@@ -1,0 +1,850 @@
+[
+  
+    {
+
+      "title"    : "How should you use tenses and person in academic writing?",
+      "url"      : "/2024/07/31/tenses-person-academic-writing.html",
+      "category" : "presentation",
+      "tags"     : "research, latex, writing, academia",
+      "date"     : "2024-07-31 00:00:00 +0530",
+      "discription" : "Mastering the use of tense and person in academic writing is essential for clarity and professionalism. This blog post provides a structured guide on how to appropriately use different tenses and narrative perspectives in various sections of a research paper."
+
+    } ,
+  
+    {
+
+      "title"    : "Learning javascript basics: getElementById",
+      "url"      : "/2024/05/16/learning-javascript-basics.html",
+      "category" : "coding",
+      "tags"     : "javascript",
+      "date"     : "2024-05-16 00:00:00 +0530",
+      "discription" : "My notes on javascript"
+
+    } ,
+  
+    {
+
+      "title"    : "Understanding viscoelasticity: Why are some materials stretchy but slow to snap back?",
+      "url"      : "/2024/02/02/understanding-viscoelasticity.html",
+      "category" : "coding, presentation",
+      "tags"     : "",
+      "date"     : "2024-02-02 00:00:00 +0530",
+      "discription" : "What is viscoelastic material? Why do we study these materials and how do we design products using them?"
+
+    } ,
+  
+    {
+
+      "title"    : "Understanding the Use of Unconventional Units in Computational Ice Dynamics",
+      "url"      : "/2024/01/24/units-for-numerical-stabalization.html",
+      "category" : "simulation",
+      "tags"     : "glacier, firedrake, fenics",
+      "date"     : "2024-01-24 00:00:00 +0530",
+      "discription" : "How does using an unconventional unit system comprising megapascals, meters, and years in computational ice dynamics facilitate alignment with the enormous spatial and temporal scales of glaciological phenomena and enhance the numerical stability and precision of simulations?"
+
+    } ,
+  
+    {
+
+      "title"    : "First steps to understanding ice flow simulation with IcePack",
+      "url"      : "/2024/01/24/stokes-flow-icepack.html",
+      "category" : "simulation",
+      "tags"     : "fenics",
+      "date"     : "2024-01-24 00:00:00 +0530",
+      "discription" : "What is Stokes equation? How to simulate Stokes equation? What is ice flow?"
+
+    } ,
+  
+    {
+
+      "title"    : "Stokes Flow Simplified: A Beginner&#39;s Guide to Ice Movement",
+      "url"      : "/2024/01/23/stokes-equation-ice-glacier-modelling.html",
+      "category" : "simulation",
+      "tags"     : "fenics",
+      "date"     : "2024-01-23 00:00:00 +0530",
+      "discription" : "Dive into the basics of Stokes flow, a key concept in understanding how glaciers and ice sheets move."
+
+    } ,
+  
+    {
+
+      "title"    : "Understanding Object References in Python: Immutable vs Mutable Behaviors",
+      "url"      : "/2024/01/06/python-mutable-fenics.html",
+      "category" : "coding",
+      "tags"     : "fenics, python",
+      "date"     : "2024-01-06 00:00:00 +0530",
+      "discription" : "Exploring Mutable and Immutable Object References in Python and Their Implications in FEniCS Simulations."
+
+    } ,
+  
+    {
+
+      "title"    : "Demystifying High-Performance Computing for Finite Element Analysis Simulations",
+      "url"      : "/2023/04/20/hpc-for-fea.html",
+      "category" : "coding, simulation",
+      "tags"     : "",
+      "date"     : "2023-04-20 00:00:00 +0530",
+      "discription" : "This article aims to explain the fundamentals of High-Performance Computing (HPC) and its role in Finite Element Method (FEM) simulations"
+
+    } ,
+  
+    {
+
+      "title"    : "How I sped up my finite element code 100x by moving parentheses.",
+      "url"      : "/2022/11/22/large-scale-matrix-multiplication.html",
+      "category" : "coding",
+      "tags"     : "hpc, matrix, python, numpy, multiplication, home",
+      "date"     : "2022-11-22 00:00:00 +0530",
+      "discription" : "The order of operation of multiplying three or more matrices could significantly affect the run-time of the algorithm."
+
+    } ,
+  
+    {
+
+      "title"    : "How to use SVG images on your website with light and dark mode.",
+      "url"      : "/2022/10/30/use-svg-in-html.html",
+      "category" : "coding, presentation",
+      "tags"     : "",
+      "date"     : "2022-10-30 00:00:00 +0530",
+      "discription" : "This post contains simple examples to showcase the way I use SVG in html."
+
+    } ,
+  
+    {
+
+      "title"    : "How to apply equality volume constraint with MMA for topology optimisation",
+      "url"      : "/2022/08/26/apply-equality-volume-constraint-mma-topology.html",
+      "category" : "simulation",
+      "tags"     : "fem, mma, volume constraint, equality constraint, topology optimization",
+      "date"     : "2022-08-26 00:00:00 +0530",
+      "discription" : "This post has the trick get a constant volume with MMA"
+
+    } ,
+  
+    {
+
+      "title"    : "Creating interactive plots with python and plotly.",
+      "url"      : "/2022/07/28/plotly-plot.html",
+      "category" : "coding, presentation",
+      "tags"     : "plotly, python, plot",
+      "date"     : "2022-07-28 00:00:00 +0530",
+      "discription" : "This post contains some example interactive plots created with python and plotly."
+
+    } ,
+  
+    {
+
+      "title"    : "Creating a color gradient over line plot in python.",
+      "url"      : "/2022/07/23/gradient-in-matplotlib.html",
+      "category" : "coding, presentation",
+      "tags"     : "python, plot, figures",
+      "date"     : "2022-07-23 00:00:00 +0530",
+      "discription" : "This post contains the code to create a color gradient across line plots in python using matplotlib."
+
+    } ,
+  
+    {
+
+      "title"    : "How to get production-ready plots from python.",
+      "url"      : "/2022/07/20/pdf-plot-python-matplotlib.html",
+      "category" : "coding",
+      "tags"     : "home, python, latex, plots",
+      "date"     : "2022-07-20 00:00:00 +0530",
+      "discription" : "This post explains the process of setting up matplotlib to export production-ready pdf plots with proper dimensions and LaTeX."
+
+    } ,
+  
+    {
+
+      "title"    : "What to do when linux can not find an installed python package",
+      "url"      : "/2022/05/01/linux-add-to-path.html",
+      "category" : "coding",
+      "tags"     : "",
+      "date"     : "2022-05-01 00:00:00 +0530",
+      "discription" : "This post explains a little bit about linux $PATH variable and its use for python packages."
+
+    } ,
+  
+    {
+
+      "title"    : "Different math environments available in LaTeX",
+      "url"      : "/2022/04/30/latex-math-alphabets.html",
+      "category" : "presentation",
+      "tags"     : "latex",
+      "date"     : "2022-04-30 00:00:00 +0530",
+      "discription" : "A picture of all the math environments available in latex"
+
+    } ,
+  
+    {
+
+      "title"    : "How to get 10 GB of sync space for your zotero library.",
+      "url"      : "/2022/04/28/zotero-pcloud-box.html",
+      "category" : "productivity, presentation",
+      "tags"     : "pcloud, box, cloud, zotero",
+      "date"     : "2022-04-28 00:00:00 +0530",
+      "discription" : "Pcloud ended support for webdav sync in Zotero. It&#39;s time to move to box.com"
+
+    } ,
+  
+    {
+
+      "title"    : "How to apply point load in FEniCS.",
+      "url"      : "/2022/04/12/point-load-fenics.html",
+      "category" : "coding",
+      "tags"     : "fenics",
+      "date"     : "2022-04-12 00:00:00 +0530",
+      "discription" : "Applying point load in FEniCS is not straightforward but doable."
+
+    } ,
+  
+    {
+
+      "title"    : "How to run julia code in jupyter notebook.",
+      "url"      : "/2022/04/06/julia-jupyter-notebook.html",
+      "category" : "coding",
+      "tags"     : "julia, notebook, jupyter",
+      "date"     : "2022-04-06 00:00:00 +0530",
+      "discription" : "It is very easy to install Julia in Jupyter."
+
+    } ,
+  
+    {
+
+      "title"    : "How to add search functionallity to jekyll blog.",
+      "url"      : "/2022/04/02/add-search-jekyll-blog.html",
+      "category" : "coding",
+      "tags"     : "jekyll, search, liquid",
+      "date"     : "2022-04-02 00:00:00 +0530",
+      "discription" : "Use this simple method to add search functionallity to your jekyll blog."
+
+    } ,
+  
+    {
+
+      "title"    : "Thoughts on writing blog posts or tweets on the internet.",
+      "url"      : "/2022/03/27/thoughts-on-writing-on-the-web.html",
+      "category" : "productivity",
+      "tags"     : "",
+      "date"     : "2022-03-27 00:00:00 +0530",
+      "discription" : "I have always felt resistance to writing on the internet, whether it is a blog post or a short tweet."
+
+    } ,
+  
+    {
+
+      "title"    : "How to have a custom markdown preview font-style and size for VSCode.",
+      "url"      : "/2022/03/27/custom-md-font-vscode.html",
+      "category" : "coding",
+      "tags"     : "",
+      "date"     : "2022-03-27 00:00:00 +0530",
+      "discription" : "This blog post details the settings required to have a custom VSCode fonts in markdown preview."
+
+    } ,
+  
+    {
+
+      "title"    : "How to draw curves with two js.",
+      "url"      : "/2022/03/25/draw-with-twojs.html",
+      "category" : "coding, presentation",
+      "tags"     : "",
+      "date"     : "2022-03-25 00:00:00 +0530",
+      "discription" : "This blog post details my understaning of drawing with Two js."
+
+    } ,
+  
+    {
+
+      "title"    : "How to take derivatives with sympy.",
+      "url"      : "/2022/03/21/derivatives-with-sympy.html",
+      "category" : "coding",
+      "tags"     : "",
+      "date"     : "2022-03-21 00:00:00 +0530",
+      "discription" : "Generate or validate your derivatives with symbolic calculation in python."
+
+    } ,
+  
+    {
+
+      "title"    : "[Lesson - 1] Understanding financial terms used in India",
+      "url"      : "/2022/03/16/financial-terms.html",
+      "category" : "finance",
+      "tags"     : "",
+      "date"     : "2022-03-16 00:00:00 +0530",
+      "discription" : "This blog post details my understanding of financial system of India."
+
+    } ,
+  
+    {
+
+      "title"    : "How to save a surface plot generated with matplotlib as STL to open in ParaView.",
+      "url"      : "/2022/03/04/matplotlib-to-stl.html",
+      "category" : "coding, presentation",
+      "tags"     : "",
+      "date"     : "2022-03-04 00:00:00 +0530",
+      "discription" : "This blog post details the steps to convert a surface plot into STL."
+
+    } ,
+  
+    {
+
+      "title"    : "FEniCS code development in VSCode with jupyter notebook and Docker.",
+      "url"      : "/2022/02/26/fenics-vscode-notebook.html",
+      "category" : "coding, productivity",
+      "tags"     : "vscode, jupyter, notebook",
+      "date"     : "2022-02-26 00:00:00 +0530",
+      "discription" : "This post describes my setup for development with FEniCS and Docker in VSCode."
+
+    } ,
+  
+    {
+
+      "title"    : "How to plan and discuss the content of thesis with supervisor.",
+      "url"      : "/2022/02/22/deciding-the-content-of-thesis.html",
+      "category" : "presentation",
+      "tags"     : "thesis, synopsis",
+      "date"     : "2022-02-22 00:00:00 +0530",
+      "discription" : "You should finalize the thesis content before giving your synopsis. This post will containt the steps that I took to plan the content of thesis while writing the synopsis report."
+
+    } ,
+  
+    {
+
+      "title"    : "Achieving significant computational gains with sparse matrices and proper multiplication order.",
+      "url"      : "/2022/02/15/sparsity-multiplication-order.html",
+      "category" : "coding",
+      "tags"     : "sparse, matrix, hpc",
+      "date"     : "2022-02-15 00:00:00 +0530",
+      "discription" : "Changing the order of matrix multiplication can significantly impact run time. In this post, I discuss how I achieved a speed boost of around 100 times."
+
+    } ,
+  
+    {
+
+      "title"    : "How to parallelize FEniCS in jupyter notebook.",
+      "url"      : "/2022/02/14/parallel-run-in-jupyter.html",
+      "category" : "coding",
+      "tags"     : "parallel, jupyter, python, fenics",
+      "date"     : "2022-02-14 00:00:00 +0530",
+      "discription" : "I have been trying to debug a portion of my FEniCS code that required parallelization for faster runtime for debugging. Just found out that we can parallelize in jupyter itself 🤯."
+
+    } ,
+  
+    {
+
+      "title"    : "Previewing math equations in Sublime with custom commands.",
+      "url"      : "/2022/02/13/math-preview-in-sublime.html",
+      "category" : "presentation",
+      "tags"     : "latex, sublime",
+      "date"     : "2022-02-13 00:00:00 +0530",
+      "discription" : "The following latex package will allow you to do so."
+
+    } ,
+  
+    {
+
+      "title"    : "Making my projects page.",
+      "url"      : "/2022/02/03/projects-worked-on.html",
+      "category" : "presentation",
+      "tags"     : "html, css, js",
+      "date"     : "2022-02-03 00:00:00 +0530",
+      "discription" : "Over the past 10 years I have worked on multiple projects."
+
+    } ,
+  
+    {
+
+      "title"    : "Every researcher must learn about sparse matrices.",
+      "url"      : "/2022/01/31/please-use-sparse-matrices.html",
+      "category" : "coding",
+      "tags"     : "sparse, ram, fem, hpc",
+      "date"     : "2022-01-31 00:00:00 +0530",
+      "discription" : "You can not even imagine solving medium to large-scale systems without sparse matrices."
+
+    } ,
+  
+    {
+
+      "title"    : "Completion of PhD. Initiating writing synopsis",
+      "url"      : "/2022/01/24/writing-synopsis.html",
+      "category" : "presentation",
+      "tags"     : "synopsis",
+      "date"     : "2022-01-24 00:00:00 +0530",
+      "discription" : "How to write a synopsis report at the end of your PhD work. 🎓"
+
+    } ,
+  
+    {
+
+      "title"    : "How to prepare for meetings.",
+      "url"      : "/2022/01/23/how-to-prepare-for-meetings.html",
+      "category" : "productivity",
+      "tags"     : "meetings, notion",
+      "date"     : "2022-01-23 00:00:00 +0530",
+      "discription" : "It is imperative to have a proper format and have some ground rules to conduct meetings."
+
+    } ,
+  
+    {
+
+      "title"    : "Happy new year 🥳.",
+      "url"      : "/2022/01/01/happy-new-year.html",
+      "category" : "misc",
+      "tags"     : "",
+      "date"     : "2022-01-01 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to develop jekyll website locally.",
+      "url"      : "/2021/12/19/local-build-jekyll-website.html",
+      "category" : "presentation, coding",
+      "tags"     : "jekyll, blog",
+      "date"     : "2021-12-19 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to build petsc with complex support.",
+      "url"      : "/2021/12/08/installing-petsc-complex.html",
+      "category" : "coding",
+      "tags"     : "fenics, petsc, python, complex numbers",
+      "date"     : "2021-12-08 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to add nomenclature to latex document.",
+      "url"      : "/2021/11/08/nomenclature-in-latex.html",
+      "category" : "presentation",
+      "tags"     : "latex, nomenclature",
+      "date"     : "2021-11-08 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to make tutorials for your class.",
+      "url"      : "/2021/07/04/making-tutorial-on-jupyter.html",
+      "category" : "productivity, presentation",
+      "tags"     : "python, teaching, jupyter, notebooks",
+      "date"     : "2021-07-04 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to properly add bib to your latex project using zotero.",
+      "url"      : "/2021/06/30/correct-way-to-add-bib.html",
+      "category" : "presentation",
+      "tags"     : "latex",
+      "date"     : "2021-06-30 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to setup sublime as a beautiful latex editor | Dark Mode | Windows",
+      "url"      : "/2021/05/14/clean-sublime-setup.html",
+      "category" : "coding",
+      "tags"     : "home, software, sublime, latex, dark mode",
+      "date"     : "2021-05-14 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to have a clean latex folder",
+      "url"      : "/2021/05/11/clean-latex.html",
+      "category" : "presentation",
+      "tags"     : "latex",
+      "date"     : "2021-05-11 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Setting custom header for list of items | Step 1:",
+      "url"      : "/2021/05/07/custom-enumerate-header.html",
+      "category" : "presentation",
+      "tags"     : "latex",
+      "date"     : "2021-05-07 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Load the working copy of your docker image to docker hub for reuse",
+      "url"      : "/2021/04/01/load-to-dockerhub.html",
+      "category" : "coding",
+      "tags"     : "docker",
+      "date"     : "2021-04-01 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Load the project to PyPi",
+      "url"      : "/2021/03/18/load-to-pypi.html",
+      "category" : "coding",
+      "tags"     : "python, pypi",
+      "date"     : "2021-03-18 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Some surprising findings on direct vs iterative in MATLAB.",
+      "url"      : "/2021/03/12/matlab-direct.html",
+      "category" : "coding",
+      "tags"     : "solvers, matlab, direct, iterative",
+      "date"     : "2021-03-12 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to set up your first JavaScript project.",
+      "url"      : "/2021/02/14/first-javascript-project.html",
+      "category" : "coding",
+      "tags"     : "js, javascript",
+      "date"     : "2021-02-14 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to set dark mode on Sumatra PDF for latex.",
+      "url"      : "/2021/02/10/dark-mode-sumatra.html",
+      "category" : "productivity",
+      "tags"     : "latex, sumatra, pdf",
+      "date"     : "2021-02-10 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to manage a project with Notion.",
+      "url"      : "/2021/02/09/project-based-learning.html",
+      "category" : "productivity",
+      "tags"     : "notion",
+      "date"     : "2021-02-09 00:00:00 +0530",
+      "discription" : "It is imperative to have a central database and organizational system for productive teamwork."
+
+    } ,
+  
+    {
+
+      "title"    : "Difference between python and C++ definition of boundaries in FEniCS.",
+      "url"      : "/2021/01/31/python-vs-cpp-boundary-definition-fenics.html",
+      "category" : "coding",
+      "tags"     : "fenics",
+      "date"     : "2021-01-31 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to visualize degrees of freedom in FEniCS.",
+      "url"      : "/2021/01/25/visualize-dofs.html",
+      "category" : "coding",
+      "tags"     : "fenics",
+      "date"     : "2021-01-25 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to set sublime as text editor in gmsh.",
+      "url"      : "/2021/01/22/set-sublime-in-gmsh.html",
+      "category" : "productivity",
+      "tags"     : "gmsh, sublime",
+      "date"     : "2021-01-22 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to convert serial FEniCS code to parallel.",
+      "url"      : "/2021/01/22/converting-serial-to-parallel.html",
+      "category" : "coding",
+      "tags"     : "fenics, parallel, MPI",
+      "date"     : "2021-01-22 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to start a new python project that you wish to support for long.",
+      "url"      : "/2021/01/18/build-python-project.html",
+      "category" : "coding, productivity",
+      "tags"     : "python",
+      "date"     : "2021-01-18 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to export animation from paraview.",
+      "url"      : "/2021/01/16/paraview-animation.html",
+      "category" : "presentation",
+      "tags"     : "paraview",
+      "date"     : "2021-01-16 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to modularize fenics code.",
+      "url"      : "/2021/01/15/modularizing-fenics.html",
+      "category" : "coding",
+      "tags"     : "fenics",
+      "date"     : "2021-01-15 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to get average of a function over each cell.",
+      "url"      : "/2021/01/12/function-average-over-cell.html",
+      "category" : "coding",
+      "tags"     : "fenics",
+      "date"     : "2021-01-12 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to find the explanation of different FEniCS commands.",
+      "url"      : "/2021/01/11/finding-fenics-commands.html",
+      "category" : "coding",
+      "tags"     : "fenics",
+      "date"     : "2021-01-11 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to get hmin for each cell in FEniCS",
+      "url"      : "/2021/01/10/circumradius-fenics.html",
+      "category" : "coding",
+      "tags"     : "fenics",
+      "date"     : "2021-01-10 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "FEniCS is incredible",
+      "url"      : "/2021/01/06/fenics-is-awesome.html",
+      "category" : "coding",
+      "tags"     : "fenics",
+      "date"     : "2021-01-06 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to setup Typora for daily journaling",
+      "url"      : "/2021/01/05/setup-Typora.html",
+      "category" : "productivity",
+      "tags"     : "markdown",
+      "date"     : "2021-01-05 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to add images, latex and code to blog.",
+      "url"      : "/2020/11/22/add-formula-images.html",
+      "category" : "presentation",
+      "tags"     : "markdown, latex",
+      "date"     : "2020-11-22 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "How to setup the Moving theme for your Jekyll blog.",
+      "url"      : "/2020/11/21/how-to-website.html",
+      "category" : "coding, presentation",
+      "tags"     : "jekyll, blog",
+      "date"     : "2020-11-21 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Welcome to the new blog",
+      "url"      : "/2020/11/20/new-blog.html",
+      "category" : "presentation",
+      "tags"     : "",
+      "date"     : "2020-11-20 00:00:00 +0530",
+      "discription" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Parallelizing for loop in python with MPI.",
+      "url"      : "/2020/07/07/parallel-for-loop.html",
+      "category" : "coding",
+      "tags"     : "parallel, MPI, python",
+      "date"     : "2020-07-07 00:00:00 +0530",
+      "discription" : "Solving real world applications demands parallel computation."
+
+    } ,
+  
+    {
+
+      "title"    : "GSoC complete: FEniCS-The mesh workflow",
+      "url"      : "/2019/08/24/gsoc-complete.html",
+      "category" : "coding",
+      "tags"     : "gsoc",
+      "date"     : "2019-08-24 00:00:00 +0530",
+      "discription" : "This is the final post for my google summer of code 2019"
+
+    } ,
+  
+    {
+
+      "title"    : "FEniCS: Completion of phase two",
+      "url"      : "/2019/07/22/complete-phase-two.html",
+      "category" : "coding",
+      "tags"     : "gsoc",
+      "date"     : "2019-07-22 00:00:00 +0530",
+      "discription" : "The second phase of google summer of code is complete."
+
+    } ,
+  
+    {
+
+      "title"    : "FEniCS: The XDMF schema",
+      "url"      : "/2019/07/01/xdmf-schema.html",
+      "category" : "coding",
+      "tags"     : "gsoc",
+      "date"     : "2019-07-01 00:00:00 +0530",
+      "discription" : "Understanding the XDMF schema as a part of GSoC 2019"
+
+    } ,
+  
+    {
+
+      "title"    : "FEniCS: Completion of phase one",
+      "url"      : "/2019/06/24/complete-phase-one.html",
+      "category" : "coding",
+      "tags"     : "gsoc",
+      "date"     : "2019-06-24 00:00:00 +0530",
+      "discription" : "Successful completion of phase one of GSoC2019"
+
+    } ,
+  
+    {
+
+      "title"    : "Understanding make and cmake",
+      "url"      : "/2019/06/10/understanding-make-cmake.html",
+      "category" : "coding",
+      "tags"     : "gsoc",
+      "date"     : "2019-06-10 00:00:00 +0530",
+      "discription" : "Understanding the compilation process of C++"
+
+    } ,
+  
+    {
+
+      "title"    : "Understanding CircleCI",
+      "url"      : "/2019/06/05/understanding-circleci.html",
+      "category" : "coding",
+      "tags"     : "gsoc",
+      "date"     : "2019-06-05 00:00:00 +0530",
+      "discription" : "Continuous testing of the code can only guarantee its correctness."
+
+    } ,
+  
+    {
+
+      "title"    : "Understanding the dockerfile of DOLFIN-X",
+      "url"      : "/2019/06/03/understanding-docker-dolfinx.html",
+      "category" : "coding",
+      "tags"     : "gsoc",
+      "date"     : "2019-06-03 00:00:00 +0530",
+      "discription" : "Handling a complex project like FEniCS required Docker."
+
+    } ,
+  
+    {
+
+      "title"    : "May 27th – May 31st, First week of coding",
+      "url"      : "/2019/06/01/first-week-coding.html",
+      "category" : "coding",
+      "tags"     : "gsoc",
+      "date"     : "2019-06-01 00:00:00 +0530",
+      "discription" : "My first week as a GSoC2019 participant."
+
+    } ,
+  
+    {
+
+      "title"    : "May 6th – May 27th, Community Bonding Period",
+      "url"      : "/2019/05/27/community-bonding.html",
+      "category" : "coding",
+      "tags"     : "gsoc",
+      "date"     : "2019-05-27 00:00:00 +0530",
+      "discription" : "Meeting the commutiny of GSoC2019"
+
+    } ,
+  
+    {
+
+      "title"    : "First meeting with my GSoC mentors",
+      "url"      : "/2019/05/17/first-meeting-mentors.html",
+      "category" : "coding",
+      "tags"     : "gsoc",
+      "date"     : "2019-05-17 00:00:00 +0530",
+      "discription" : "Meeting my mentors for the GSoC2019"
+
+    } ,
+  
+    {
+
+      "title"    : "Got selected to GSoC 2019 to work on FEniCS",
+      "url"      : "/2019/05/08/selected-in-gsoc.html",
+      "category" : "coding",
+      "tags"     : "gsoc",
+      "date"     : "2019-05-08 00:00:00 +0530",
+      "discription" : "I am so much happy to have been officially accepted to contribute to the FEniCS project."
+
+    } 
+  
+]

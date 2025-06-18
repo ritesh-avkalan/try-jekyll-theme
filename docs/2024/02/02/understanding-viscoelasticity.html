@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name = "keywords" content = "fenics, topology optimization, isogeomtric analysis, hpc, phd blog, paraview, latex, computational mechanics, phd tools, parallel computation, python, phase field fracture, phase field topology optimization" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Understanding viscoelasticity: Why are some materials stretchy but slow to snap back?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What is viscoelastic material? Why do we study these materials and how do we design products using them?" />
+<meta property="og:description" content="What is viscoelastic material? Why do we study these materials and how do we design products using them?" />
+<link rel="canonical" href="/2024/02/02/understanding-viscoelasticity.html" />
+<meta property="og:url" content="/2024/02/02/understanding-viscoelasticity.html" />
+<meta property="og:site_name" content="Abhinav Gupta" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-02-02T00:00:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Understanding viscoelasticity: Why are some materials stretchy but slow to snap back?" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-02-02T00:00:00+05:30","datePublished":"2024-02-02T00:00:00+05:30","description":"What is viscoelastic material? Why do we study these materials and how do we design products using them?","headline":"Understanding viscoelasticity: Why are some materials stretchy but slow to snap back?","mainEntityOfPage":{"@type":"WebPage","@id":"/2024/02/02/understanding-viscoelasticity.html"},"url":"/2024/02/02/understanding-viscoelasticity.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/?" />
+    <title> 
+     
+      Understanding viscoelasticity: Why are some materials stretchy but slow to snap back? | 
+    
+    Abhinav Gupta
+  </title>
+
+
+  <!-- MailerLite Universal -->
+  <script>
+      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account', '325878');
+  </script>
+  <!-- End MailerLite Universal --><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Abhinav Gupta" /></head><body class="full_width_container"><div class="navbar-container">
+    <div class="primary_container ">
+        <a class="link home-icon" href="">
+                <svg width="76px" height="100%" viewBox="0 0 63 40" >
+                    <path d="M29.585,14.07l0.085,1.138l8.46,19.638l0.896,0.906c0.279,0.125 0.564,0.243 0.854,0.355c2.201,0.852 4.618,1.284 7.253,1.284c5.057,0 9.628,-1.101 13.717,-3.286l0.925,-1.544l0,-15.928l-1.75,-1.75l-11.924,0l-1.75,1.75l0,5.016l1.75,1.75l4.63,0c0,0 0,4.518 0,4.518c-0.594,0.254 -1.239,0.453 -1.934,0.6c-1.134,0.24 -2.34,0.358 -3.62,0.358c-1.348,0 -2.57,-0.236 -3.66,-0.726c-1.083,-0.487 -2.014,-1.154 -2.792,-2.005c-0.789,-0.862 -1.394,-1.888 -1.826,-3.07c-0.446,-1.225 -0.664,-2.566 -0.664,-4.021c0,-1.332 0.216,-2.577 0.656,-3.734c0.431,-1.132 1.037,-2.125 1.825,-2.974c0.777,-0.837 1.706,-1.49 2.786,-1.963c1.095,-0.48 2.321,-0.711 3.675,-0.711c1.37,0 2.671,0.226 3.901,0.683c1.182,0.438 2.192,1.054 3.02,1.859l2.463,-0.025l4.092,-4.136l-0.078,-2.536c-1.849,-1.651 -3.946,-2.797 -6.29,-3.44c-2.228,-0.612 -4.611,-0.921 -7.152,-0.921c-2.635,0 -5.052,0.432 -7.253,1.284c-2.243,0.867 -4.172,2.106 -5.792,3.71c-1.617,1.601 -2.887,3.534 -3.802,5.804c-0.275,0.683 -0.509,1.388 -0.701,2.117Z" style="fill-rule:nonzero;"/><path d="M16.141,3.21l-1.604,1.052l-13.552,31.152l1.604,2.448l6.204,0l1.628,-1.107l2.379,-6.021c-0,0 11.141,0 11.141,0c-0,0 2.46,6.038 2.46,6.038l1.62,1.09l6.336,0l1.608,-2.442l-13.42,-31.152l-1.608,-1.058l-4.796,0Zm4.507,19.272l-4.597,0c0,0 2.32,-6.017 2.32,-6.017l2.277,6.017Z" style="fill-rule:nonzero;"/>
+                </svg>
+        </a>
+        <div class="navbar align_menu" style="font-family: Montserrat; font-weight:500">
+            <a class="link" href="/pages/blog">Articles</a>
+            <a class="link" href="/pages/projects">Projects</a>
+            <a class="link nav_desktop" href="/pages/newsletters">Newsletter</a>
+            <a class="link" href="/pages/about">About</a>
+            <a href="/2024/02/02/understanding-viscoelasticity.html" id="theme-toggle" onclick="modeSwitcher()" style="cursor: pointer;">Dark</a>
+        </div>
+    </div>
+</div><main aria-label="Content">
+        <div>
+            <div class="post_container">
+    <div class="post_item_left" style=" padding-bottom:50px; ">
+        <div class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+            <head>
+                <title>Understanding viscoelasticity: Why are some materials stretchy but slow to snap back?</title>
+                <script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({
+                    extensions: ["tex2jax.js"],
+                    jax: ["input/TeX", "output/HTML-CSS"],
+                    tex2jax: {
+                      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                      processEscapes: true
+                    },
+                    "HTML-CSS": { availableFonts: ["TeX"] }
+                  });
+                </script>
+                <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+            </head>
+            <header class="post-header" style="margin-bottom: 60px;">
+                <h1 style="font-weight:600; font-size: 46px; margin-top: 120px; " class="post-title p-name" itemprop="name headline">
+                    Understanding viscoelasticity: Why are some materials stretchy but slow to snap back?
+                </h1>
+                <p class="post-meta" style="font-size: 16px;">
+                    <time class="dt-published" datetime="2024-02-02T00:00:00+05:30" itemprop="datePublished">Feb 2, 2024
+                    </time><span style="padding-left:10px;padding-right: 10px;">|</span><span class="post-meta"><a style="font-size:14px;color: var(--text-color);padding-right: 10px" href="/categories/coding">CODING, </a></span><span class="post-meta"><a style="font-size:14px;color: var(--text-color);" href="/categories/presentation">PRESENTATION</a></span><!-- --------------------------------------- -->
+                </p>
+            </header>
+            <hr style="/*position: relative; width: 300%;right:calc(200% - 30px);*/ background: var(--color-1);border: none;height: 1px; margin-bottom: 80px; opacity: 1;">
+            <div class="post-content e-content enlarged-char" itemprop="articleBody">
+                <p>Imagine you’re playing with two different types of materials: a spring (representing an elastic material) and a piece of silly putty (representing a viscoelastic material). When you pull and then release the spring, it snaps back immediately to its original shape. This instant response to pulling and releasing is characteristic of <strong>elastic materials</strong> – they return to their original shape as soon as the force is removed, just like a rubber band.</p>
+
+<p>Now, think about what happens when you stretch or squish the silly putty. It stretches or deforms slowly under your pull and retains its deformed shape for a while before slowly returning to its original shape after you let go. This behavior – the slow, time-dependent return to the original shape – is a hallmark of <strong>viscoelastic materials</strong>. They have a memory of sorts, taking time to go back to how they were, combining both the “instant snap” of elastic materials and the “slow flow” of viscous materials (like honey).</p>
+
+<p>The difference between elastic and viscoelastic materials fundamentally lies in how they respond over time. Elastic materials don’t care about time; they react the same way whether you stretch them quickly or slowly. Viscoelastic materials, on the other hand, care a lot about how fast or slow things happen. Stretch them quickly, and they might resist more strongly; stretch them slowly, and they might gradually give way.</p>
+
+<p>This time-dependent behavior of viscoelastic materials is crucial in their design and application. For example:</p>
+
+<ul>
+  <li><strong>Shock Absorption</strong>: In products like car bumpers or sports helmets, viscoelastic materials are used because they can absorb and dissipate energy over time, providing better protection against impacts.</li>
+  <li><strong>Comfort Products</strong>: Memory foam mattresses and pillows use viscoelastic materials to conform to the shape of your body over time, offering personalized support and comfort.</li>
+  <li><strong>Medical Devices</strong>: Viscoelastic materials are used in prosthetics and implants because they can mimic the time-dependent behavior of human tissues, making the devices more comfortable and functional for users.</li>
+  <li><strong>Vibration Damping</strong>: In buildings and machinery, viscoelastic materials help damp vibrations, not just instantly but over a period, reducing noise and wear and tear.</li>
+</ul>
+
+<p>Designers and engineers leverage the unique “time-aware” properties of viscoelastic materials to create products that perform better under specific conditions, providing benefits that purely elastic materials can’t match. They carefully consider how these materials will be stretched, compressed, or twisted over time to ensure the final product behaves exactly as needed, whether that’s in ensuring comfort, safety, durability, or any other desired property.</p>
+
+<p>Understanding viscoelastic materials and their behavior involves diving into the world of material science and mechanics, where the properties of these materials are described and predicted through mathematical equations. Let’s look at the foundational equations that help explain why viscoelastic materials stretch and slowly return to their original shape.</p>
+
+<h3 id="1-stress-strain-relationship">1. Stress-Strain Relationship</h3>
+
+<p>In viscoelastic materials, the relationship between stress (force per unit area) and strain (deformation) is time-dependent. Two primary models often used to describe this behavior are the Maxwell model and the Kelvin-Voigt model.</p>
+
+<h4 id="maxwell-model">Maxwell Model</h4>
+
+<p>The Maxwell model represents viscoelastic behavior as a combination of a purely elastic spring and a purely viscous dashpot in series. The constitutive equation is:</p>
+
+\[\sigma + \frac{\eta}{E} \frac{d\sigma}{dt} = \eta \frac{d\varepsilon}{dt}\]
+
+<p>where:</p>
+<ul>
+  <li>$\sigma$ is the stress,</li>
+  <li>$\varepsilon$ is the strain,</li>
+  <li>$E$ is the elastic modulus of the spring,</li>
+  <li>$\eta$ is the viscosity of the dashpot,</li>
+  <li>$t$ is time.</li>
+</ul>
+
+<p>This model captures fluid-like behavior, showing that under a constant stress, the material will continue to deform over time.</p>
+
+<h4 id="kelvin-voigt-model">Kelvin-Voigt Model</h4>
+
+<p>The Kelvin-Voigt model describes viscoelastic behavior using a spring and dashpot in parallel. Its constitutive equation is:</p>
+
+\[\sigma = E\varepsilon + \eta \frac{d\varepsilon}{dt}\]
+
+<p>This model captures solid-like behavior, where the material deforms immediately under stress and slowly returns to its original shape when the stress is removed, but it does not flow over time as the Maxwell model predicts.</p>
+
+<h3 id="2-creep-and-recovery">2. Creep and Recovery</h3>
+
+<p>Creep describes how a material deforms under a constant load over time, while recovery describes how a material returns to its original shape after the load is removed. The creep function $J(t)$ for a viscoelastic material is often represented as:</p>
+
+\[J(t) = \frac{\varepsilon(t)}{\sigma_0}\]
+
+<p>where $\sigma_0$ is the constant stress applied. The recovery process, especially in nonlinear viscoelastic materials, might not follow the same function due to the material’s history-dependent behavior.</p>
+
+<h3 id="3-complex-modulus">3. Complex Modulus</h3>
+
+<p>For viscoelastic materials subjected to oscillatory loading, the complex modulus $E^*$ is used to describe the material’s response, combining storage modulus $E’$ (elastic response) and loss modulus $E’’$ (viscous response):</p>
+
+\[E^* = E' + iE''\]
+
+<p>where $i$ is the imaginary unit. The phase angle $\delta$ between stress and strain gives insight into the material’s viscoelastic nature:</p>
+
+\[\tan(\delta) = \frac{E''}{E'}\]
+
+<p>High values of $\tan(\delta)$ indicate more viscous behavior, while lower values indicate more elastic behavior.</p>
+
+<p>These equations and models provide a mathematical framework to understand and predict how viscoelastic materials behave under various loading conditions. By analyzing these time-dependent stress-strain relationships, scientists and engineers can design materials and products that leverage the unique properties of viscoelasticity for applications requiring both elasticity and viscosity, such as impact absorption, comfort, and durability.</p>
+
+<h2 id="variational-form">Variational form</h2>
+
+<p>In the context of viscoelastic materials, in addition to the elastic energy stored in the material, there’s an energy dissipation component due to the material’s viscous behavior. This dissipation energy represents the loss of mechanical energy to heat or internal friction as the material deforms. Unlike purely elastic materials, where the energy is fully recoverable, viscoelastic materials convert a portion of the energy into heat, leading to a hysteresis effect in stress-strain cycles.</p>
+
+<h3 id="dissipation-energy-in-viscoelasticity">Dissipation Energy in Viscoelasticity</h3>
+
+<p>Dissipation energy in viscoelastic materials is a crucial aspect that differentiates them from purely elastic materials. It quantifies the energy lost during cyclic loading due to the material’s inherent viscosity. The rate of energy dissipation is related to the material’s relaxation processes and is a function of both the applied strain rate and the material’s viscoelastic properties.</p>
+
+<p>The dissipated energy $\Delta W_{diss}$ over a loading cycle can be expressed as the area enclosed by the hysteresis loop in a stress-strain diagram, which can be calculated for a cycle from $t_1$ to $t_2$ as:</p>
+
+\[\Delta W_{diss} = \int_{t_1}^{t_2} \sigma(t) \frac{d\varepsilon(t)}{dt} dt\]
+
+<p>where $\sigma(t)$ is the stress and $\varepsilon(t)$ is the strain at the time $t$.</p>
+
+<h3 id="weak-form-for-viscoelasticity">Weak Form for Viscoelasticity</h3>
+
+<p>The weak form for viscoelastic materials extends the concept of the weak form in linear elasticity by incorporating the time-dependent behavior. In linear elasticity, the weak form is derived by taking the first variation of the total potential energy. For viscoelasticity, we need to consider both the stored elastic energy and the dissipative energy.</p>
+
+<p>For a viscoelastic material undergoing small deformations, the weak form of the equilibrium equation, incorporating the dissipative effects, can be formulated as follows:</p>
+
+<p>Given a body $\Omega$ with boundary $\partial\Omega$, the weak form states that for all admissible variations $\delta\varepsilon$ of the strain field, the following condition holds:</p>
+
+\[\int_{\Omega} \left( \sigma_{ij}(\varepsilon) \delta\varepsilon_{ij} - \rho f_i \delta u_i \right) d\Omega + \int_{\Omega} \eta \frac{d\varepsilon_{ij}}{dt} \delta\varepsilon_{ij} d\Omega = 0\]
+
+<p>where:</p>
+<ul>
+  <li>$\sigma_{ij}(\varepsilon)$ is the stress tensor, which is a function of the strain tensor $\varepsilon_{ij}$,</li>
+  <li>$\rho$ is the density,</li>
+  <li>$f_i$ are body forces,</li>
+  <li>$u_i$ are displacements,</li>
+  <li>$\eta$ represents the viscosity coefficient, and</li>
+  <li>$\frac{d\varepsilon_{ij}}{dt}$ is the strain rate.</li>
+</ul>
+
+<p>The first integral represents the internal and external work done on the system, similar to the elastic case. The second integral accounts for the energy dissipation due to the viscous nature of the material, with $\eta \frac{d\varepsilon_{ij}}{dt}$ representing the viscous stress component.</p>
+
+<p>This formulation captures the essence of viscoelastic behavior by including both the instantaneous elastic response and the time-dependent viscous response, allowing for the analysis of viscoelastic materials under various loading conditions. The weak form is essential for implementing finite element methods for viscoelastic problems, where the time-dependent nature of the material’s response must be accurately captured.</p>
+
+            </div>
+            <div class="PageNavigation">
+                
+                <a class="button button-prev" href="/2024/01/24/units-for-numerical-stabalization.html" title="Understanding the Use of Unconventional Units in Computational Ice Dynamics">&laquo; Previous</a>
+                
+                
+                <a class="button button-next" href="/2024/05/16/learning-javascript-basics.html" title="Learning javascript basics: getElementById">Next &raquo;</a>
+                
+            </div>
+            <!-- ----------------------------------------------------------- -->
+            <hr style="/*position: relative; width: 300%;right:calc(200% - 30px);*/ background: var(--color-1);border: none;height: 1px; margin-bottom: 80px; opacity: 1;">
+            <div class="flexbox_container_two_col flexbox_container_flip " style="padding-top: 50px;padding-bottom: 50px;">
+                <div class="flexbox_item">
+                    <div>
+                        <p style="font-size:36px; font-family: Montserrat; font-weight: bold; line-height: 1.2; ">Newsletter</p>
+                        <p style="font-size:16px; padding-top: 20px; padding-bottom: 30px;">"<em><strong>Quality Research:</strong> A weekly newsletter covering ideas and tools for better academic research.</em>" </p>
+                        <a class="ml-onclick-form button button-hello" href="javascript:void(0)" onclick="ml('show', 'uSsXyN', true)">Try the free newsletter</a>
+                    </div>
+                </div>
+                <div class="flexbox_item">
+                    <div class="abhi-icon" style="vertical-align: middle;     float: right;"><object data="/assets/svg/newsletter.svg" width="80%" style="pointer-events: none;"> </object></div>
+                </div>
+            </div>
+            <!-- ----------------------------------------------------------- -->
+        </div>
+    </div>
+    <div class="post_item_right hide_mobile">
+        <p style="padding-top:200px; font-size: 14px; font-family: Montserrat;">ABOUT THE AUTHOR</p>
+        <hr style="/*position: relative; width: 300%;right:calc(200% - 30px);*/ background: var(--color-1);border: none;height: 1px; margin-bottom: 40px;">
+        <p style="margin-bottom:20px;font-size: 14px;">Hi, I am <strong>Abhinav Gupta</strong>. I am a researcher at Vanderbilt University, USA. I create content to help you become effective in producing quality research. If you are interested in research, academia, or computational mechanics, make sure to follow me. </p>
+        <div style="margin-top:50px;">
+            <ul class="social-media-list" style="font-size: 14px;">
+                <li>
+                    <a class="black-link" href="https://www.linkedin.com/in/abhiguptaio/" target="_blank" rel="noopener noreferrer">[LinkedIn]</a>
+                </li>
+                <li>
+                    <a class="black-link" href="https://github.com/iitrabhi" target="_blank" rel="noopener noreferrer"> [Github]</a>
+                </li>
+                <li>
+                    <a class="black-link" href="https://www.researchgate.net/profile/Abhinav_Gupta52" target="_blank" rel="noopener noreferrer">[RG]</a>
+                </li>
+                <li>
+                    <p>👋</p>
+                </li>
+            </ul>
+        </div>
+        <a class="hover_highlight" style="font-size: 14px;" href="/pages/about">Click here to learn more →</a>
+        <p style="margin-bottom:50px"></p>
+    </div>
+</div>
+        </div>
+    </main>
+<div style="min-height: 500px;background-color: #000; width:100%">
+    <div class="primary_container">
+        <div style="flex: 60%; ">
+            <p style="font-family:Montserrat; color:#fff; font-weight:700; margin-top: 50px;">ABHI GUPTA</p>
+        </div>
+        <div class="hide_mobile" style="flex: 20%;">
+            <p style="font-family:Montserrat; color:#888; font-weight:700; margin-top: 50px;">Categories</p>
+             <p><a href="/categories/coding"  style="color:#ddd; font-size: 16px;">Coding</a></p>
+            <p><a href="/categories/presentation"  style="color:#ddd;font-size: 16px;">Presentation</a></p>
+            <p><a href="/categories/productivity"  style="color:#ddd;font-size: 16px;">Productivity</a></p>
+        </div>
+        <div style="flex: 20%; ">
+            <p style="font-family:Montserrat; color:#888; font-weight:700; margin-top: 50px;">Links</p>
+           
+            <p><a href="https://twitter.com/abhiguptaio"  style="color:#ddd;font-size: 16px;">Twitter</a></p>
+            <p><a href="https://www.youtube.com/channel/UCpj8oznjjLwVe5KHOGNrvnQ" style="color:#ddd;font-size: 16px;">YouTube</a></p>
+
+             <p><a href="https://github.com/iitrabhi" style="color:#ddd;font-size: 16px;">GitHub</a></p>
+             <p><a href="https://www.linkedin.com/in/abhiguptaio/"  style="color:#ddd;font-size: 16px;">LinkedIn</a></p>
+
+            <p><a href="https://scholar.google.com/citations?user=UfWvIkEAAAAJ"  style="color:#ddd;font-size: 16px;">Google Scholar</a></p>
+            <p><a href="https://www.researchgate.net/profile/Abhinav-Gupta-38"  style="color:#ddd;font-size: 16px;">Research Gate</a></p>
+            
+        </div>
+    </div>
+</div>
+<script src="/assets/js/mode_switcher.js" type="text/javascript"></script>
+    <script src="/assets/js/code_block.js" type="text/javascript"></script>
+</body>
+
+</html>

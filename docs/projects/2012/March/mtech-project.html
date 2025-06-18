@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name = "keywords" content = "fenics, topology optimization, isogeomtric analysis, hpc, phd blog, paraview, latex, computational mechanics, phd tools, parallel computation, python, phase field fracture, phase field topology optimization" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Non-linear analysis of RCC structures for seismic loading" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Understanding Newton Raphson and Arc Length method using ABAQUS." />
+<meta property="og:description" content="Understanding Newton Raphson and Arc Length method using ABAQUS." />
+<link rel="canonical" href="/projects/2012/March/mtech-project.html" />
+<meta property="og:url" content="/projects/2012/March/mtech-project.html" />
+<meta property="og:site_name" content="Abhinav Gupta" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-03-01T00:00:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Non-linear analysis of RCC structures for seismic loading" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2012-03-01T00:00:00+05:30","datePublished":"2012-03-01T00:00:00+05:30","description":"Understanding Newton Raphson and Arc Length method using ABAQUS.","headline":"Non-linear analysis of RCC structures for seismic loading","mainEntityOfPage":{"@type":"WebPage","@id":"/projects/2012/March/mtech-project.html"},"url":"/projects/2012/March/mtech-project.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/?" />
+    <title> 
+     
+      Non-linear analysis of RCC structures for seismic loading | 
+    
+    Abhinav Gupta
+  </title>
+
+
+  <!-- MailerLite Universal -->
+  <script>
+      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account', '325878');
+  </script>
+  <!-- End MailerLite Universal --><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Abhinav Gupta" /></head><body class="full_width_container"><div class="navbar-container">
+    <div class="primary_container ">
+        <a class="link home-icon" href="">
+                <svg width="76px" height="100%" viewBox="0 0 63 40" >
+                    <path d="M29.585,14.07l0.085,1.138l8.46,19.638l0.896,0.906c0.279,0.125 0.564,0.243 0.854,0.355c2.201,0.852 4.618,1.284 7.253,1.284c5.057,0 9.628,-1.101 13.717,-3.286l0.925,-1.544l0,-15.928l-1.75,-1.75l-11.924,0l-1.75,1.75l0,5.016l1.75,1.75l4.63,0c0,0 0,4.518 0,4.518c-0.594,0.254 -1.239,0.453 -1.934,0.6c-1.134,0.24 -2.34,0.358 -3.62,0.358c-1.348,0 -2.57,-0.236 -3.66,-0.726c-1.083,-0.487 -2.014,-1.154 -2.792,-2.005c-0.789,-0.862 -1.394,-1.888 -1.826,-3.07c-0.446,-1.225 -0.664,-2.566 -0.664,-4.021c0,-1.332 0.216,-2.577 0.656,-3.734c0.431,-1.132 1.037,-2.125 1.825,-2.974c0.777,-0.837 1.706,-1.49 2.786,-1.963c1.095,-0.48 2.321,-0.711 3.675,-0.711c1.37,0 2.671,0.226 3.901,0.683c1.182,0.438 2.192,1.054 3.02,1.859l2.463,-0.025l4.092,-4.136l-0.078,-2.536c-1.849,-1.651 -3.946,-2.797 -6.29,-3.44c-2.228,-0.612 -4.611,-0.921 -7.152,-0.921c-2.635,0 -5.052,0.432 -7.253,1.284c-2.243,0.867 -4.172,2.106 -5.792,3.71c-1.617,1.601 -2.887,3.534 -3.802,5.804c-0.275,0.683 -0.509,1.388 -0.701,2.117Z" style="fill-rule:nonzero;"/><path d="M16.141,3.21l-1.604,1.052l-13.552,31.152l1.604,2.448l6.204,0l1.628,-1.107l2.379,-6.021c-0,0 11.141,0 11.141,0c-0,0 2.46,6.038 2.46,6.038l1.62,1.09l6.336,0l1.608,-2.442l-13.42,-31.152l-1.608,-1.058l-4.796,0Zm4.507,19.272l-4.597,0c0,0 2.32,-6.017 2.32,-6.017l2.277,6.017Z" style="fill-rule:nonzero;"/>
+                </svg>
+        </a>
+        <div class="navbar align_menu" style="font-family: Montserrat; font-weight:500">
+            <a class="link" href="/pages/blog">Articles</a>
+            <a class="link" href="/pages/projects">Projects</a>
+            <a class="link nav_desktop" href="/pages/newsletters">Newsletter</a>
+            <a class="link" href="/pages/about">About</a>
+            <a href="/projects/2012/March/mtech-project.html" id="theme-toggle" onclick="modeSwitcher()" style="cursor: pointer;">Dark</a>
+        </div>
+    </div>
+</div><main aria-label="Content">
+        <div>
+            <div class="post_container">
+    <div class="post_item_left" style=" padding-bottom:50px; ">
+        <div class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+            <head>
+                <title>Non-linear analysis of RCC structures for seismic loading</title>
+                <script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({
+                    extensions: ["tex2jax.js"],
+                    jax: ["input/TeX", "output/HTML-CSS"],
+                    tex2jax: {
+                      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                      processEscapes: true
+                    },
+                    "HTML-CSS": { availableFonts: ["TeX"] }
+                  });
+                </script>
+                <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+            </head>
+            <header class="post-header" style="margin-bottom: 60px;">
+                <h1 style="font-weight:600; font-size: 46px; margin-top: 120px; " class="post-title p-name" itemprop="name headline">
+                    Non-linear analysis of RCC structures for seismic loading
+                </h1>
+                <p class="post-meta" style="font-size: 16px;">
+                    <time class="dt-published" datetime="2012-03-01T00:00:00+05:30" itemprop="datePublished">Mar 1, 2012
+                    </time><!-- --------------------------------------- -->
+                </p>
+            </header>
+            <hr style="/*position: relative; width: 300%;right:calc(200% - 30px);*/ background: var(--color-1);border: none;height: 1px; margin-bottom: 80px; opacity: 1;">
+            <div class="post-content e-content enlarged-char" itemprop="articleBody">
+                <h2 id="objective-of-the-study">Objective of the study</h2>
+
+<ul>
+  <li>Studying different material models available in ABAQUS v.6.9.</li>
+  <li>Modelling structural elements and seismic condition in ABAQUS v6.9 for conducting the non-linear analysis.</li>
+  <li>Studying the effect of material model parameters and mesh on analysis results.</li>
+  <li>Conducting a comparative study of the material models of concrete and proposing the best suited model of concrete for the purpose of seismic analysis.</li>
+</ul>
+
+<h2 id="effect-of-mesh-density-on-displacement-field">Effect of mesh density on displacement field</h2>
+
+<p><img src="/assets/images/image-20220213213900583.png" alt="image-20220213213900583" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Displacement</th>
+      <th>Ele_size = 300mm</th>
+      <th>200mm</th>
+      <th>100mm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Linear Hexahedral</td>
+      <td>3.509mm</td>
+      <td>3.501mm</td>
+      <td>3.069mm</td>
+    </tr>
+    <tr>
+      <td>Quadratic Hexahedral</td>
+      <td>2.761mm</td>
+      <td>3.051 mm</td>
+      <td>3.058mm</td>
+    </tr>
+    <tr>
+      <td>Linear Tetrahedral</td>
+      <td>1.855mm</td>
+      <td>2.918mm</td>
+      <td>2.987mm</td>
+    </tr>
+    <tr>
+      <td>Quadratic Tetrahedral</td>
+      <td>2.798mm</td>
+      <td>3.065mm</td>
+      <td>3.086mm</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Now, let’s make an important observation: By meshing a part with a certain type of element and using a certain size and shape, we impose additional constraints on the part. The meshed part must conform to applied loads and restraints. But being meshed, it must also conform to constraints imposed by meshing. In other words, deformation must satisfy loads and restraints and be piecewise linear. Because the meshed part has the additional constraints, the process of meshing makes it stiffer.</p>
+
+<p>The amount of additional stiffness depends on the element and their size. First-order elements require that the displacement field be piecewise linear. This is more restrictive than in second-order elements where the displacement field must be piecewise parabolic. Larger elements add more stiffness than small ones. However, the effect of added stiffness (call it artificial stiffness) always accompanies finite-element models. The effect of artificial stiffness is small but demonstrable in most cases, even with a reasonably well-refined mesh.</p>
+
+<h2 id="finite-element-model-development">Finite Element Model Development</h2>
+
+<p>This chapter aims at:-</p>
+
+<ul>
+  <li>Briefly discussing the procedure adapted by ABAQUS v6.9 for the non-linear analysis of a structure.</li>
+  <li>Validating the chosen material models and constitutive relations, by comparing the simulated results with experimental results.</li>
+  <li>Presenting the stress analysis results of beams and columns.</li>
+  <li>Studying parameters influencing the response of the structural member such as tension stiffening, damage ratios etc.</li>
+</ul>
+
+<p><img src="/assets/images/image-20220217071729934.png" alt="image-20220217071729934" /></p>
+
+<p><img src="/assets/images/image-20220217071800335.png" alt="image-20220217071800335" /></p>
+
+<p><strong>Compressive behavior:</strong> Vecchio and Collins (1982) recommended a stress–strain relationship, for transversely cracked concrete:</p>
+
+<p>\(f_{2}=f_{2 \max }\left[2\left(\frac{\varepsilon_{2}}{\varepsilon_{o}}\right)-\left(\frac{\varepsilon_{2}}{\varepsilon_{o}}\right)^{2}\right]\)
+\(f_{2 \max }=\frac{f^{\prime} c}{0.8+170 \varepsilon_{1}}\)</p>
+
+<p>where \(\epsilon_1\), is the average transverse strain measured on a gauge length that includes one or more cracks and \(\epsilon_2\) is the strain at the highest point in the compressive stress–strain curve, which is taken as 0.002. The term in brackets describes a parabolic stress–strain curve with apex at \(\epsilon_0\) and a peak stress that decreases as \(\epsilon_1\) increases.</p>
+
+<p><img src="/assets/images/image-20220217071943218.png" alt="image-20220217071943218" /></p>
+
+<p><strong>Tensile behavior:</strong> Tensile strength was assumed to be 10% of the compressive strength. After the ultimate point the tension softening branch is depicted by a linear plot which also symbolizes the amount of tension stiffening to be considered for the element.</p>
+
+<h3 id="concrete-modelling">Concrete modelling</h3>
+
+<p>Two material models for the purpose of simulation of concrete were studied, namely</p>
+
+<ul>
+  <li>Concrete Smeared Cracking Model</li>
+  <li>Concrete Damage Plasticity Model</li>
+</ul>
+
+<h3 id="the-concrete-smeared-cracking-model-parameters">The Concrete Smeared Cracking Model Parameters</h3>
+
+<p>Formulation for calculation of the basic material properties have been described above. In this section the input tables have been calculated which are required for defining the material in ABAQUS v6.9.</p>
+
+<p><img src="/assets/images/image-20220217072235167.png" alt="image-20220217072235167" /></p>
+
+<p>Tension Stiffening</p>
+
+<p>The tension stiffening curve is assumed to be linear.
+ sigma/sigma_c:- Fraction of remaining stress to stress at cracking.
+ epsilon-epsilon_c:- Absolute value of the direct strain minus the direct strain at cracking.</p>
+
+<p><img src="/assets/images/image-20220217072313958.png" alt="image-20220217072313958" /></p>
+
+<p><img src="/assets/images/image-20220217072334174.png" alt="image-20220217072334174" /></p>
+
+<p>The choice of tension stiffening parameter is important as it helps in stability of the solution process. Giving more tension stiffening to the model will help you get a stable solution but will decrease the amount of straining in the structure and thus the deflections. So a parametric study has to be carried out during the validation process to find the best suited value of this parameter.</p>
+
+<p><img src="/assets/images/image-20220217072455270.png" alt="image-20220217072455270" /></p>
+
+<figcaption>Comparison of load deflection graph for various values of tension stiffening.</figcaption>
+
+<p>Above figure shows us the load displacement graph of the model with various tension stiffening values compared to the experimental values. Here the strain required to reach a stress value of zero from failure point is termed as TS, so TS001 implies that the strain TS is 0.001. From the graph we can see that a value of TS = 0.001 would give us the best suited results. The same has been used for further study.</p>
+
+<blockquote>
+  <p>Too little (TS &lt; 0.001) tension stiffening leads to early failure of the element which results in negative eigenvalues in the system matrix.</p>
+</blockquote>
+
+<h2 id="the-concrete-damage-plasticity-model-parameters">The Concrete Damage Plasticity Model Parameters</h2>
+
+<p>Tomasz et al., (2005) conducted laboratory test in order to identify the constitutive parameters of B−50 grade concrete. These parameters are essential in damage plasticity model. In this study the value of dilation angle and eccentricity has been taken from this study. Rests of the values are taken to be the default values as provided by ABAQUS.</p>
+
+<p><img src="/assets/images/image-20220217072701631.png" alt="image-20220217072701631" /></p>
+
+<p><img src="/assets/images/image-20220217072734457.png" alt="image-20220217072734457" /></p>
+
+<p><img src="/assets/images/image-20220217072816429.png" alt="image-20220217072816429" /></p>
+
+<h2 id="material-properties-for-reinforcing-steel">Material Properties for reinforcing steel</h2>
+
+<p>Material properties for reinforcing steel are directly taken from the graphs and values as provided by <strong>Bresler and Scordelis (1963)</strong>.</p>
+
+<p><img src="/assets/images/image-20220217072845027.png" alt="image-20220217072845027" /></p>
+
+<h3 id="validation-of-concrete-material-models">Validation of Concrete Material Models</h3>
+
+<p>A comparison of the experimental results to that of analytical results the material models are made for the purpose of validation. The results are presented in the form of Load v/s deflection plot. The deflections were noted at mid span.</p>
+
+<p><img src="/assets/images/image-20220217073144729.png" alt="image-20220217073144729" /></p>
+
+<p>From the above figure we can see that the smeared cracking model and the concrete damage plasticity model almost follows the same equilibrium path as is described by the experiment. It has to be noted that the experiment was carried out in such a way that there was no bond slip, hence the results are in well agreement even with the use of embedded region as constrain between steel and concrete. If there is bond slip then that has to be modelled accordingly.</p>
+
+<h2 id="analysis-of-beam-column-joint">Analysis of Beam-Column Joint</h2>
+
+<p>In the analysis of reinforced concrete moment resisting frames the joints are generally assumed as rigid. In Indian practice, the joint is usually neglected for specific design with attention being restricted to provision of sufficient anchorage for beam longitudinal reinforcement. This may be acceptable when the frame is not subjected to earthquake loads.</p>
+
+<p>But when these frames are subjected to seismic loads the poor design practice of beam column joints is compounded by the high demand imposed by the adjoining flexural members (beams and columns) in the event of mobilizing their inelastic capacities to dissipate seismic energy. Unsafe design and detailing within the joint region jeopardizes the entire structure, even if other structural members conform to the design requirements.</p>
+
+<p>The moment resisting frame is expected to obtain ductility and energy dissipating capacity from flexural yield mechanism at the plastic hinges. Beam-column joint behavior is controlled by bond and shear failure mechanisms, which are weak sources for energy dissipation. The performance criteria for joints under seismic actions may be summarized as follows:</p>
+
+<ul>
+  <li>
+    <p>The joint should have sufficient strength to enable the maximum capacities to be mobilized in the adjoining flexural members.</p>
+  </li>
+  <li>
+    <p>The degradation of joints should be so limited such that the capacity of the column is not affected in carrying its design loads.</p>
+  </li>
+  <li>
+    <p>The joint deformation should not result in increased storey drift.</p>
+
+    <p>A 3D finite element model of a reinforced concrete beam column joint is discussed in this section. The geometry of this model is taken from the tests conducted by Beres et al. (1992). The concrete was modelled by linear, reduced integration, 3D solid element and reinforcement was modelled by linear, 3D truss element of ABAQUS.</p>
+  </li>
+</ul>
+
+<p><img src="/assets/images/image-20220217073350615.png" alt="image-20220217073350615" /></p>
+
+<p><img src="/assets/images/image-20220217073403778.png" alt="image-20220217073403778" /></p>
+
+<p>Concrete damage plasticity model is used for concrete and classic metal plasticity for steel.</p>
+
+<p><img src="/assets/images/image-20220217073501379.png" alt="image-20220217073501379" /></p>
+
+<p><img src="/assets/images/image-20220217073513040.png" alt="image-20220217073513040" /></p>
+
+<p>The applied loading consisted of a shear displacement imposed at the exposed end of the cantilever beam. The load was applied in small increments automatically by ABAQUS to overcome numerical instability difficulties that could have occurred had a large load been applied suddenly. The two ends of the column were taken to be pinned and a perfect bond was assumed between concrete and steel.</p>
+
+<p><img src="/assets/images/image-20220217073552929.png" alt="image-20220217073552929" /></p>
+
+<p>From the above figure we can see that the results are in well agreement with the experiment and the unreinforced beam column joint section fails in shear which could have adverse effect on the overall strength of assembly.</p>
+
+<h2 id="comparison-of-concrete-material-models">Comparison of Concrete Material Models</h2>
+
+<p>A detailed comparison of the two concrete material models is discussed here.</p>
+
+<h3 id="comparison-based-on-equilibrium-path">Comparison Based On Equilibrium Path</h3>
+
+<p>The first and foremost requirement of a material model is to properly depict the behavior of material and help the solution algorithm to follow exact equilibrium path. This comparison is being done with reference to two beams. The first one which is tested by (Bresler &amp; Scordelis, 1963) is having heavy flexural reinforcement and no shear reinforcement. Another beam tested by (Burns &amp; Seiss, 1962) is also used which is having flexural as well as shear reinforcement.</p>
+
+<p><img src="/assets/images/image-20220217074219963.png" alt="image-20220217074219963" /></p>
+
+<p>From above figure we can see that both the models behave in a similar fashion when subjected to low loads and they almost follow the same equilibrium path. Hence, for studies in which the structure is subjected to essentially monotonic loading which is significantly less that the ultimate load carrying capacity of its individual structural components, both the models can be used.</p>
+
+<p><img src="/assets/images/image-20220217074251508.png" alt="image-20220217074251508" /></p>
+
+<p>But when simulation of a beam with longitudinal reinforcement and stirrups (Burns &amp; Seiss, 1962) was done it was seen that the response of the model was stiffer than as observed during experiment. Still the deviation of response was under limit and we can see from Figure 7-4 that concrete damage plasticity model was able to predict the response of beam even after the ultimate load has reached whereas with the use of concrete smeared cracking model the analysis stopped at the ultimate point and was not able to continue further. Thus we can conclude that concrete damage plasticity model is more suited for analysis in which we want to study the response of structure to the point of collapse.</p>
+
+<h3 id="comparison-based-on-meshing-and-tension-stiffening">Comparison Based On Meshing and Tension Stiffening</h3>
+
+<p>The analytical results of the response of reinforced concrete structures are greatly influenced by the size of the finite element mesh and by the amount of tension stiffening of concrete. A sample beam as studied by Burns &amp; Seiss (1962) is modelled here to study the effect of these two parameters on the behavior of beam and accuracy of results.</p>
+
+<p><img src="/assets/images/image-20220217074335229.png" alt="image-20220217074335229" /></p>
+
+<blockquote>
+  <p><strong>TS001_M50 × 50</strong> means that the tension stiffening parameter value is 0.001 and the mesh is of size 50 mm.</p>
+</blockquote>
+
+<p><img src="/assets/images/image-20220217074347344.png" alt="image-20220217074347344" /></p>
+
+<p>From the above table we can see that results are highly dependent on the mesh size chosen and the amount of tension stiffening provided. Following conclusions are made out of this study,</p>
+
+<ul>
+  <li>Decreasing the mesh size i.e. adding more no of elements, lead to complicacy in the solution algorithm and thus its early termination.</li>
+  <li>Too fine mesh would under estimate the capacity of the structure and increase computational effort whereas too coarse mesh giving us a high capacity could easily diverge from exact equilibrium path.</li>
+  <li>Increasing the strain softening zone of concrete by modelling it for more tension stiffening usually helps in stabilizing the results,</li>
+  <li>But, providing more tension stiffening also leads to overestimation of the stiffness of structure.</li>
+</ul>
+
+<h3 id="comparison-based-on-crack-visualization">Comparison Based on Crack Visualization</h3>
+
+<p>We can visualize the formation of cracks in concrete structural element if we use Concrete Damage plasticity model to define the behavior of concrete. For the purpose of visualization of cracks we have to define the tensile damage parameters discussed in section 3.4.1.3. Crack is assumed to initiates at points where the tensile equivalent plastic strain is greater than zero and the maximum principal plastic strain is positive. The direction of the vector normal to the crack plane is assumed to be parallel to the direction of the maximum principal plastic strain. This direction can be viewed in the Visualization module of Abaqus/CAE with the help of DAMAGET field output variable as shown in Figure 7-5.</p>
+
+<p><img src="/assets/images/image-20220217074507060.png" alt="image-20220217074507060" /></p>
+
+<p>Whereas when the analysis is performed by taking smeared cracking model for concrete we cannot visualize cracks with the help of DAMAGET field output variable as there is no provision of providing damage definition while defining the concrete smeared cracking model. Thus DAMAGET variable would give us a contour of zero values throughout when activated in visualization module as shown in Figure 7-6.</p>
+
+<p><img src="/assets/images/image-20220217074522895.png" alt="image-20220217074522895" /></p>
+
+<p>Hence, concrete damage plasticity model should be used if it is required to visualize cracks in the study.</p>
+
+<h3 id="comparison-based-on-response-to-cyclic-behavior">Comparison Based on Response to cyclic behavior</h3>
+
+<p>Concrete damage plasticity model uses concepts of isotropic damaged elasticity in combination with isotropic tensile and compressive plasticity to represent the inelastic behavior of concrete and is designed for applications in which concrete can be subjected to monotonic, cyclic, and/or dynamic whereas concrete smeared cracking model is designed for applications in which the concrete is subjected to essentially monotonic straining.</p>
+
+<p>CDP also allows user control of stiffness recovery effects during cyclic load reversals whereas there is no such provision in concrete smeared cracking model.</p>
+
+<p>Thus if the analysis consists of application of cyclic and/or dynamic application of load to the structure than concrete damage plasticity model is more suited for the analysis.</p>
+
+<p><img src="/assets/images/image-20220217074640139.png" alt="image-20220217074640139" /></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<ul>
+  <li>
+    <p>Both the concrete models perform well under low strains.</p>
+  </li>
+  <li>
+    <p>The effect of tension-stiffening is important in the analysis of RC structure.</p>
+  </li>
+  <li>
+    <p>The inclusion of tension stiffening is important for avoiding numerical problems in connection with the response of structure post cracking.</p>
+  </li>
+  <li>
+    <p>Tetrahedral elements perform better than hexahedral elements if the region to be</p>
+
+    <p>meshed is irregular.</p>
+  </li>
+  <li>
+    <p>Second order hexahedral elements are stiffer than first order hexahedral elements whereas second order tetrahedral elements are less stiff than first order tetrahedral elements.</p>
+  </li>
+  <li>
+    <p>Increasing the element size in a finite element mesh increases the stiffness of model.</p>
+  </li>
+  <li>
+    <p>Tension-stiffening, which accounts for the concrete tensile stresses between cracks, increases the stiffness of the member.</p>
+  </li>
+  <li>
+    <p>Results are highly dependent on the mesh size and amount of tension stiffening</p>
+
+    <p>modelled.</p>
+  </li>
+  <li>
+    <p>Crack propagation can only be visualized when Concrete damage plasticity model is used to define the behavior of concrete.</p>
+  </li>
+  <li>
+    <p>For the purpose of ultimate analysis of a structure Concrete damage plasticity model is mode suited.</p>
+  </li>
+  <li>
+    <p>Concrete damage plasticity model also incorporates the permanent damage caused to stiffness of concrete due to straining beyond elastic limit.</p>
+  </li>
+  <li>
+    <p>For cyclic loading Concrete damage plasticity model allows user control of stiffness recovery effects whereas there is no such provision in concrete smeared cracking model.</p>
+  </li>
+  <li>
+    <p>Inclusion of bond−slip behaviour into the model is important as under seismic type excitation there is finite amount of slip between concrete and steel. Modelling the structure with no bond−slip behaviour would lead to overestimation of strength.</p>
+  </li>
+</ul>
+
+<p>Based on the above study it can be concluded that proper understanding of the material model parameters and modelling techniques is important for the simulation of RC structural members under any kind of loading. Especially for the case of non−linear analysis even a slight variation in material model parameters or meshing techniques could lead to significant deviation of analysis results from actual equilibrium path. Thus extensive amount of study must be carried out before choosing a material model for a particular type of analysis.</p>
+
+<p>For conducting a Non−linear seismic analysis of a structure, Concrete Damage Plasticity model is found to be suited to model the behavior of reinforced concrete.</p>
+
+<h2 id="recommendations-for-further-work">Recommendations for Further Work</h2>
+
+<p>In present study various kinds of modelling techniques available in ABAQUS v6.9 to model reinforced concrete structure subjected to monotonic or cyclic loading has been studied in detail. A material model for concrete and steel has been recommended and various methods used to model bond−slip behaviour of reinforced concrete in ABAQUS v6.9 have been documented.</p>
+
+<p>Present study does not incorporate modelling of bond−slip in structural elements. This has led to some overestimation of stiffness as can be seen from results. Therefore for proper and accurate modelling of reinforced concrete there is a need to model this behaviour.</p>
+
+<p>Current work on material models and modelling techniques can be extended to the next phase by conducting a comparative study of the available bond−slip models in ABAQUS v6.9 and then including the best suited bond−slip model in finite element model of RC sub−assemblages. Further a detailed study on full scaled model of RC frames subjected to seismic loading can be conducted with the help of ABAQUS.</p>
+
+            </div>
+            <div class="PageNavigation">
+                
+                <a class="button button-prev" href="/projects/2010/March/btech-project.html" title="RCC design of multistorey building">&laquo; Previous</a>
+                
+                
+                <a class="button button-next" href="/projects/2013/March/liquifaction-analysis.html" title="Automated liquifaction analysis">Next &raquo;</a>
+                
+            </div>
+            <!-- ----------------------------------------------------------- -->
+            <hr style="/*position: relative; width: 300%;right:calc(200% - 30px);*/ background: var(--color-1);border: none;height: 1px; margin-bottom: 80px; opacity: 1;">
+            <div class="flexbox_container_two_col flexbox_container_flip " style="padding-top: 50px;padding-bottom: 50px;">
+                <div class="flexbox_item">
+                    <div>
+                        <p style="font-size:36px; font-family: Montserrat; font-weight: bold; line-height: 1.2; ">Newsletter</p>
+                        <p style="font-size:16px; padding-top: 20px; padding-bottom: 30px;">"<em><strong>Quality Research:</strong> A weekly newsletter covering ideas and tools for better academic research.</em>" </p>
+                        <a class="ml-onclick-form button button-hello" href="javascript:void(0)" onclick="ml('show', 'uSsXyN', true)">Try the free newsletter</a>
+                    </div>
+                </div>
+                <div class="flexbox_item">
+                    <div class="abhi-icon" style="vertical-align: middle;     float: right;"><object data="/assets/svg/newsletter.svg" width="80%" style="pointer-events: none;"> </object></div>
+                </div>
+            </div>
+            <!-- ----------------------------------------------------------- -->
+        </div>
+    </div>
+    <div class="post_item_right hide_mobile">
+        <p style="padding-top:200px; font-size: 14px; font-family: Montserrat;">ABOUT THE AUTHOR</p>
+        <hr style="/*position: relative; width: 300%;right:calc(200% - 30px);*/ background: var(--color-1);border: none;height: 1px; margin-bottom: 40px;">
+        <p style="margin-bottom:20px;font-size: 14px;">Hi, I am <strong>Abhinav Gupta</strong>. I am a researcher at Vanderbilt University, USA. I create content to help you become effective in producing quality research. If you are interested in research, academia, or computational mechanics, make sure to follow me. </p>
+        <div style="margin-top:50px;">
+            <ul class="social-media-list" style="font-size: 14px;">
+                <li>
+                    <a class="black-link" href="https://www.linkedin.com/in/abhiguptaio/" target="_blank" rel="noopener noreferrer">[LinkedIn]</a>
+                </li>
+                <li>
+                    <a class="black-link" href="https://github.com/iitrabhi" target="_blank" rel="noopener noreferrer"> [Github]</a>
+                </li>
+                <li>
+                    <a class="black-link" href="https://www.researchgate.net/profile/Abhinav_Gupta52" target="_blank" rel="noopener noreferrer">[RG]</a>
+                </li>
+                <li>
+                    <p>👋</p>
+                </li>
+            </ul>
+        </div>
+        <a class="hover_highlight" style="font-size: 14px;" href="/pages/about">Click here to learn more →</a>
+        <p style="margin-bottom:50px"></p>
+    </div>
+</div>
+        </div>
+    </main>
+<div style="min-height: 500px;background-color: #000; width:100%">
+    <div class="primary_container">
+        <div style="flex: 60%; ">
+            <p style="font-family:Montserrat; color:#fff; font-weight:700; margin-top: 50px;">ABHI GUPTA</p>
+        </div>
+        <div class="hide_mobile" style="flex: 20%;">
+            <p style="font-family:Montserrat; color:#888; font-weight:700; margin-top: 50px;">Categories</p>
+             <p><a href="/categories/coding"  style="color:#ddd; font-size: 16px;">Coding</a></p>
+            <p><a href="/categories/presentation"  style="color:#ddd;font-size: 16px;">Presentation</a></p>
+            <p><a href="/categories/productivity"  style="color:#ddd;font-size: 16px;">Productivity</a></p>
+        </div>
+        <div style="flex: 20%; ">
+            <p style="font-family:Montserrat; color:#888; font-weight:700; margin-top: 50px;">Links</p>
+           
+            <p><a href="https://twitter.com/abhiguptaio"  style="color:#ddd;font-size: 16px;">Twitter</a></p>
+            <p><a href="https://www.youtube.com/channel/UCpj8oznjjLwVe5KHOGNrvnQ" style="color:#ddd;font-size: 16px;">YouTube</a></p>
+
+             <p><a href="https://github.com/iitrabhi" style="color:#ddd;font-size: 16px;">GitHub</a></p>
+             <p><a href="https://www.linkedin.com/in/abhiguptaio/"  style="color:#ddd;font-size: 16px;">LinkedIn</a></p>
+
+            <p><a href="https://scholar.google.com/citations?user=UfWvIkEAAAAJ"  style="color:#ddd;font-size: 16px;">Google Scholar</a></p>
+            <p><a href="https://www.researchgate.net/profile/Abhinav-Gupta-38"  style="color:#ddd;font-size: 16px;">Research Gate</a></p>
+            
+        </div>
+    </div>
+</div>
+<script src="/assets/js/mode_switcher.js" type="text/javascript"></script>
+    <script src="/assets/js/code_block.js" type="text/javascript"></script>
+</body>
+
+</html>

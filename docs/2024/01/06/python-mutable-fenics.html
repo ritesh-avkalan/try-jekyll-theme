@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name = "keywords" content = "fenics, topology optimization, isogeomtric analysis, hpc, phd blog, paraview, latex, computational mechanics, phd tools, parallel computation, python, phase field fracture, phase field topology optimization" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Understanding Object References in Python: Immutable vs Mutable Behaviors" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Exploring Mutable and Immutable Object References in Python and Their Implications in FEniCS Simulations." />
+<meta property="og:description" content="Exploring Mutable and Immutable Object References in Python and Their Implications in FEniCS Simulations." />
+<link rel="canonical" href="/2024/01/06/python-mutable-fenics.html" />
+<meta property="og:url" content="/2024/01/06/python-mutable-fenics.html" />
+<meta property="og:site_name" content="Abhinav Gupta" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-01-06T00:00:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Understanding Object References in Python: Immutable vs Mutable Behaviors" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-06T00:00:00+05:30","datePublished":"2024-01-06T00:00:00+05:30","description":"Exploring Mutable and Immutable Object References in Python and Their Implications in FEniCS Simulations.","headline":"Understanding Object References in Python: Immutable vs Mutable Behaviors","mainEntityOfPage":{"@type":"WebPage","@id":"/2024/01/06/python-mutable-fenics.html"},"url":"/2024/01/06/python-mutable-fenics.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/?" />
+    <title> 
+     
+      Understanding Object References in Python: Immutable vs Mutable Behaviors | 
+    
+    Abhinav Gupta
+  </title>
+
+
+  <!-- MailerLite Universal -->
+  <script>
+      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account', '325878');
+  </script>
+  <!-- End MailerLite Universal --><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Abhinav Gupta" /></head><body class="full_width_container"><div class="navbar-container">
+    <div class="primary_container ">
+        <a class="link home-icon" href="">
+                <svg width="76px" height="100%" viewBox="0 0 63 40" >
+                    <path d="M29.585,14.07l0.085,1.138l8.46,19.638l0.896,0.906c0.279,0.125 0.564,0.243 0.854,0.355c2.201,0.852 4.618,1.284 7.253,1.284c5.057,0 9.628,-1.101 13.717,-3.286l0.925,-1.544l0,-15.928l-1.75,-1.75l-11.924,0l-1.75,1.75l0,5.016l1.75,1.75l4.63,0c0,0 0,4.518 0,4.518c-0.594,0.254 -1.239,0.453 -1.934,0.6c-1.134,0.24 -2.34,0.358 -3.62,0.358c-1.348,0 -2.57,-0.236 -3.66,-0.726c-1.083,-0.487 -2.014,-1.154 -2.792,-2.005c-0.789,-0.862 -1.394,-1.888 -1.826,-3.07c-0.446,-1.225 -0.664,-2.566 -0.664,-4.021c0,-1.332 0.216,-2.577 0.656,-3.734c0.431,-1.132 1.037,-2.125 1.825,-2.974c0.777,-0.837 1.706,-1.49 2.786,-1.963c1.095,-0.48 2.321,-0.711 3.675,-0.711c1.37,0 2.671,0.226 3.901,0.683c1.182,0.438 2.192,1.054 3.02,1.859l2.463,-0.025l4.092,-4.136l-0.078,-2.536c-1.849,-1.651 -3.946,-2.797 -6.29,-3.44c-2.228,-0.612 -4.611,-0.921 -7.152,-0.921c-2.635,0 -5.052,0.432 -7.253,1.284c-2.243,0.867 -4.172,2.106 -5.792,3.71c-1.617,1.601 -2.887,3.534 -3.802,5.804c-0.275,0.683 -0.509,1.388 -0.701,2.117Z" style="fill-rule:nonzero;"/><path d="M16.141,3.21l-1.604,1.052l-13.552,31.152l1.604,2.448l6.204,0l1.628,-1.107l2.379,-6.021c-0,0 11.141,0 11.141,0c-0,0 2.46,6.038 2.46,6.038l1.62,1.09l6.336,0l1.608,-2.442l-13.42,-31.152l-1.608,-1.058l-4.796,0Zm4.507,19.272l-4.597,0c0,0 2.32,-6.017 2.32,-6.017l2.277,6.017Z" style="fill-rule:nonzero;"/>
+                </svg>
+        </a>
+        <div class="navbar align_menu" style="font-family: Montserrat; font-weight:500">
+            <a class="link" href="/pages/blog">Articles</a>
+            <a class="link" href="/pages/projects">Projects</a>
+            <a class="link nav_desktop" href="/pages/newsletters">Newsletter</a>
+            <a class="link" href="/pages/about">About</a>
+            <a href="/2024/01/06/python-mutable-fenics.html" id="theme-toggle" onclick="modeSwitcher()" style="cursor: pointer;">Dark</a>
+        </div>
+    </div>
+</div><main aria-label="Content">
+        <div>
+            <div class="post_container">
+    <div class="post_item_left" style=" padding-bottom:50px; ">
+        <div class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+            <head>
+                <title>Understanding Object References in Python: Immutable vs Mutable Behaviors</title>
+                <script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({
+                    extensions: ["tex2jax.js"],
+                    jax: ["input/TeX", "output/HTML-CSS"],
+                    tex2jax: {
+                      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                      processEscapes: true
+                    },
+                    "HTML-CSS": { availableFonts: ["TeX"] }
+                  });
+                </script>
+                <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+            </head>
+            <header class="post-header" style="margin-bottom: 60px;">
+                <h1 style="font-weight:600; font-size: 46px; margin-top: 120px; " class="post-title p-name" itemprop="name headline">
+                    Understanding Object References in Python: Immutable vs Mutable Behaviors
+                </h1>
+                <p class="post-meta" style="font-size: 16px;">
+                    <time class="dt-published" datetime="2024-01-06T00:00:00+05:30" itemprop="datePublished">Jan 6, 2024
+                    </time><span style="padding-left:10px;padding-right: 10px;">|</span><span class="post-meta"><a style="font-size:14px;color: var(--text-color);" href="/categories/coding">CODING</a></span><!-- --------------------------------------- -->
+                </p>
+            </header>
+            <hr style="/*position: relative; width: 300%;right:calc(200% - 30px);*/ background: var(--color-1);border: none;height: 1px; margin-bottom: 80px; opacity: 1;">
+            <div class="post-content e-content enlarged-char" itemprop="articleBody">
+                <p>In Python, the way variables are handled is based on what they are: objects. Everything in Python is an object, including integers, floats, functions, and even types and classes. However, the behavior of these objects can vary significantly depending on whether they are mutable or immutable.</p>
+
+<h2 id="immutable-objects">Immutable Objects:</h2>
+<p>Immutable objects in Python include <code class="language-plaintext highlighter-rouge">integers</code>, <code class="language-plaintext highlighter-rouge">floats</code>, <code class="language-plaintext highlighter-rouge">strings</code>, and <code class="language-plaintext highlighter-rouge">tuples</code>.</p>
+<ul>
+  <li>When you create an immutable object, like setting <code class="language-plaintext highlighter-rouge">u = 10</code>, you create an object <code class="language-plaintext highlighter-rouge">10</code>, and <code class="language-plaintext highlighter-rouge">u</code> is a name that refers to it. If you then do <code class="language-plaintext highlighter-rouge">v = u</code>, you are creating a new reference <code class="language-plaintext highlighter-rouge">v</code> that also points to object <code class="language-plaintext highlighter-rouge">10</code>.</li>
+  <li>However, because integers are immutable when you do something like <code class="language-plaintext highlighter-rouge">u += 1</code>, you are not modifying the object <code class="language-plaintext highlighter-rouge">10</code> — you are creating a new object <code class="language-plaintext highlighter-rouge">11</code> and changing <code class="language-plaintext highlighter-rouge">u</code> to refer to it instead. This is a critical distinction: <code class="language-plaintext highlighter-rouge">u</code> and <code class="language-plaintext highlighter-rouge">v</code> are separate references, and changing one does not affect the other.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">u</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">u</span>  <span class="c1"># v is now a reference to the same integer object as u
+</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Original u:</span><span class="sh">"</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>  <span class="c1"># Output: 10
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Original v:</span><span class="sh">"</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>  <span class="c1"># Output: 10
+</span>
+<span class="n">u</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># u is now a reference to a new integer object, 11
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Modified u:</span><span class="sh">"</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>  <span class="c1"># Output: 11
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Unchanged v:</span><span class="sh">"</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>  <span class="c1"># Output: 10
+</span>
+</code></pre></div></div>
+
+<p>When you modify <code class="language-plaintext highlighter-rouge">u</code> by doing <code class="language-plaintext highlighter-rouge">u += 1</code>, you’re not changing the integer object <code class="language-plaintext highlighter-rouge">10</code>. Instead, you’re creating a new integer object <code class="language-plaintext highlighter-rouge">11</code> and updating <code class="language-plaintext highlighter-rouge">u</code> to reference this new object. Since integers are immutable, this is the only way to “change” <code class="language-plaintext highlighter-rouge">u</code>. The variable <code class="language-plaintext highlighter-rouge">v</code> still references the original integer object <code class="language-plaintext highlighter-rouge">10</code>.</p>
+<h2 id="mutable-objects">Mutable Objects:</h2>
+
+<p>Mutable objects include <code class="language-plaintext highlighter-rouge">lists</code>, <code class="language-plaintext highlighter-rouge">dictionaries</code>, and most <code class="language-plaintext highlighter-rouge">class instances</code>. The word “most” acknowledges the existence of deliberately designed immutable classes in Python, even though they are less common. Most classes you’ll encounter or write are likely mutable because that’s the default behavior and often what’s desired. However, when designing or using a class, it’s important to understand its mutability, as it will affect how you interact with its instances and what implications it has for your program’s behavior.</p>
+
+<p>With mutable objects such as instances of custom classes, assignments don’t create new objects; they only create new references to the same object.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">CustomObject</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+
+<span class="n">u</span> <span class="o">=</span> <span class="nc">CustomObject</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">u</span>  <span class="c1"># v is now another reference to the same CustomObject instance as u
+</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Original u.value:</span><span class="sh">"</span><span class="p">,</span> <span class="n">u</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>  <span class="c1"># Output: 10
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Original v.value:</span><span class="sh">"</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>  <span class="c1"># Output: 10
+</span>
+<span class="n">u</span><span class="p">.</span><span class="n">value</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Modifies the value attribute of the object referred to by u
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Modified u.value:</span><span class="sh">"</span><span class="p">,</span> <span class="n">u</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>  <span class="c1"># Output: 11
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">v.value also changes:</span><span class="sh">"</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>  <span class="c1"># Output: 11
+</span>
+</code></pre></div></div>
+
+<p>In this mutable scenario, when you modify <code class="language-plaintext highlighter-rouge">u.value</code> by doing <code class="language-plaintext highlighter-rouge">u.value += 1</code>, you modify the object that both <code class="language-plaintext highlighter-rouge">u</code> and <code class="language-plaintext highlighter-rouge">v</code> reference. As a result, the change is reflected in both <code class="language-plaintext highlighter-rouge">u.value</code> and <code class="language-plaintext highlighter-rouge">v.value</code>.</p>
+
+<h2 id="a-note-on-fenics">A note on FEniCS</h2>
+<p>Suppose you have a FEniCS <code class="language-plaintext highlighter-rouge">Function</code> object <code class="language-plaintext highlighter-rouge">u</code> and assign it to an attribute of a class instance like <code class="language-plaintext highlighter-rouge">self.u</code>. In this case, both <code class="language-plaintext highlighter-rouge">u</code> and <code class="language-plaintext highlighter-rouge">self.u</code> refer to the same actual object in memory. If this object is mutable, any changes made to it through any of its references will be reflected across all references. For instance, if the function object <code class="language-plaintext highlighter-rouge">u</code> is modified in place in a method of your class, this change will also be visible outside of the class because <code class="language-plaintext highlighter-rouge">self.u</code> and <code class="language-plaintext highlighter-rouge">u</code> are just two names for the same object.</p>
+
+<p>This also holds true for passing a FEniCS <code class="language-plaintext highlighter-rouge">Function</code> object to a python function.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">fenics</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Define the problem domain, mesh, function space
+</span><span class="n">mesh</span> <span class="o">=</span> <span class="nc">UnitSquareMesh</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">V</span> <span class="o">=</span> <span class="nc">FunctionSpace</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="sh">'</span><span class="s">P</span><span class="sh">'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Create a FEniCS Function object (mutable)
+</span><span class="n">u</span> <span class="o">=</span> <span class="nc">Function</span><span class="p">(</span><span class="n">V</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">modify_function</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+    <span class="c1"># Modify the function object
+</span>    <span class="n">fn</span><span class="p">.</span><span class="nf">vector</span><span class="p">()[:]</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Increment all values by 1
+</span>    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Values of function inside modify_function:</span><span class="sh">"</span><span class="p">,</span> <span class="n">fn</span><span class="p">.</span><span class="nf">vector</span><span class="p">()[:])</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Values of u before function call:</span><span class="sh">"</span><span class="p">,</span> <span class="n">u</span><span class="p">.</span><span class="nf">vector</span><span class="p">()[:])</span>
+<span class="nf">modify_function</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>  <span class="c1"># Pass the mutable object to the function
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Values of u after function call:</span><span class="sh">"</span><span class="p">,</span> <span class="n">u</span><span class="p">.</span><span class="nf">vector</span><span class="p">()[:])</span>  <span class="c1"># u is modified outside function
+</span>
+</code></pre></div></div>
+
+<p>In this FEniCS example, <code class="language-plaintext highlighter-rouge">u</code> is a <code class="language-plaintext highlighter-rouge">Function</code> object that is mutable. When passed to the <code class="language-plaintext highlighter-rouge">modify_function</code>, the function modifies the <code class="language-plaintext highlighter-rouge">Function</code> object <code class="language-plaintext highlighter-rouge">fn</code> (the same as <code class="language-plaintext highlighter-rouge">u</code>). The modification is an in-place change, incrementing all function values by 1. After the function call, you can observe that <code class="language-plaintext highlighter-rouge">u</code> has been modified outside the function because <code class="language-plaintext highlighter-rouge">fn</code> and <code class="language-plaintext highlighter-rouge">u</code> refer to the same <code class="language-plaintext highlighter-rouge">Function</code> object.</p>
+
+<h3 id="further-discussion-on-the-assignment-in-fenics">Further discussion on the assignment in FEniCS</h3>
+
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">u.assign(v)</code>: This method is specifically used in FEniCS. When you have two function objects, say <code class="language-plaintext highlighter-rouge">u</code> and <code class="language-plaintext highlighter-rouge">v</code>, <code class="language-plaintext highlighter-rouge">u.assign(v)</code> assigns the values of <code class="language-plaintext highlighter-rouge">v</code> to <code class="language-plaintext highlighter-rouge">u</code> without changing the underlying function space of <code class="language-plaintext highlighter-rouge">u</code>. This means that after the assignment, <code class="language-plaintext highlighter-rouge">u</code> and <code class="language-plaintext highlighter-rouge">v</code> will have the same values in their respective function spaces, but their function spaces or any other associated data remain unchanged. This method is particularly used when you want to update a solution or a variable iteratively without altering its properties.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">u = v</code>: This is a standard assignment operation in Python. In the context of FEniCS, when you say <code class="language-plaintext highlighter-rouge">u = v</code>, you are not just copying the values from <code class="language-plaintext highlighter-rouge">v</code> to <code class="language-plaintext highlighter-rouge">u</code>. Still, you are also making <code class="language-plaintext highlighter-rouge">u</code> reference the same object as <code class="language-plaintext highlighter-rouge">v</code>. After this operation, any change to <code class="language-plaintext highlighter-rouge">v</code> will reflect in <code class="language-plaintext highlighter-rouge">u</code> as well because they are essentially the same object. This doesn’t just assign the current values but makes both variables refer to the same underlying data and function space.</p>
+  </li>
+</ol>
+
+<p>In summary, <code class="language-plaintext highlighter-rouge">u.assign(v)</code> is the way to copy values from one function to another in FEniCS, preserving the original structure and properties of the function, while <code class="language-plaintext highlighter-rouge">u = v</code> is a way to make two variables reference the same object, leading to a complete overlap of their identities.</p>
+
+<p>In practice, <code class="language-plaintext highlighter-rouge">u.assign(v)</code> is used when you want to update or iterate solutions in FEniCS, keeping the function spaces distinct, whereas <code class="language-plaintext highlighter-rouge">u = v</code> is a broader Python assignment operation, which in FEniCS context would typically be used for setting up initial conditions or simplifying references.</p>
+
+<h2 id="assignment-summary">Assignment Summary:</h2>
+<ul>
+  <li><strong>Immutable objects</strong>: Assignment creates a new reference to an object. If you modify the original reference (like changing <code class="language-plaintext highlighter-rouge">u</code> to point to a different integer), the new reference (<code class="language-plaintext highlighter-rouge">v</code>) is unaffected because it still points to the original object.</li>
+  <li><strong>Mutable objects</strong>: Assignment creates a new reference to the same object. If you modify the object through one reference, all references see the change because they all point to the same object.</li>
+</ul>
+
+<p>Understanding these behaviors is crucial when working with different types of objects in Python, especially when the effects of functions and methods on objects can significantly impact the program’s behavior. It’s also why careful management of object references is important in Python to avoid unintended side effects, particularly with mutable objects.</p>
+
+            </div>
+            <div class="PageNavigation">
+                
+                <a class="button button-prev" href="/2023/04/20/hpc-for-fea.html" title="Demystifying High-Performance Computing for Finite Element Analysis Simulations">&laquo; Previous</a>
+                
+                
+                <a class="button button-next" href="/2024/01/23/stokes-equation-ice-glacier-modelling.html" title="Stokes Flow Simplified: A Beginner's Guide to Ice Movement">Next &raquo;</a>
+                
+            </div>
+            <!-- ----------------------------------------------------------- -->
+            <hr style="/*position: relative; width: 300%;right:calc(200% - 30px);*/ background: var(--color-1);border: none;height: 1px; margin-bottom: 80px; opacity: 1;">
+            <div class="flexbox_container_two_col flexbox_container_flip " style="padding-top: 50px;padding-bottom: 50px;">
+                <div class="flexbox_item">
+                    <div>
+                        <p style="font-size:36px; font-family: Montserrat; font-weight: bold; line-height: 1.2; ">Newsletter</p>
+                        <p style="font-size:16px; padding-top: 20px; padding-bottom: 30px;">"<em><strong>Quality Research:</strong> A weekly newsletter covering ideas and tools for better academic research.</em>" </p>
+                        <a class="ml-onclick-form button button-hello" href="javascript:void(0)" onclick="ml('show', 'uSsXyN', true)">Try the free newsletter</a>
+                    </div>
+                </div>
+                <div class="flexbox_item">
+                    <div class="abhi-icon" style="vertical-align: middle;     float: right;"><object data="/assets/svg/newsletter.svg" width="80%" style="pointer-events: none;"> </object></div>
+                </div>
+            </div>
+            <!-- ----------------------------------------------------------- -->
+        </div>
+    </div>
+    <div class="post_item_right hide_mobile">
+        <p style="padding-top:200px; font-size: 14px; font-family: Montserrat;">ABOUT THE AUTHOR</p>
+        <hr style="/*position: relative; width: 300%;right:calc(200% - 30px);*/ background: var(--color-1);border: none;height: 1px; margin-bottom: 40px;">
+        <p style="margin-bottom:20px;font-size: 14px;">Hi, I am <strong>Abhinav Gupta</strong>. I am a researcher at Vanderbilt University, USA. I create content to help you become effective in producing quality research. If you are interested in research, academia, or computational mechanics, make sure to follow me. </p>
+        <div style="margin-top:50px;">
+            <ul class="social-media-list" style="font-size: 14px;">
+                <li>
+                    <a class="black-link" href="https://www.linkedin.com/in/abhiguptaio/" target="_blank" rel="noopener noreferrer">[LinkedIn]</a>
+                </li>
+                <li>
+                    <a class="black-link" href="https://github.com/iitrabhi" target="_blank" rel="noopener noreferrer"> [Github]</a>
+                </li>
+                <li>
+                    <a class="black-link" href="https://www.researchgate.net/profile/Abhinav_Gupta52" target="_blank" rel="noopener noreferrer">[RG]</a>
+                </li>
+                <li>
+                    <p>👋</p>
+                </li>
+            </ul>
+        </div>
+        <a class="hover_highlight" style="font-size: 14px;" href="/pages/about">Click here to learn more →</a>
+        <p style="margin-bottom:50px"></p>
+    </div>
+</div>
+        </div>
+    </main>
+<div style="min-height: 500px;background-color: #000; width:100%">
+    <div class="primary_container">
+        <div style="flex: 60%; ">
+            <p style="font-family:Montserrat; color:#fff; font-weight:700; margin-top: 50px;">ABHI GUPTA</p>
+        </div>
+        <div class="hide_mobile" style="flex: 20%;">
+            <p style="font-family:Montserrat; color:#888; font-weight:700; margin-top: 50px;">Categories</p>
+             <p><a href="/categories/coding"  style="color:#ddd; font-size: 16px;">Coding</a></p>
+            <p><a href="/categories/presentation"  style="color:#ddd;font-size: 16px;">Presentation</a></p>
+            <p><a href="/categories/productivity"  style="color:#ddd;font-size: 16px;">Productivity</a></p>
+        </div>
+        <div style="flex: 20%; ">
+            <p style="font-family:Montserrat; color:#888; font-weight:700; margin-top: 50px;">Links</p>
+           
+            <p><a href="https://twitter.com/abhiguptaio"  style="color:#ddd;font-size: 16px;">Twitter</a></p>
+            <p><a href="https://www.youtube.com/channel/UCpj8oznjjLwVe5KHOGNrvnQ" style="color:#ddd;font-size: 16px;">YouTube</a></p>
+
+             <p><a href="https://github.com/iitrabhi" style="color:#ddd;font-size: 16px;">GitHub</a></p>
+             <p><a href="https://www.linkedin.com/in/abhiguptaio/"  style="color:#ddd;font-size: 16px;">LinkedIn</a></p>
+
+            <p><a href="https://scholar.google.com/citations?user=UfWvIkEAAAAJ"  style="color:#ddd;font-size: 16px;">Google Scholar</a></p>
+            <p><a href="https://www.researchgate.net/profile/Abhinav-Gupta-38"  style="color:#ddd;font-size: 16px;">Research Gate</a></p>
+            
+        </div>
+    </div>
+</div>
+<script src="/assets/js/mode_switcher.js" type="text/javascript"></script>
+    <script src="/assets/js/code_block.js" type="text/javascript"></script>
+</body>
+
+</html>

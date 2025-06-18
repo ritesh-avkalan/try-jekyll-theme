@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name = "keywords" content = "fenics, topology optimization, isogeomtric analysis, hpc, phd blog, paraview, latex, computational mechanics, phd tools, parallel computation, python, phase field fracture, phase field topology optimization" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Some surprising findings on direct vs iterative in MATLAB." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I am trying to solve a million DoF system with PETSc as well as MATLAB. In both cases the system has been assembled and I have the K matrix and the F vector." />
+<meta property="og:description" content="I am trying to solve a million DoF system with PETSc as well as MATLAB. In both cases the system has been assembled and I have the K matrix and the F vector." />
+<link rel="canonical" href="/2021/03/12/matlab-direct.html" />
+<meta property="og:url" content="/2021/03/12/matlab-direct.html" />
+<meta property="og:site_name" content="Abhinav Gupta" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-12T00:00:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Some surprising findings on direct vs iterative in MATLAB." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2021-03-12T00:00:00+05:30","datePublished":"2021-03-12T00:00:00+05:30","description":"I am trying to solve a million DoF system with PETSc as well as MATLAB. In both cases the system has been assembled and I have the K matrix and the F vector.","headline":"Some surprising findings on direct vs iterative in MATLAB.","mainEntityOfPage":{"@type":"WebPage","@id":"/2021/03/12/matlab-direct.html"},"url":"/2021/03/12/matlab-direct.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/?" />
+    <title> 
+     
+      Some surprising findings on direct vs iterative in MATLAB. | 
+    
+    Abhinav Gupta
+  </title>
+
+
+  <!-- MailerLite Universal -->
+  <script>
+      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account', '325878');
+  </script>
+  <!-- End MailerLite Universal --><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Abhinav Gupta" /></head><body class="full_width_container"><div class="navbar-container">
+    <div class="primary_container ">
+        <a class="link home-icon" href="">
+                <svg width="76px" height="100%" viewBox="0 0 63 40" >
+                    <path d="M29.585,14.07l0.085,1.138l8.46,19.638l0.896,0.906c0.279,0.125 0.564,0.243 0.854,0.355c2.201,0.852 4.618,1.284 7.253,1.284c5.057,0 9.628,-1.101 13.717,-3.286l0.925,-1.544l0,-15.928l-1.75,-1.75l-11.924,0l-1.75,1.75l0,5.016l1.75,1.75l4.63,0c0,0 0,4.518 0,4.518c-0.594,0.254 -1.239,0.453 -1.934,0.6c-1.134,0.24 -2.34,0.358 -3.62,0.358c-1.348,0 -2.57,-0.236 -3.66,-0.726c-1.083,-0.487 -2.014,-1.154 -2.792,-2.005c-0.789,-0.862 -1.394,-1.888 -1.826,-3.07c-0.446,-1.225 -0.664,-2.566 -0.664,-4.021c0,-1.332 0.216,-2.577 0.656,-3.734c0.431,-1.132 1.037,-2.125 1.825,-2.974c0.777,-0.837 1.706,-1.49 2.786,-1.963c1.095,-0.48 2.321,-0.711 3.675,-0.711c1.37,0 2.671,0.226 3.901,0.683c1.182,0.438 2.192,1.054 3.02,1.859l2.463,-0.025l4.092,-4.136l-0.078,-2.536c-1.849,-1.651 -3.946,-2.797 -6.29,-3.44c-2.228,-0.612 -4.611,-0.921 -7.152,-0.921c-2.635,0 -5.052,0.432 -7.253,1.284c-2.243,0.867 -4.172,2.106 -5.792,3.71c-1.617,1.601 -2.887,3.534 -3.802,5.804c-0.275,0.683 -0.509,1.388 -0.701,2.117Z" style="fill-rule:nonzero;"/><path d="M16.141,3.21l-1.604,1.052l-13.552,31.152l1.604,2.448l6.204,0l1.628,-1.107l2.379,-6.021c-0,0 11.141,0 11.141,0c-0,0 2.46,6.038 2.46,6.038l1.62,1.09l6.336,0l1.608,-2.442l-13.42,-31.152l-1.608,-1.058l-4.796,0Zm4.507,19.272l-4.597,0c0,0 2.32,-6.017 2.32,-6.017l2.277,6.017Z" style="fill-rule:nonzero;"/>
+                </svg>
+        </a>
+        <div class="navbar align_menu" style="font-family: Montserrat; font-weight:500">
+            <a class="link" href="/pages/blog">Articles</a>
+            <a class="link" href="/pages/projects">Projects</a>
+            <a class="link nav_desktop" href="/pages/newsletters">Newsletter</a>
+            <a class="link" href="/pages/about">About</a>
+            <a href="/2021/03/12/matlab-direct.html" id="theme-toggle" onclick="modeSwitcher()" style="cursor: pointer;">Dark</a>
+        </div>
+    </div>
+</div><main aria-label="Content">
+        <div>
+            <div class="post_container">
+    <div class="post_item_left" style=" padding-bottom:50px; ">
+        <div class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+            <head>
+                <title>Some surprising findings on direct vs iterative in MATLAB.</title>
+                <script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({
+                    extensions: ["tex2jax.js"],
+                    jax: ["input/TeX", "output/HTML-CSS"],
+                    tex2jax: {
+                      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                      processEscapes: true
+                    },
+                    "HTML-CSS": { availableFonts: ["TeX"] }
+                  });
+                </script>
+                <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+            </head>
+            <header class="post-header" style="margin-bottom: 60px;">
+                <h1 style="font-weight:600; font-size: 46px; margin-top: 120px; " class="post-title p-name" itemprop="name headline">
+                    Some surprising findings on direct vs iterative in MATLAB.
+                </h1>
+                <p class="post-meta" style="font-size: 16px;">
+                    <time class="dt-published" datetime="2021-03-12T00:00:00+05:30" itemprop="datePublished">Mar 12, 2021
+                    </time><span style="padding-left:10px;padding-right: 10px;">|</span><span class="post-meta"><a style="font-size:14px;color: var(--text-color);" href="/categories/coding">CODING</a></span><!-- --------------------------------------- -->
+                </p>
+            </header>
+            <hr style="/*position: relative; width: 300%;right:calc(200% - 30px);*/ background: var(--color-1);border: none;height: 1px; margin-bottom: 80px; opacity: 1;">
+            <div class="post-content e-content enlarged-char" itemprop="articleBody">
+                <p>I am trying to solve a million DoF system with PETSc as well as MATLAB. In both cases the system has been assembled and I have the K matrix and the F vector.</p>
+
+<ul>
+  <li>MATLAB - takes 4 seconds to solve the system using sparsity and decomposition.</li>
+  <li>PETSc is unable to handle the system with direct solvers and iterative solvers take 60 seconds to solve the system with 17 iterations.</li>
+</ul>
+
+<p>This has baffled me, as till now I was under the impression that I will always get better speeds with PETSc. From matlab documentation:</p>
+
+<ul>
+  <li>The speed of solving a linear system with a direct method strongly depends on the density and fill pattern of the coefficient matrix.</li>
+  <li>The speed of solving a linear system with an indirect method does not depend as strongly on the fill pattern of the coefficient matrix as a direct method. <strong>However, using an iterative method typically requires tuning parameters for each specific problem.</strong></li>
+</ul>
+
+<p>Previously I have read in the large scale paper on FEniCS that the number of iterations required to reach solution increases with increasing the number of DoF in the system and keeping everything same. In ideal case it should be the same.</p>
+
+<p>From my own testing also I have found out that the residual norm increases with incresing numbers of DoF and thus requires more iterations to converge.</p>
+
+<p>Also, it should be noted that the problem should be well defined. The loading on the system should not be exorbitantly large.</p>
+
+<p>My system was not converging with the standard choice of CG + ILU so based on <a href="https://scicomp.stackexchange.com/questions/2369/what-is-a-robust-iterative-solver-for-large-3-d-linear-elastic-problems?noredirect=1&amp;lq=1">this post</a> I changed it to CG + AMG and it converged in 20 iteration.</p>
+
+<blockquote>
+  <p>a direct solver is equivalent to an iterative method that stops after one preconditioner application. <a href="https://pages.tacc.utexas.edu/~eijkhout/pcse/html/petsc-solver.html#:~:text=32.2%20Direct%20solvers&amp;text=PETSc%20has%20some%20support%20for,stops%20after%20one%20preconditioner%20application.">from here</a></p>
+</blockquote>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<ul>
+  <li>The problem with direct solver is that they become prohibitive for large problems because of memory requirement.</li>
+  <li>For that they are using sparse matrices with integer indexing to reduce the memory expense</li>
+  <li>In case of PETSc, it cannot handle large problems with direct solvers(ndof&gt;50,000) and in the documentation itself suggests to go for iterative solvers.</li>
+  <li>Iterative solvers need to iterate to reduce the residual.</li>
+  <li>The residual is dependent on initial guess as well as the size of the system</li>
+  <li>For the same differential equation, iterative solvers require more iterations to converge with increasing number of DoF’s.</li>
+  <li>Moreover they are dependent on the pre-conditioners. For a simple cantilever beam problem with 1 Million elements no pre-conditioner other than AMG was producing results in less than 100 iterations. AMG took 16 iterations to converge to a solution.</li>
+  <li>For a large system the condition number is bad for the same differential equation, thus we need pre-conditioner to condition the system. The amount of iteration that are required to solve the system depends on the solver and pre-conditioner used. This combination could result in better performance as compared to direct solvers for very large problem which are prohibitively expensive in terms of memory requirement.</li>
+  <li>For symmetric positive definite systems that we can decompose and store in the memory, direct solvers will perform better. (There are many other factors that go into this but for our case this is the only thing.)</li>
+</ul>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://caendkoelsch.wordpress.com/2018/11/29/direct-vs-iterative-solvers-in-fem/#:~:text=Direct%20Solver%3A,for%20computationally%20less%20expensive%20problems.">Direct v/s iterative</a></li>
+  <li><a href="https://in.mathworks.com/help/matlab/math/iterative-methods-for-linear-systems.html#:~:text=MATLAB%20implements%20direct%20methods%20through,a%20finite%20number%20of%20steps.">MATLAB direct vs iterative</a></li>
+  <li><a href="https://scicomp.stackexchange.com/questions/5600/best-choice-of-solver-for-a-large-sparse-symmetric-but-not-positive-definite-s">Nico’s query on a similar problem to mine</a></li>
+  <li><a href="https://scicomp.stackexchange.com/questions/81/what-guidelines-should-i-follow-when-choosing-a-sparse-linear-system-solver">Which solver to choose</a></li>
+  <li><a href="https://stackoverflow.com/questions/64401503/is-there-a-way-to-further-improve-sparse-solution-times-using-python">Matlab vs python sparse solvers </a></li>
+</ul>
+
+
+            </div>
+            <div class="PageNavigation">
+                
+                <a class="button button-prev" href="/2021/02/14/first-javascript-project.html" title="How to set up your first JavaScript project.">&laquo; Previous</a>
+                
+                
+                <a class="button button-next" href="/2021/03/18/load-to-pypi.html" title="Load the project to PyPi">Next &raquo;</a>
+                
+            </div>
+            <!-- ----------------------------------------------------------- -->
+            <hr style="/*position: relative; width: 300%;right:calc(200% - 30px);*/ background: var(--color-1);border: none;height: 1px; margin-bottom: 80px; opacity: 1;">
+            <div class="flexbox_container_two_col flexbox_container_flip " style="padding-top: 50px;padding-bottom: 50px;">
+                <div class="flexbox_item">
+                    <div>
+                        <p style="font-size:36px; font-family: Montserrat; font-weight: bold; line-height: 1.2; ">Newsletter</p>
+                        <p style="font-size:16px; padding-top: 20px; padding-bottom: 30px;">"<em><strong>Quality Research:</strong> A weekly newsletter covering ideas and tools for better academic research.</em>" </p>
+                        <a class="ml-onclick-form button button-hello" href="javascript:void(0)" onclick="ml('show', 'uSsXyN', true)">Try the free newsletter</a>
+                    </div>
+                </div>
+                <div class="flexbox_item">
+                    <div class="abhi-icon" style="vertical-align: middle;     float: right;"><object data="/assets/svg/newsletter.svg" width="80%" style="pointer-events: none;"> </object></div>
+                </div>
+            </div>
+            <!-- ----------------------------------------------------------- -->
+        </div>
+    </div>
+    <div class="post_item_right hide_mobile">
+        <p style="padding-top:200px; font-size: 14px; font-family: Montserrat;">ABOUT THE AUTHOR</p>
+        <hr style="/*position: relative; width: 300%;right:calc(200% - 30px);*/ background: var(--color-1);border: none;height: 1px; margin-bottom: 40px;">
+        <p style="margin-bottom:20px;font-size: 14px;">Hi, I am <strong>Abhinav Gupta</strong>. I am a researcher at Vanderbilt University, USA. I create content to help you become effective in producing quality research. If you are interested in research, academia, or computational mechanics, make sure to follow me. </p>
+        <div style="margin-top:50px;">
+            <ul class="social-media-list" style="font-size: 14px;">
+                <li>
+                    <a class="black-link" href="https://www.linkedin.com/in/abhiguptaio/" target="_blank" rel="noopener noreferrer">[LinkedIn]</a>
+                </li>
+                <li>
+                    <a class="black-link" href="https://github.com/iitrabhi" target="_blank" rel="noopener noreferrer"> [Github]</a>
+                </li>
+                <li>
+                    <a class="black-link" href="https://www.researchgate.net/profile/Abhinav_Gupta52" target="_blank" rel="noopener noreferrer">[RG]</a>
+                </li>
+                <li>
+                    <p>👋</p>
+                </li>
+            </ul>
+        </div>
+        <a class="hover_highlight" style="font-size: 14px;" href="/pages/about">Click here to learn more →</a>
+        <p style="margin-bottom:50px"></p>
+    </div>
+</div>
+        </div>
+    </main>
+<div style="min-height: 500px;background-color: #000; width:100%">
+    <div class="primary_container">
+        <div style="flex: 60%; ">
+            <p style="font-family:Montserrat; color:#fff; font-weight:700; margin-top: 50px;">ABHI GUPTA</p>
+        </div>
+        <div class="hide_mobile" style="flex: 20%;">
+            <p style="font-family:Montserrat; color:#888; font-weight:700; margin-top: 50px;">Categories</p>
+             <p><a href="/categories/coding"  style="color:#ddd; font-size: 16px;">Coding</a></p>
+            <p><a href="/categories/presentation"  style="color:#ddd;font-size: 16px;">Presentation</a></p>
+            <p><a href="/categories/productivity"  style="color:#ddd;font-size: 16px;">Productivity</a></p>
+        </div>
+        <div style="flex: 20%; ">
+            <p style="font-family:Montserrat; color:#888; font-weight:700; margin-top: 50px;">Links</p>
+           
+            <p><a href="https://twitter.com/abhiguptaio"  style="color:#ddd;font-size: 16px;">Twitter</a></p>
+            <p><a href="https://www.youtube.com/channel/UCpj8oznjjLwVe5KHOGNrvnQ" style="color:#ddd;font-size: 16px;">YouTube</a></p>
+
+             <p><a href="https://github.com/iitrabhi" style="color:#ddd;font-size: 16px;">GitHub</a></p>
+             <p><a href="https://www.linkedin.com/in/abhiguptaio/"  style="color:#ddd;font-size: 16px;">LinkedIn</a></p>
+
+            <p><a href="https://scholar.google.com/citations?user=UfWvIkEAAAAJ"  style="color:#ddd;font-size: 16px;">Google Scholar</a></p>
+            <p><a href="https://www.researchgate.net/profile/Abhinav-Gupta-38"  style="color:#ddd;font-size: 16px;">Research Gate</a></p>
+            
+        </div>
+    </div>
+</div>
+<script src="/assets/js/mode_switcher.js" type="text/javascript"></script>
+    <script src="/assets/js/code_block.js" type="text/javascript"></script>
+</body>
+
+</html>

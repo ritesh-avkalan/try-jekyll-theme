@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-06-19T01:28:29+05:30</updated><id>/feed.xml</id><title type="html">Abhinav Gupta</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">How should you use tenses and person in academic writing?</title><link href="/2024/07/31/tenses-person-academic-writing.html" rel="alternate" type="text/html" title="How should you use tenses and person in academic writing?" /><published>2024-07-31T00:00:00+05:30</published><updated>2024-07-31T00:00:00+05:30</updated><id>/2024/07/31/tenses-person-academic-writing</id><content type="html" xml:base="/2024/07/31/tenses-person-academic-writing.html"><![CDATA[<p><strong>Abstract and Introduction: Setting the Stage</strong>
+In academic writing, the abstract and introduction sections serve to present the general background and the objectives of the study. These sections are best written in the <code class="language-plaintext highlighter-rouge">present tense</code> to emphasize the ongoing relevance and immediacy of the research topic. For example:</p>
+
+<p>“This paper examines the effects of X on Y.”</p>
+
+<p><strong>Literature Review: Reflecting on Past Research</strong>
+The literature review section discusses previous studies and findings, requiring the use of the <code class="language-plaintext highlighter-rouge">past tense</code> to acknowledge the work already done in the field. This helps differentiate between existing knowledge and the new contributions of the current study. For instance:</p>
+
+<p>“Gupta (2020) found that X affects Y.”</p>
+
+<p><strong>Methods: Detailing the Research Process</strong>
+The methods section outlines the procedures and techniques employed during the study. Here, the <code class="language-plaintext highlighter-rouge">past tense</code> is used to describe completed actions and established methods. This provides a clear account of the research process for replication and verification. An example sentence might be:</p>
+
+<p>“The samples were analyzed using X method.”</p>
+
+<p><strong>Results: Presenting the Findings</strong>
+When writing the results section, the <code class="language-plaintext highlighter-rouge">past tense</code> is again appropriate, as this part reports the findings of the study. This tense choice helps to clearly convey what was observed and discovered during the research. For example:</p>
+
+<p>“The results showed a significant increase in Y.”</p>
+
+<p><strong>Discussion: Interpreting the Findings</strong>
+The discussion section interprets the results and relates them to existing knowledge, often using the <code class="language-plaintext highlighter-rouge">present tense</code>. This approach underscores the current relevance and implications of the findings, making connections to the broader academic context. An illustrative sentence could be:</p>
+
+<p>“These findings suggest that X plays a crucial role in Y.”</p>
+
+<p><strong>Conclusion: Summarizing the Study</strong>
+In the conclusion, the <code class="language-plaintext highlighter-rouge">present tense</code> is used to summarize the main findings and their significance. This helps reinforce the study’s contributions and its relevance to ongoing research. For example:</p>
+
+<p>“This study provides new insights into the relationship between X and Y.”</p>
+
+<p><strong>Choosing the Right Person: Maintaining Objectivity</strong>
+Academic writing traditionally favors the <code class="language-plaintext highlighter-rouge">third person</code> to maintain an objective tone. However, the <code class="language-plaintext highlighter-rouge">first person</code> may be used sparingly in some sections like the introduction or discussion to highlight the author’s contributions. Here is an example of using the first person appropriately:</p>
+
+<p>“In this study, we examine the effects of X on Y.”</p>
+
+<p>In summary, mastering the use of tense and person in academic writing enhances clarity and ensures that the research is presented professionally.</p>]]></content><author><name></name></author><category term="presentation" /><category term="research" /><category term="latex" /><category term="writing" /><category term="academia" /><summary type="html"><![CDATA[Mastering the use of tense and person in academic writing is essential for clarity and professionalism. This blog post provides a structured guide on how to appropriately use different tenses and narrative perspectives in various sections of a research paper.]]></summary></entry><entry><title type="html">Learning javascript basics: getElementById</title><link href="/2024/05/16/learning-javascript-basics.html" rel="alternate" type="text/html" title="Learning javascript basics: getElementById" /><published>2024-05-16T00:00:00+05:30</published><updated>2024-05-16T00:00:00+05:30</updated><id>/2024/05/16/learning-javascript-basics</id><content type="html" xml:base="/2024/05/16/learning-javascript-basics.html"><![CDATA[<p>The <code class="language-plaintext highlighter-rouge">getElementById</code> method is a widely used function in web programming, specifically in JavaScript. It is part of the Document Object Model (DOM) and is used to access and manipulate elements within an HTML document. The method returns the element that has the ID attribute with the specified value. If no such element exists, it returns <code class="language-plaintext highlighter-rouge">null</code>.</p>
+
+<p>Here are some common uses and methods associated with an element obtained using <code class="language-plaintext highlighter-rouge">getElementById</code>:</p>
+
+<ol>
+  <li><strong>Modifying Text Content</strong>
+    <ul>
+      <li><strong>innerText</strong>: Sets or returns the text content of the specified element.</li>
+      <li><strong>textContent</strong>: Sets or returns the text content of the specified element, including all whitespace and HTML tags.</li>
+    </ul>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">demo</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Hello, World!</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Changing Style</strong>
+    <ul>
+      <li><strong>style</strong>: Allows you to change the style of an element by setting properties like <code class="language-plaintext highlighter-rouge">color</code>, <code class="language-plaintext highlighter-rouge">backgroundColor</code>, <code class="language-plaintext highlighter-rouge">fontSize</code>, etc.</li>
+    </ul>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">demo</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">red</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Modifying HTML Content</strong>
+    <ul>
+      <li><strong>innerHTML</strong>: Sets or returns the HTML content (inner HTML) of an element.</li>
+    </ul>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">demo</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">&lt;strong&gt;Updated Content&lt;/strong&gt;</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Adding Event Handlers</strong>
+    <ul>
+      <li><strong>addEventListener</strong>: Adds an event listener to the specified element.</li>
+    </ul>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">demo</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">element</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Element Clicked!</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Attributes Manipulation</strong>
+    <ul>
+      <li><strong>setAttribute</strong>: Sets a new value for an attribute on the specified element.</li>
+      <li><strong>getAttribute</strong>: Returns the value of a specified attribute on the element.</li>
+    </ul>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">demo</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">element</span><span class="p">.</span><span class="nf">setAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">data-custom</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">12345</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nf">getAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">data-custom</span><span class="dl">"</span><span class="p">));</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Class Manipulation</strong>
+    <ul>
+      <li><strong>classList</strong>: Provides methods like <code class="language-plaintext highlighter-rouge">add</code>, <code class="language-plaintext highlighter-rouge">remove</code>, <code class="language-plaintext highlighter-rouge">toggle</code>, and <code class="language-plaintext highlighter-rouge">contains</code> for class manipulation.</li>
+    </ul>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">demo</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="dl">"</span><span class="s2">new-class</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="dl">"</span><span class="s2">old-class</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nf">toggle</span><span class="p">(</span><span class="dl">"</span><span class="s2">active</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>These methods and properties provide a robust interface for interacting with and manipulating the elements of a webpage dynamically using JavaScript.</p>]]></content><author><name></name></author><category term="coding" /><category term="javascript" /><summary type="html"><![CDATA[My notes on javascript]]></summary></entry><entry><title type="html">Understanding viscoelasticity: Why are some materials stretchy but slow to snap back?</title><link href="/2024/02/02/understanding-viscoelasticity.html" rel="alternate" type="text/html" title="Understanding viscoelasticity: Why are some materials stretchy but slow to snap back?" /><published>2024-02-02T00:00:00+05:30</published><updated>2024-02-02T00:00:00+05:30</updated><id>/2024/02/02/understanding-viscoelasticity</id><content type="html" xml:base="/2024/02/02/understanding-viscoelasticity.html"><![CDATA[<p>Imagine you’re playing with two different types of materials: a spring (representing an elastic material) and a piece of silly putty (representing a viscoelastic material). When you pull and then release the spring, it snaps back immediately to its original shape. This instant response to pulling and releasing is characteristic of <strong>elastic materials</strong> – they return to their original shape as soon as the force is removed, just like a rubber band.</p>
+
+<p>Now, think about what happens when you stretch or squish the silly putty. It stretches or deforms slowly under your pull and retains its deformed shape for a while before slowly returning to its original shape after you let go. This behavior – the slow, time-dependent return to the original shape – is a hallmark of <strong>viscoelastic materials</strong>. They have a memory of sorts, taking time to go back to how they were, combining both the “instant snap” of elastic materials and the “slow flow” of viscous materials (like honey).</p>
+
+<p>The difference between elastic and viscoelastic materials fundamentally lies in how they respond over time. Elastic materials don’t care about time; they react the same way whether you stretch them quickly or slowly. Viscoelastic materials, on the other hand, care a lot about how fast or slow things happen. Stretch them quickly, and they might resist more strongly; stretch them slowly, and they might gradually give way.</p>
+
+<p>This time-dependent behavior of viscoelastic materials is crucial in their design and application. For example:</p>
+
+<ul>
+  <li><strong>Shock Absorption</strong>: In products like car bumpers or sports helmets, viscoelastic materials are used because they can absorb and dissipate energy over time, providing better protection against impacts.</li>
+  <li><strong>Comfort Products</strong>: Memory foam mattresses and pillows use viscoelastic materials to conform to the shape of your body over time, offering personalized support and comfort.</li>
+  <li><strong>Medical Devices</strong>: Viscoelastic materials are used in prosthetics and implants because they can mimic the time-dependent behavior of human tissues, making the devices more comfortable and functional for users.</li>
+  <li><strong>Vibration Damping</strong>: In buildings and machinery, viscoelastic materials help damp vibrations, not just instantly but over a period, reducing noise and wear and tear.</li>
+</ul>
+
+<p>Designers and engineers leverage the unique “time-aware” properties of viscoelastic materials to create products that perform better under specific conditions, providing benefits that purely elastic materials can’t match. They carefully consider how these materials will be stretched, compressed, or twisted over time to ensure the final product behaves exactly as needed, whether that’s in ensuring comfort, safety, durability, or any other desired property.</p>
+
+<p>Understanding viscoelastic materials and their behavior involves diving into the world of material science and mechanics, where the properties of these materials are described and predicted through mathematical equations. Let’s look at the foundational equations that help explain why viscoelastic materials stretch and slowly return to their original shape.</p>
+
+<h3 id="1-stress-strain-relationship">1. Stress-Strain Relationship</h3>
+
+<p>In viscoelastic materials, the relationship between stress (force per unit area) and strain (deformation) is time-dependent. Two primary models often used to describe this behavior are the Maxwell model and the Kelvin-Voigt model.</p>
+
+<h4 id="maxwell-model">Maxwell Model</h4>
+
+<p>The Maxwell model represents viscoelastic behavior as a combination of a purely elastic spring and a purely viscous dashpot in series. The constitutive equation is:</p>
+
+\[\sigma + \frac{\eta}{E} \frac{d\sigma}{dt} = \eta \frac{d\varepsilon}{dt}\]
+
+<p>where:</p>
+<ul>
+  <li>$\sigma$ is the stress,</li>
+  <li>$\varepsilon$ is the strain,</li>
+  <li>$E$ is the elastic modulus of the spring,</li>
+  <li>$\eta$ is the viscosity of the dashpot,</li>
+  <li>$t$ is time.</li>
+</ul>
+
+<p>This model captures fluid-like behavior, showing that under a constant stress, the material will continue to deform over time.</p>
+
+<h4 id="kelvin-voigt-model">Kelvin-Voigt Model</h4>
+
+<p>The Kelvin-Voigt model describes viscoelastic behavior using a spring and dashpot in parallel. Its constitutive equation is:</p>
+
+\[\sigma = E\varepsilon + \eta \frac{d\varepsilon}{dt}\]
+
+<p>This model captures solid-like behavior, where the material deforms immediately under stress and slowly returns to its original shape when the stress is removed, but it does not flow over time as the Maxwell model predicts.</p>
+
+<h3 id="2-creep-and-recovery">2. Creep and Recovery</h3>
+
+<p>Creep describes how a material deforms under a constant load over time, while recovery describes how a material returns to its original shape after the load is removed. The creep function $J(t)$ for a viscoelastic material is often represented as:</p>
+
+\[J(t) = \frac{\varepsilon(t)}{\sigma_0}\]
+
+<p>where $\sigma_0$ is the constant stress applied. The recovery process, especially in nonlinear viscoelastic materials, might not follow the same function due to the material’s history-dependent behavior.</p>
+
+<h3 id="3-complex-modulus">3. Complex Modulus</h3>
+
+<p>For viscoelastic materials subjected to oscillatory loading, the complex modulus $E^*$ is used to describe the material’s response, combining storage modulus $E’$ (elastic response) and loss modulus $E’’$ (viscous response):</p>
+
+\[E^* = E' + iE''\]
+
+<p>where $i$ is the imaginary unit. The phase angle $\delta$ between stress and strain gives insight into the material’s viscoelastic nature:</p>
+
+\[\tan(\delta) = \frac{E''}{E'}\]
+
+<p>High values of $\tan(\delta)$ indicate more viscous behavior, while lower values indicate more elastic behavior.</p>
+
+<p>These equations and models provide a mathematical framework to understand and predict how viscoelastic materials behave under various loading conditions. By analyzing these time-dependent stress-strain relationships, scientists and engineers can design materials and products that leverage the unique properties of viscoelasticity for applications requiring both elasticity and viscosity, such as impact absorption, comfort, and durability.</p>
+
+<h2 id="variational-form">Variational form</h2>
+
+<p>In the context of viscoelastic materials, in addition to the elastic energy stored in the material, there’s an energy dissipation component due to the material’s viscous behavior. This dissipation energy represents the loss of mechanical energy to heat or internal friction as the material deforms. Unlike purely elastic materials, where the energy is fully recoverable, viscoelastic materials convert a portion of the energy into heat, leading to a hysteresis effect in stress-strain cycles.</p>
+
+<h3 id="dissipation-energy-in-viscoelasticity">Dissipation Energy in Viscoelasticity</h3>
+
+<p>Dissipation energy in viscoelastic materials is a crucial aspect that differentiates them from purely elastic materials. It quantifies the energy lost during cyclic loading due to the material’s inherent viscosity. The rate of energy dissipation is related to the material’s relaxation processes and is a function of both the applied strain rate and the material’s viscoelastic properties.</p>
+
+<p>The dissipated energy $\Delta W_{diss}$ over a loading cycle can be expressed as the area enclosed by the hysteresis loop in a stress-strain diagram, which can be calculated for a cycle from $t_1$ to $t_2$ as:</p>
+
+\[\Delta W_{diss} = \int_{t_1}^{t_2} \sigma(t) \frac{d\varepsilon(t)}{dt} dt\]
+
+<p>where $\sigma(t)$ is the stress and $\varepsilon(t)$ is the strain at the time $t$.</p>
+
+<h3 id="weak-form-for-viscoelasticity">Weak Form for Viscoelasticity</h3>
+
+<p>The weak form for viscoelastic materials extends the concept of the weak form in linear elasticity by incorporating the time-dependent behavior. In linear elasticity, the weak form is derived by taking the first variation of the total potential energy. For viscoelasticity, we need to consider both the stored elastic energy and the dissipative energy.</p>
+
+<p>For a viscoelastic material undergoing small deformations, the weak form of the equilibrium equation, incorporating the dissipative effects, can be formulated as follows:</p>
+
+<p>Given a body $\Omega$ with boundary $\partial\Omega$, the weak form states that for all admissible variations $\delta\varepsilon$ of the strain field, the following condition holds:</p>
+
+\[\int_{\Omega} \left( \sigma_{ij}(\varepsilon) \delta\varepsilon_{ij} - \rho f_i \delta u_i \right) d\Omega + \int_{\Omega} \eta \frac{d\varepsilon_{ij}}{dt} \delta\varepsilon_{ij} d\Omega = 0\]
+
+<p>where:</p>
+<ul>
+  <li>$\sigma_{ij}(\varepsilon)$ is the stress tensor, which is a function of the strain tensor $\varepsilon_{ij}$,</li>
+  <li>$\rho$ is the density,</li>
+  <li>$f_i$ are body forces,</li>
+  <li>$u_i$ are displacements,</li>
+  <li>$\eta$ represents the viscosity coefficient, and</li>
+  <li>$\frac{d\varepsilon_{ij}}{dt}$ is the strain rate.</li>
+</ul>
+
+<p>The first integral represents the internal and external work done on the system, similar to the elastic case. The second integral accounts for the energy dissipation due to the viscous nature of the material, with $\eta \frac{d\varepsilon_{ij}}{dt}$ representing the viscous stress component.</p>
+
+<p>This formulation captures the essence of viscoelastic behavior by including both the instantaneous elastic response and the time-dependent viscous response, allowing for the analysis of viscoelastic materials under various loading conditions. The weak form is essential for implementing finite element methods for viscoelastic problems, where the time-dependent nature of the material’s response must be accurately captured.</p>]]></content><author><name></name></author><category term="coding" /><category term="presentation" /><summary type="html"><![CDATA[What is viscoelastic material? Why do we study these materials and how do we design products using them?]]></summary></entry><entry><title type="html">First steps to understanding ice flow simulation with IcePack</title><link href="/2024/01/24/stokes-flow-icepack.html" rel="alternate" type="text/html" title="First steps to understanding ice flow simulation with IcePack" /><published>2024-01-24T00:00:00+05:30</published><updated>2024-01-24T00:00:00+05:30</updated><id>/2024/01/24/stokes-flow-icepack</id><content type="html" xml:base="/2024/01/24/stokes-flow-icepack.html"><![CDATA[<p>I know nothing about ice simulations, but I know a lot about variational mechanics and FEniCS. This post will record what I learned as I try to understand the subject with the Firedrake/FEniCS-based ice simulation package IcePack.</p>
+
+<hr />
+
+<p>In 1848, J.D. Forbes was the first Western scientist to identify viscous deformation as the reason glaciers flow correctly. In his original paper on the subject, Forbes has a wonderful quote about this realization:</p>
+
+<blockquote>
+  <p>There is something pleasing to the imagination in the unexpected analogies presented by a torrent of fiery lava and the icy stream of a glacier.</p>
+</blockquote>
+
+<p>Both lava and ice flow can be described by the same mathematics, and that mathematics is the <em>Stokes equations.</em></p>
+
+<hr />
+
+<p>The Stokes equations have three parts: a conservation law, a constitutive relation, and boundary conditions.</p>
+
+<h3 id="conservation-law">Conservation law</h3>
+<p>\(\nabla\cdot\tau - \nabla p + f = 0.\)</p>
+<h3 id="constitutive-relation">Constitutive relation</h3>
+<p>\(\dot\varepsilon(u) \equiv \frac{1}{2}\left(\nabla u + \nabla u^\top\right)\)
+The deviatoric stress and strain rate tensor are linearly proportional for a plain old, viscous Newtonian fluid. But glacier ice is not a Newtonian fluid!
+\(\dot\varepsilon = A|\tau|^{n - 1}\tau\)</p>
+<h3 id="boundary-conditions">Boundary conditions</h3>
+<p>At the ice surface, there is effectively zero stress:
+\((\tau - pI)\cdot\nu|_{z = s} = -p_0\nu\)
+Things get much more interesting at the ice base because there are different boundary conditions in the normal and tangential directions. In the normal direction, the ice velocity has to equal the rate of basal melting:
+\(u\cdot\nu|_{z = b} = \dot m.\)
+In the tangential direction, frictional contact with the bed creates resistive stresses. The <strong>sliding law</strong> contains the relationship between resistive stresses and the ice velocity and other fields. Weertman sliding is a power-law relation between stress and sliding speed:
+\((\tau - pI)\cdot\nu|_{z = b} = -C|u|^{1/m - 1}u,\)</p>
+<h2 id="action-principle">Action principle</h2>
+<p>Instead of dealing with the full complexity of the Stokes equations, this principle simplifies the problem into finding the critical point of a functional called the action.
+\(J = \int_\Omega\left(\frac{n}{n + 1}A^{-1/n}|\dot\varepsilon|^{1/n + 1} - p\nabla\cdot u - f\cdot u\right)dx + \frac{m}{m + 1}\int_{\Gamma_b}C|u|^{1/m + 1}ds.\)
+This method is advantageous because it allows the use of more effective numerical methods for solving optimization problems. The action itself is a mathematical expression that incorporates various aspects of ice movement and behavior, including viscosity, pressure, and sliding at the base of the ice. This approach is not only more efficient computationally but also more concise in its mathematical formulation.</p>
+
+<h2 id="reference">Reference</h2>
+<ul>
+  <li>https://icepack.github.io/physics/</li>
+</ul>]]></content><author><name></name></author><category term="simulation" /><category term="fenics" /><summary type="html"><![CDATA[What is Stokes equation? How to simulate Stokes equation? What is ice flow?]]></summary></entry><entry><title type="html">Understanding the Use of Unconventional Units in Computational Ice Dynamics</title><link href="/2024/01/24/units-for-numerical-stabalization.html" rel="alternate" type="text/html" title="Understanding the Use of Unconventional Units in Computational Ice Dynamics" /><published>2024-01-24T00:00:00+05:30</published><updated>2024-01-24T00:00:00+05:30</updated><id>/2024/01/24/units-for-numerical-stabalization</id><content type="html" xml:base="/2024/01/24/units-for-numerical-stabalization.html"><![CDATA[<p>In the realm of computational ice dynamics, particularly in models like Elmer/ICE, a peculiar unit system is often employed: megapascals (MPa), meters (m), and years. This choice deviates from the more conventional metric system (MKS: meters, kilograms, seconds). This blog post delves into the rationale behind this choice, illustrating how it aids in dealing with the peculiarities of glaciological computations and examines whether this approach impacts numerical stability.</p>
+
+<h2 id="the-problem-with-conventional-units-in-glaciology">The Problem with Conventional Units in Glaciology</h2>
+
+<h3 id="scale-of-glaciological-phenomena">Scale of Glaciological Phenomena</h3>
+<p>Glaciological phenomena occur over vast spatial scales (kilometers) and long temporal scales (years to millennia). This already sets a challenge for conventional MKS units, where seconds as a time unit are too granular for practical computation.</p>
+
+<h3 id="physical-constants-in-mks-units">Physical Constants in MKS Units</h3>
+<p>A key issue arises with the values of physical constants in glaciological modeling. For instance, the Glen flow law rate factor, a crucial constant in ice flow modeling, exhibits extremely large or small values in MKS units. Such extreme values can introduce computational difficulties, particularly in numerical stability and precision.</p>
+
+<h2 id="advantages-of-megapascals---meters---years-unit-system">Advantages of Megapascals - Meters - Years Unit System</h2>
+
+<h3 id="sensible-range-of-physical-constants">Sensible Range of Physical Constants</h3>
+<p>By employing megapascals, meters, and years, physical constants like the Glen flow law rate factor fall within a more manageable numerical range. This choice reduces the risk of computational errors from handling very large or small numbers.</p>
+
+<h3 id="alignment-with-physical-processes">Alignment with Physical Processes</h3>
+<p>The choice of years as a time unit aligns better with the temporal scale of ice dynamics. Similarly, using megapascals, a higher pressure unit, matches the scale of pressures typically encountered in glaciological studies.</p>
+
+<h2 id="numerical-stability-and-the-unit-system">Numerical Stability and the Unit System</h2>
+
+<h3 id="impact-on-computations">Impact on Computations</h3>
+<p>Numerical stability in computational models is crucial to ensure accurate and reliable results. The choice of unit system can influence this stability. Extreme values (either too large or too small), common in MKS units for glaciological constants, can lead to numerical issues like underflow, overflow, or loss of precision.</p>
+
+<h3 id="how-megapascals---meters---years-help">How Megapascals - Meters - Years Help</h3>
+<p>By normalizing the range of constant values, the megapascals - meters - years system mitigates some of these numerical issues. It helps balance the magnitude of numbers processed during simulations, contributing to improved numerical stability.</p>
+
+<h2 id="examples">Examples</h2>
+<p>Consider the Glen flow law, which describes the relationship between stress and strain rate in ice. In MKS units, the rate factor (A) can be extremely small (e.g., $10^{-24}  s^{-1}Pa^{-3}$), posing challenges in computational precision. In contrast, when using the $MPa-m-years$ system, this value is more manageable (e.g., $10^{-3} year^{-1}MPa^{-3}$), reducing the risk of numerical errors.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Adopting megapascals - meters - years as a unit system in glaciological modeling is a pragmatic response to the unique challenges posed by the scale and nature of ice dynamics. It ensures that physical constants remain within a sensible numerical range and enhances the numerical stability of the simulations. This approach exemplifies how adapting conventional practices to the specific needs of a field can lead to more effective and accurate scientific modeling.</p>]]></content><author><name></name></author><category term="simulation" /><category term="glacier" /><category term="firedrake" /><category term="fenics" /><summary type="html"><![CDATA[How does using an unconventional unit system comprising megapascals, meters, and years in computational ice dynamics facilitate alignment with the enormous spatial and temporal scales of glaciological phenomena and enhance the numerical stability and precision of simulations?]]></summary></entry><entry><title type="html">Stokes Flow Simplified: A Beginner’s Guide to Ice Movement</title><link href="/2024/01/23/stokes-equation-ice-glacier-modelling.html" rel="alternate" type="text/html" title="Stokes Flow Simplified: A Beginner’s Guide to Ice Movement" /><published>2024-01-23T00:00:00+05:30</published><updated>2024-01-23T00:00:00+05:30</updated><id>/2024/01/23/stokes-equation-ice-glacier-modelling</id><content type="html" xml:base="/2024/01/23/stokes-equation-ice-glacier-modelling.html"><![CDATA[<p>As part of my postdoctoral work with NASA, I’ve started exploring a concept that’s relatively new to me: Stokes flow, especially as it relates to ice movement. I aim to understand how massive ice formations like glaciers can flow and change shape over time. This is a vital piece of the puzzle in studying Earth’s climate and environmental changes. In this article, I’ll be sharing what I learn as I delve into the intriguing science behind ice’s slow yet significant movement.</p>
+
+<h2 id="what-is-stokess-flow">What is Stokes’s flow?</h2>
+<p>Stokes flow, also known as creeping flow or low Reynolds number flow, refers to fluid motion where viscous forces are dominant over inertial forces. This is typically the case when dealing with very slow fluid motion, small-length scales, or highly viscous fluids. The Reynolds number in these situations is much less than one.</p>
+
+<p>In the context of ice, Stokes flow can be particularly relevant in glaciology, where it’s used to model the movement of ice sheets and glaciers. Despite being a solid, ice flows under its own weight over <code class="language-plaintext highlighter-rouge">geological timescales.</code> This flow is often very slow, and the viscous forces within the ice are much more significant than inertial forces, making Stokes flow a suitable model for describing it.</p>
+
+<blockquote>
+  <p>To draw parallels with solid mechanics, consider how a metal beam bends under weight. The beam deforms slowly, showing strain akin to how ice deforms under its weight and external forces. However, unlike the instantaneous response of the metal beam, ice movement is a much slower process, taking years to manifest noticeable changes. This difference in timescale is a key aspect of Stokes flow in glaciology.</p>
+</blockquote>
+
+<h2 id="what-is-stokes-equation">What is Stokes equation?</h2>
+<p>The Stokes equation, also known as the Stokes flow or the creeping flow equation, is a simplified form of the Navier-Stokes equation. It describes the <strong>motion of a viscous fluid at very low Reynolds numbers</strong>, where the inertial forces are negligible compared to viscous forces.</p>
+
+<p>The Reynolds number (Re) is a dimensionless parameter that characterizes the relative importance of inertia to viscosity in a fluid flow. <strong>Low Reynolds Number (Re « 1):</strong> the fluid behaves as if it has high viscosity relative to its density and velocity.
+\(\mathcal{R}_e = \frac{\rho V L}{\mu}\)
+where Re is the Reynolds number, $\rho$ is the density of the fluid, V is the velocity of the fluid, L is a characteristic length scale (such as the diameter of a pipe or the radius of a sphere), $\mu$ is the dynamic viscosity of the fluid.
+\(\begin{split}- \nabla \cdot (\nabla u + p I) &amp;= f \quad {\rm in} \ \Omega, \\                \nabla \cdot u &amp;= 0 \quad {\rm in} \ \Omega. \\\end{split}\)
+Where <strong>u</strong> is the velocity vector field of the fluid, <strong>p</strong> is the pressure field, <strong>I</strong> is the identity tensor, and <strong>f</strong> represents the external forces acting on the fluid.</p>
+
+<hr />
+<p>These equations are the steady-state, incompressible Stokes equations, and they describe the behavior of a viscous, incompressible fluid within a domain $\Omega$. Let’s break down what each equation is trying to convey:</p>
+
+<ol>
+  <li>The first equation is the momentum equation (also called the Stokes momentum equation) and can be written as:</li>
+</ol>
+
+<p>\(\nabla \cdot (\nabla u + pI) = f\)
+This equation describes the balance of forces within the fluid. Here’s what it’s trying to say:</p>
+
+<ul>
+  <li>$\nabla u$ represents the gradient of the velocity vector field $u$. It describes how the velocity changes from point to point within the fluid.</li>
+  <li>$pI$ represents the pressure field multiplied by the identity tensor $I$. This term represents pressure forces acting within the fluid.</li>
+  <li>$f$ represents external forces applied to the fluid (e.g., gravitational forces or other forces).</li>
+</ul>
+
+<p>The equation essentially states that the divergence of the sum of the velocity gradient ($\nabla u$) and the pressure  ($p$) is equal to the sum of external forces ($f$) acting within the fluid. This equation represents the balance of forces in the fluid. It is a simplified version of the Navier-Stokes momentum equation, appropriate for low Reynolds number flows where inertial forces are negligible.</p>
+
+<ol>
+  <li>The second equation is the continuity equation, and it can be written as:
+\(\nabla \cdot u = 0\)</li>
+</ol>
+
+<p>This equation enforces the condition of incompressibility within the fluid. Here’s what it’s trying to say:</p>
+<ul>
+  <li>$\nabla \cdot u$ represents the divergence of the velocity field $u$. It quantifies how much the fluid expands or contracts at a given point.</li>
+  <li>The equation asserts that the divergence of the velocity field $u$ must be zero everywhere within the fluid domain $\Omega$.</li>
+</ul>
+
+<p>In other words, the continuity equation ensures that the fluid is incompressible, meaning that the volume of fluid elements remains constant as they move within the flow. It is a fundamental constraint for incompressible fluid flows.</p>
+
+<p>In summary, the Stokes equations describe the behavior of a viscous, incompressible fluid by expressing the balance of forces (momentum equation) and ensuring incompressibility (continuity equation) within a given domain $\Omega$. They are particularly applicable to low Reynolds number flows, such as slow and viscous flows, and they are a simplified version of the more comprehensive Navier-Stokes equations.</p>
+
+<hr />
+<h2 id="where-is-it-used">Where is it used?</h2>
+<p>The Stokes equations model fluid flow in situations where viscous forces dominate, and inertial forces are negligible. These equations are particularly applicable to low Reynolds number flows. Here are some practical examples of where the Stokes equations might be used:</p>
+
+<ol>
+  <li><strong>Microfluidics:</strong> In microfluidic devices and systems, the dimensions are often on the micrometer scale, and flow velocities are relatively low. Examples include lab-on-a-chip devices, where small volumes of fluids are manipulated for applications like chemical analysis and medical diagnostics. The Stokes equations accurately describe and predict fluid behavior in microfluidic channels.</li>
+  <li><strong>Biological Fluid Dynamics:</strong> The movement of fluids within biological systems, such as blood flow in capillaries or the movement of cilia and flagella in cells, often occurs at very low Reynolds numbers. The Stokes equations can be used to study and understand these biological fluid flows.</li>
+  <li><strong>Suspensions of Small Particles:</strong> When small solid particles are suspended in a fluid, viscous forces strongly influence their motion. The Stokes equations are used to model the motion of these particles in applications like colloidal suspensions, where understanding particle behavior is important in fields like chemistry and materials science.</li>
+  <li><strong>Boundary Layer Flows:</strong> In situations where a fluid flows near a solid boundary, such as the flow of a viscous fluid over a flat plate (Stokes boundary layer), the flow can be analyzed using the Stokes equations. This is important in aerodynamics and fluid mechanics for understanding boundary layer behavior and drag forces.</li>
+  <li><strong>Rheology of Viscous Materials:</strong> When studying the behavior of highly viscous materials like specific polymers or lubricants, the Stokes equations may be used to model their flow characteristics. This is important in materials processing, manufacturing, and lubrication engineering industries.</li>
+  <li><strong>Lubrication Problems:</strong> In applications involving lubrication, where a thin film of viscous fluid separates moving surfaces (e.g., in journal bearings or slider bearings), the Stokes equations can be used to model the lubricant flow and study the lubrication properties.</li>
+</ol>
+
+<p>The full Navier-Stokes equations account for viscous and inertial effects in many practical situations, especially in everyday engineering and fluid dynamics. However, the Stokes equations serve as a valid approximation in situations where viscous forces dominate.</p>
+
+<hr />
+<h2 id="why-is-the-stokes-equation-not-time-dependent">Why is the Stokes equation not time-dependent?</h2>
+<p>The steady-state, incompressible Stokes equations are not time-dependent because they describe fluid flow in a steady-state condition, where the flow properties stay the same with time.</p>
+
+<p>There are several reasons why these equations are often used in situations where time-dependent effects are not a primary concern:</p>
+
+<ol>
+  <li><strong>Simplified Modeling:</strong> In many practical scenarios, especially when dealing with highly viscous fluids like honey, the primary interest is understanding the fluid’s steady-state behavior. Time-dependent effects, such as fluid transients or unsteady flows, may be minor or of secondary importance.</li>
+  <li><strong>Practical Applicability:</strong> Certain applications, like the flow of honey in food processing or the behavior of lubricants in machinery, often operate in steady-state conditions. Modeling these systems as steady-state simplifies the analysis without significantly compromising accuracy.</li>
+  <li><strong>Mathematical Convenience:</strong> Steady-state problems can be easier mathematically than time-dependent problems. The absence of time-dependent terms makes the equations more straightforward to handle and often leads to analytical or numerical solutions that are computationally less intensive.</li>
+  <li><strong>Physical Realism:</strong> In some situations, it is a reasonable approximation to assume that the flow has reached a quasi-steady state quickly, and the time it takes for transient effects to dissipate is much shorter than the time scale of interest. This makes the steady-state assumption valid for practical purposes.</li>
+</ol>
+
+<p>That said, the full Navier-Stokes equations, which include time-dependent terms, can be used when it’s necessary to account for transient effects and unsteady flows or when analyzing systems with rapidly changing conditions.</p>
+
+<p>The choice between steady-state and time-dependent models depends on the specific problem, the time scales of interest, and the desired level of accuracy in the analysis.</p>
+
+<p>In some cases, transient effects may be significant and cannot be neglected, and in those cases, time-dependent versions of the equations would be more appropriate.</p>
+
+<h2 id="solving-the-stokes-problem">Solving the Stokes problem</h2>
+<p>The Stokes equation leads to a Saddle Point problem in its discretized form. This means that the resulting matrix from the discretization is neither symmetric nor positive definite. Such matrices are challenging to solve efficiently due to their unique properties. In the context of ice flow, this challenge is compounded by the large scale and complexity of glacial systems.</p>
+
+<ul>
+  <li>Prof. Gilbert Strang talks about this problem in great detail in his <a href="https://math.mit.edu/classes/18.086/2006/am65.pdf">lecture</a>.</li>
+  <li>We also have a very good tutorial on the solution of the Stokes equation using FEM on the <a href="https://fenicsproject.org/olddocs/dolfin/1.6.0/python/demo/documented/stokes-iterative/python/documentation.html">FEniCS website.</a></li>
+  <li><a href="https://math.stackexchange.com/questions/397644/existence-and-uniqueness-of-stokes-flow">This post</a> on stack overflow is also good for understanding the problem and the solution process.</li>
+</ul>
+
+<p>Because of a [0] on the block diagonal, the conditioning of the system of equations is really bad. A special way of handling this using specially designed pre-conditioners is discussed in the FEniCS tutorial.</p>
+
+<blockquote>
+  <p>We could use a direct solver such as MUMPS to get a solution.</p>
+</blockquote>]]></content><author><name></name></author><category term="simulation" /><category term="fenics" /><summary type="html"><![CDATA[Dive into the basics of Stokes flow, a key concept in understanding how glaciers and ice sheets move.]]></summary></entry><entry><title type="html">Understanding Object References in Python: Immutable vs Mutable Behaviors</title><link href="/2024/01/06/python-mutable-fenics.html" rel="alternate" type="text/html" title="Understanding Object References in Python: Immutable vs Mutable Behaviors" /><published>2024-01-06T00:00:00+05:30</published><updated>2024-01-06T00:00:00+05:30</updated><id>/2024/01/06/python-mutable-fenics</id><content type="html" xml:base="/2024/01/06/python-mutable-fenics.html"><![CDATA[<p>In Python, the way variables are handled is based on what they are: objects. Everything in Python is an object, including integers, floats, functions, and even types and classes. However, the behavior of these objects can vary significantly depending on whether they are mutable or immutable.</p>
+
+<h2 id="immutable-objects">Immutable Objects:</h2>
+<p>Immutable objects in Python include <code class="language-plaintext highlighter-rouge">integers</code>, <code class="language-plaintext highlighter-rouge">floats</code>, <code class="language-plaintext highlighter-rouge">strings</code>, and <code class="language-plaintext highlighter-rouge">tuples</code>.</p>
+<ul>
+  <li>When you create an immutable object, like setting <code class="language-plaintext highlighter-rouge">u = 10</code>, you create an object <code class="language-plaintext highlighter-rouge">10</code>, and <code class="language-plaintext highlighter-rouge">u</code> is a name that refers to it. If you then do <code class="language-plaintext highlighter-rouge">v = u</code>, you are creating a new reference <code class="language-plaintext highlighter-rouge">v</code> that also points to object <code class="language-plaintext highlighter-rouge">10</code>.</li>
+  <li>However, because integers are immutable when you do something like <code class="language-plaintext highlighter-rouge">u += 1</code>, you are not modifying the object <code class="language-plaintext highlighter-rouge">10</code> — you are creating a new object <code class="language-plaintext highlighter-rouge">11</code> and changing <code class="language-plaintext highlighter-rouge">u</code> to refer to it instead. This is a critical distinction: <code class="language-plaintext highlighter-rouge">u</code> and <code class="language-plaintext highlighter-rouge">v</code> are separate references, and changing one does not affect the other.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">u</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">u</span>  <span class="c1"># v is now a reference to the same integer object as u
+</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Original u:</span><span class="sh">"</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>  <span class="c1"># Output: 10
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Original v:</span><span class="sh">"</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>  <span class="c1"># Output: 10
+</span>
+<span class="n">u</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># u is now a reference to a new integer object, 11
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Modified u:</span><span class="sh">"</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>  <span class="c1"># Output: 11
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Unchanged v:</span><span class="sh">"</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>  <span class="c1"># Output: 10
+</span>
+</code></pre></div></div>
+
+<p>When you modify <code class="language-plaintext highlighter-rouge">u</code> by doing <code class="language-plaintext highlighter-rouge">u += 1</code>, you’re not changing the integer object <code class="language-plaintext highlighter-rouge">10</code>. Instead, you’re creating a new integer object <code class="language-plaintext highlighter-rouge">11</code> and updating <code class="language-plaintext highlighter-rouge">u</code> to reference this new object. Since integers are immutable, this is the only way to “change” <code class="language-plaintext highlighter-rouge">u</code>. The variable <code class="language-plaintext highlighter-rouge">v</code> still references the original integer object <code class="language-plaintext highlighter-rouge">10</code>.</p>
+<h2 id="mutable-objects">Mutable Objects:</h2>
+
+<p>Mutable objects include <code class="language-plaintext highlighter-rouge">lists</code>, <code class="language-plaintext highlighter-rouge">dictionaries</code>, and most <code class="language-plaintext highlighter-rouge">class instances</code>. The word “most” acknowledges the existence of deliberately designed immutable classes in Python, even though they are less common. Most classes you’ll encounter or write are likely mutable because that’s the default behavior and often what’s desired. However, when designing or using a class, it’s important to understand its mutability, as it will affect how you interact with its instances and what implications it has for your program’s behavior.</p>
+
+<p>With mutable objects such as instances of custom classes, assignments don’t create new objects; they only create new references to the same object.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">CustomObject</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+
+<span class="n">u</span> <span class="o">=</span> <span class="nc">CustomObject</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">u</span>  <span class="c1"># v is now another reference to the same CustomObject instance as u
+</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Original u.value:</span><span class="sh">"</span><span class="p">,</span> <span class="n">u</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>  <span class="c1"># Output: 10
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Original v.value:</span><span class="sh">"</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>  <span class="c1"># Output: 10
+</span>
+<span class="n">u</span><span class="p">.</span><span class="n">value</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Modifies the value attribute of the object referred to by u
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Modified u.value:</span><span class="sh">"</span><span class="p">,</span> <span class="n">u</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>  <span class="c1"># Output: 11
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">v.value also changes:</span><span class="sh">"</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>  <span class="c1"># Output: 11
+</span>
+</code></pre></div></div>
+
+<p>In this mutable scenario, when you modify <code class="language-plaintext highlighter-rouge">u.value</code> by doing <code class="language-plaintext highlighter-rouge">u.value += 1</code>, you modify the object that both <code class="language-plaintext highlighter-rouge">u</code> and <code class="language-plaintext highlighter-rouge">v</code> reference. As a result, the change is reflected in both <code class="language-plaintext highlighter-rouge">u.value</code> and <code class="language-plaintext highlighter-rouge">v.value</code>.</p>
+
+<h2 id="a-note-on-fenics">A note on FEniCS</h2>
+<p>Suppose you have a FEniCS <code class="language-plaintext highlighter-rouge">Function</code> object <code class="language-plaintext highlighter-rouge">u</code> and assign it to an attribute of a class instance like <code class="language-plaintext highlighter-rouge">self.u</code>. In this case, both <code class="language-plaintext highlighter-rouge">u</code> and <code class="language-plaintext highlighter-rouge">self.u</code> refer to the same actual object in memory. If this object is mutable, any changes made to it through any of its references will be reflected across all references. For instance, if the function object <code class="language-plaintext highlighter-rouge">u</code> is modified in place in a method of your class, this change will also be visible outside of the class because <code class="language-plaintext highlighter-rouge">self.u</code> and <code class="language-plaintext highlighter-rouge">u</code> are just two names for the same object.</p>
+
+<p>This also holds true for passing a FEniCS <code class="language-plaintext highlighter-rouge">Function</code> object to a python function.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">fenics</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Define the problem domain, mesh, function space
+</span><span class="n">mesh</span> <span class="o">=</span> <span class="nc">UnitSquareMesh</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">V</span> <span class="o">=</span> <span class="nc">FunctionSpace</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="sh">'</span><span class="s">P</span><span class="sh">'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Create a FEniCS Function object (mutable)
+</span><span class="n">u</span> <span class="o">=</span> <span class="nc">Function</span><span class="p">(</span><span class="n">V</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">modify_function</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+    <span class="c1"># Modify the function object
+</span>    <span class="n">fn</span><span class="p">.</span><span class="nf">vector</span><span class="p">()[:]</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Increment all values by 1
+</span>    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Values of function inside modify_function:</span><span class="sh">"</span><span class="p">,</span> <span class="n">fn</span><span class="p">.</span><span class="nf">vector</span><span class="p">()[:])</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Values of u before function call:</span><span class="sh">"</span><span class="p">,</span> <span class="n">u</span><span class="p">.</span><span class="nf">vector</span><span class="p">()[:])</span>
+<span class="nf">modify_function</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>  <span class="c1"># Pass the mutable object to the function
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Values of u after function call:</span><span class="sh">"</span><span class="p">,</span> <span class="n">u</span><span class="p">.</span><span class="nf">vector</span><span class="p">()[:])</span>  <span class="c1"># u is modified outside function
+</span>
+</code></pre></div></div>
+
+<p>In this FEniCS example, <code class="language-plaintext highlighter-rouge">u</code> is a <code class="language-plaintext highlighter-rouge">Function</code> object that is mutable. When passed to the <code class="language-plaintext highlighter-rouge">modify_function</code>, the function modifies the <code class="language-plaintext highlighter-rouge">Function</code> object <code class="language-plaintext highlighter-rouge">fn</code> (the same as <code class="language-plaintext highlighter-rouge">u</code>). The modification is an in-place change, incrementing all function values by 1. After the function call, you can observe that <code class="language-plaintext highlighter-rouge">u</code> has been modified outside the function because <code class="language-plaintext highlighter-rouge">fn</code> and <code class="language-plaintext highlighter-rouge">u</code> refer to the same <code class="language-plaintext highlighter-rouge">Function</code> object.</p>
+
+<h3 id="further-discussion-on-the-assignment-in-fenics">Further discussion on the assignment in FEniCS</h3>
+
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">u.assign(v)</code>: This method is specifically used in FEniCS. When you have two function objects, say <code class="language-plaintext highlighter-rouge">u</code> and <code class="language-plaintext highlighter-rouge">v</code>, <code class="language-plaintext highlighter-rouge">u.assign(v)</code> assigns the values of <code class="language-plaintext highlighter-rouge">v</code> to <code class="language-plaintext highlighter-rouge">u</code> without changing the underlying function space of <code class="language-plaintext highlighter-rouge">u</code>. This means that after the assignment, <code class="language-plaintext highlighter-rouge">u</code> and <code class="language-plaintext highlighter-rouge">v</code> will have the same values in their respective function spaces, but their function spaces or any other associated data remain unchanged. This method is particularly used when you want to update a solution or a variable iteratively without altering its properties.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">u = v</code>: This is a standard assignment operation in Python. In the context of FEniCS, when you say <code class="language-plaintext highlighter-rouge">u = v</code>, you are not just copying the values from <code class="language-plaintext highlighter-rouge">v</code> to <code class="language-plaintext highlighter-rouge">u</code>. Still, you are also making <code class="language-plaintext highlighter-rouge">u</code> reference the same object as <code class="language-plaintext highlighter-rouge">v</code>. After this operation, any change to <code class="language-plaintext highlighter-rouge">v</code> will reflect in <code class="language-plaintext highlighter-rouge">u</code> as well because they are essentially the same object. This doesn’t just assign the current values but makes both variables refer to the same underlying data and function space.</p>
+  </li>
+</ol>
+
+<p>In summary, <code class="language-plaintext highlighter-rouge">u.assign(v)</code> is the way to copy values from one function to another in FEniCS, preserving the original structure and properties of the function, while <code class="language-plaintext highlighter-rouge">u = v</code> is a way to make two variables reference the same object, leading to a complete overlap of their identities.</p>
+
+<p>In practice, <code class="language-plaintext highlighter-rouge">u.assign(v)</code> is used when you want to update or iterate solutions in FEniCS, keeping the function spaces distinct, whereas <code class="language-plaintext highlighter-rouge">u = v</code> is a broader Python assignment operation, which in FEniCS context would typically be used for setting up initial conditions or simplifying references.</p>
+
+<h2 id="assignment-summary">Assignment Summary:</h2>
+<ul>
+  <li><strong>Immutable objects</strong>: Assignment creates a new reference to an object. If you modify the original reference (like changing <code class="language-plaintext highlighter-rouge">u</code> to point to a different integer), the new reference (<code class="language-plaintext highlighter-rouge">v</code>) is unaffected because it still points to the original object.</li>
+  <li><strong>Mutable objects</strong>: Assignment creates a new reference to the same object. If you modify the object through one reference, all references see the change because they all point to the same object.</li>
+</ul>
+
+<p>Understanding these behaviors is crucial when working with different types of objects in Python, especially when the effects of functions and methods on objects can significantly impact the program’s behavior. It’s also why careful management of object references is important in Python to avoid unintended side effects, particularly with mutable objects.</p>]]></content><author><name></name></author><category term="coding" /><category term="fenics" /><category term="python" /><summary type="html"><![CDATA[Exploring Mutable and Immutable Object References in Python and Their Implications in FEniCS Simulations.]]></summary></entry><entry><title type="html">Demystifying High-Performance Computing for Finite Element Analysis Simulations</title><link href="/2023/04/20/hpc-for-fea.html" rel="alternate" type="text/html" title="Demystifying High-Performance Computing for Finite Element Analysis Simulations" /><published>2023-04-20T00:00:00+05:30</published><updated>2023-04-20T00:00:00+05:30</updated><id>/2023/04/20/hpc-for-fea</id><content type="html" xml:base="/2023/04/20/hpc-for-fea.html"><![CDATA[<p>High-performance computing (HPC) has become an increasingly important tool in modern scientific research, engineering, and other fields that require the processing of large amounts of data and complex calculations. Finite Element Method (FEM) simulations, which are used to model and analyze physical systems and structures, are one area where HPC has had a significant impact.</p>
+
+<p>As someone who’s interested in FEM simulations, I’ve found that understanding HPC can be pretty tough, even for experts. So, in this article, I’ll explain the basics of HPC and how it’s used in FEM simulations. By the end, you’ll have a better idea of how HPC can help you run more accurate and efficient simulations.</p>
+
+<h2 id="how-do-we-simulate-reality">How do we simulate reality?</h2>
+
+<p>In engineering we simulate reality by creating mathematical models that describe the behavior of real-world phenomena. These models can be based on fundamental physical laws and principles, as in the case of physics-based simulations used in scientific research and engineering. Alternatively, they can be based on statistical models or machine learning algorithms that learn patterns and relationships from data.</p>
+
+<p>Once a mathematical model is created, it can be implemented on a computer and solved using matrix algebra. Matrix algebra is a powerful tool for solving systems of linear equations, which are commonly used in many types of simulations. In matrix algebra, equations are represented using matrices, which are arrays of numbers that can be manipulated using mathematical operations such as addition, subtraction, multiplication, and inversion.</p>
+
+<p>By using matrix algebra to solve mathematical models, we can simulate the behavior of real-world phenomena with a high degree of accuracy and efficiency. However, creating accurate and reliable models requires a deep understanding of the underlying physical principles and a careful consideration of the data used to inform the model.</p>
+
+<h2 id="why-simulation-is-hard">Why simulation is hard?</h2>
+
+<p>Achieving high-fidelity simulations of reality is a difficult task due to the trade-off between accuracy and computational cost. In order to accurately model complex physical phenomena, we need to use Finite Element Analysis (FEA) simulations that have a large number of degrees of freedom. These degrees of freedom represent the number of parameters used to describe the system being analyzed, such as the position, velocity, and acceleration of each point in a structure. They also represent the size of the matrices used in analysis.</p>
+
+<p>However, increasing the number of degrees of freedom also increases the computational cost of the simulation. This is because more degrees of freedom require more memory and processing power to accurately model the system. As a result, running high-fidelity simulations can take a long time and require significant computing resources.</p>
+
+<p>To overcome this challenge, researchers have developed various techniques to optimize the computational efficiency of FEA simulations. These include the use of parallel computing, which allows multiple processors to work together to solve a single simulation, and adaptive meshing, which dynamically adjusts the resolution of the simulation based on the complexity of the system being analyzed. By using these techniques, it’s possible to achieve high-fidelity simulations of reality while minimizing computational cost and run time.</p>
+
+<h2 id="what-is-high-performance-computing">What is high performance computing?</h2>
+
+<p>Normal computing refers to the use of general-purpose computing systems, such as desktops, laptops, or mobile devices, to perform everyday tasks such as browsing the internet, sending emails, creating documents, and running basic applications. The computers are designed to handle light weight tasks and sometimes basic parallel computations.</p>
+
+<p>Whereas high performance computing is a type of computing that is designed to perform complex calculations and handle large amounts of data at very high speeds. It typically involves the use of specialized hardware and software optimized for parallel processing, which allows multiple computations to be performed simultaneously. HPC systems are used in a wide range of fields, including scientific research, engineering, and finance, among others.</p>
+
+<h2 id="how-is-hpc-different-from-normal-computing">How is HPC different from normal computing?</h2>
+
+<p>HPC can be thought of as a large dam that is used to control and manage the flow of water in a river. It is designed to manage and control large amounts of data and computing power, much like a dam manages the flow of water. Just as a dam is made up of multiple components that work together to control the flow of water, an HPC system is made up of multiple components such as processors, memory, storage, and networking infrastructure that work together to manage and control large-scale computational workloads.</p>
+
+<p>Workstations, on the other hand, can be compared to a pipeline system that delivers a large volume of water to multiple users at once. Workstations are designed for heavy-duty computing tasks that require high-performance computing power, memory, and storage resources. They are typically desktop computers with multiple cores, high-speed storage, and powerful graphics cards that can handle demanding tasks such as video editing, 3D rendering, and scientific simulations.</p>
+
+<p>Laptops can be thought of as portable water bottles that can be carried around and used to deliver a small amount of water to an individual user. Like a water bottle, a laptop is designed to be compact, lightweight, and easy to carry around. It has limited computational power and memory resources, but it’s suitable for performing everyday tasks such as browsing the web, sending emails, and light productivity work.</p>
+
+<h2 id="what-are-some-hpc-linear-algebra-libraries">What are some HPC linear algebra libraries?</h2>
+
+<p>HPC linear algebra libraries are software packages that provide optimized implementations of linear algebra algorithms for HPC architectures. These libraries are designed to take advantage of the parallelism inherent in HPC systems to perform matrix computations efficiently on large-scale data sets.</p>
+
+<p>Some popular HPC linear algebra libraries include:</p>
+
+<ol>
+  <li><strong>BLAS (Basic Linear Algebra Subprograms):</strong> a standard library that provides a set of low-level linear algebra operations such as matrix multiplication, matrix-vector operations, and vector-vector operations.</li>
+  <li><strong>LAPACK (Linear Algebra Package):</strong> a higher-level library that builds on top of BLAS and provides routines for solving systems of linear equations, eigenvalue problems, and singular value decomposition.</li>
+  <li><strong>ScaLAPACK (Scalable Linear Algebra Package):</strong> a parallel implementation of LAPACK designed to run efficiently on distributed-memory systems.</li>
+  <li><strong>PETSc (Portable, Extensible Toolkit for Scientific Computation):</strong> a library that provides a set of scalable linear and nonlinear solvers, including direct solvers based on LU and Cholesky factorizations and iterative solvers such as Conjugate Gradient.</li>
+  <li><strong>Trilinos:</strong> a collection of libraries that provide scalable algorithms for solving linear and nonlinear problems, including linear algebra, optimization, and partial differential equations.</li>
+</ol>
+
+<p>These libraries are widely used in scientific and engineering applications, including computational fluid dynamics, weather modeling, and molecular dynamics simulations. By leveraging these libraries, researchers and practitioners can achieve high performance and scalability in their numerical simulations and data analytics.</p>
+
+<h2 id="can-i-use-hpc-libraries-on-my-laptop">Can I use HPC libraries on my laptop?</h2>
+
+<p>HPC libraries such as BLAS, LAPACK, and PETSc can be installed and run on laptops, but the performance of these libraries will be limited by the processing power and memory capacity of the laptop.</p>
+
+<p>HPC libraries are like high-performance engines in cars. Just like how high-performance engines are designed to produce more power and speed than standard engines, HPC libraries are designed to perform complex computations more efficiently and quickly than standard software libraries.</p>
+
+<p>Installing HPC libraries on a laptop is like installing a high-performance engine in a small car. While the high-performance engine may be capable of producing a lot of power, the size and weight of the car will limit its performance. Similarly, while HPC libraries can be installed on laptops, the limited processing power and memory capacity of the laptop will limit the performance of the libraries.</p>
+
+<p>In contrast, using HPC libraries on a dedicated HPC cluster is like using a high-performance engine in a sports car. The sports car is designed to handle the power and speed of the high-performance engine, allowing it to achieve peak performance. Similarly, dedicated HPC clusters are designed to handle the complex computations performed by HPC libraries, allowing them to achieve high performance and scalability.</p>
+
+<p>Nonetheless, even though the performance of HPC libraries may be limited on a laptop, they can still be useful for smaller-scale computations or for prototyping and testing purposes. For example, if you are developing a new algorithm that requires linear algebra computations, you could start by testing it on your laptop using HPC libraries before moving to a more powerful HPC system for larger-scale simulations.</p>
+
+<p>HPC systems can be very expensive to build, operate, and maintain. The cost of purchasing and maintaining the necessary hardware, such as high-end CPUs, GPUs, and networking equipment, can be significant. Additionally, the cost of energy and cooling required to run HPC systems can be high, particularly for larger systems. By starting with a smaller-scale system, you can test and refine your application before investing in a larger, more expensive HPC system.</p>
+
+<h2 id="message-passing-interface">Message passing interface</h2>
+
+<p>MPI stands for Message Passing Interface which is meant to be a tool to pass messages among various processes to carry out certain task. Processes corresponds to the physical cores available in your system. You can look for the number of cores available in your own computer by going into the task manager (On a windows computer) and looking for it in the Performance tab.</p>
+
+<p><img src="assets/images/Pasted%20image%2020230420123236.png" alt="" /></p>
+
+<p>On my system, I have 6 physical cores. This means that I can parallelize my code to a maximum of 6 processes. Now the question is – how to achieve that with python?</p>
+
+<p>Before that we need to understand a bit about MPI and its terminology.</p>
+
+<p><strong>MPI_COMM_WORLD:</strong> MPI uses objects called communicators, which are a collection of processes. The default communicator is called MPI_COMM_WORLD and it encompasses all the processes available. In my case the MPI_COMM_WORLD will look something like this:</p>
+
+<p><img src="assets/images/Pasted%20image%2020230420123247.png" alt="" /></p>
+
+<p><strong>World Size:</strong> This would tell the program about the number of processors available in the world.</p>
+
+<p><strong>Processor Rank:</strong> This is a unique number assigned to each processor inside the world. The numbering starts from 0 as shown in the above figure.</p>
+
+<p><strong>Barrier:</strong> As the name suggests this acts as a barrier in the parallel execution. This forces MPI to execute all the commands before the barrier by all the processes. This is required in the situation where you need a certain variable generated by the program in all processes. This will become clear in the example presented below.</p>
+
+<p>In MPI, processes are organized into groups called communicators. Communicators define a group of processes that can communicate with each other using MPI messages. Think of communicators as a group of people working together to solve a puzzle.</p>
+
+<p>Each process in MPI is identified by a unique rank within the communicator. The rank of a process is like a person’s seat at the table while working on a puzzle. Just as each person has their own seat at the table, each process has its own rank within the communicator.</p>
+
+<p>For example, imagine that you are working on a puzzle with a group of friends. You are all part of the same communicator, which is like the puzzle-solving group. Within the group, each person has a unique rank that identifies their seat at the table. If you are sitting in seat 1, your rank within the communicator is 1.</p>
+
+<p>Processes use their ranks to communicate with each other. For example, one process might send a message to another process with a specific rank. This message might contain data that the receiving process needs to complete its part of the computation.</p>
+
+<h2 id="how-do-you-run-a-script-in-parallel">How do you run a script in parallel?</h2>
+
+<p>First we need to install a few packages for MPI to work. I have compiled all of them into an image that you can use by installing docker on your system.</p>
+
+<ul>
+  <li>Go to https://www.docker.com/ and download and install docker desktop</li>
+  <li>After installation open terminal/command prompt in you computer and then type the following command
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -v host_system_path:/root/ -w /root/ -it iitrabhi/fenics
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><em>Note: you should replace the variable <code class="language-plaintext highlighter-rouge">host_system_path</code> with the path of the folder that contains your code. e.g. If <code class="language-plaintext highlighter-rouge">D:\Codes</code> contains your code then to start the command line interface you have to run:</em></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -v D:\Codes:/root/ -w /root/ -it iitrabhi/fenics
+</code></pre></div></div>
+
+<p>You can download the example code at https://github.com/iitrabhi/parallel-fenics.</p>
+
+<p>You can run any python script with MPI by typing the following command in terminal:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mpirun -np 6 python3 main.py
+</code></pre></div></div>
+
+<p>This will tell MPI to run test-parallel.py on 6 processors. The thing to understand here is that even though you are running the program on 6 processors, you are not actually doing parallel computations. You are just doing the same computation 6 times. To actually do parallel computations, you need to manually split the code to work parallelly. When you type the above command the system creates 6 different copies of the program file and sends it to 6 different processes.</p>
+
+<p><img src="assets/images/Pasted%20image%2020230420123306.png" alt="" /></p>
+
+<p>Thus we need to identify the processor number inside the program and execute the commands accordingly. We can identify the processor number by first getting a handle to the world communicator by using command</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">comm</span> <span class="o">=</span> <span class="n">MPI</span><span class="p">.</span><span class="n">COMM_WORLD</span>
+</code></pre></div></div>
+
+<p>and then get the size of the world and the rank of the processor by using the commands</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">rank</span> <span class="o">=</span> <span class="n">comm</span><span class="p">.</span><span class="nc">Get_rank</span><span class="p">()</span>
+<span class="n">size</span> <span class="o">=</span> <span class="n">comm</span><span class="p">.</span><span class="nc">Get_size</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Based on this information we can modify our logic to run on multiple processors. This simple program sums the numbers from a to b and gives us the result. This logic is parallelizable. We can split the whole domain of calculation into the number of processors available and then add the numbers in that domain. Finally, we can add the results of all the processors. The program below is self-explanatory and you can run the same on your machine with the help of <code class="language-plaintext highlighter-rouge">mpirun</code> command.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">numpy</span>
+<span class="kn">from</span> <span class="n">mpi4py</span> <span class="kn">import</span> <span class="n">MPI</span>
+<span class="kn">import</span> <span class="n">time</span>
+
+<span class="n">comm</span> <span class="o">=</span> <span class="n">MPI</span><span class="p">.</span><span class="n">COMM_WORLD</span>
+<span class="n">rank</span> <span class="o">=</span> <span class="n">comm</span><span class="p">.</span><span class="nc">Get_rank</span><span class="p">()</span>
+<span class="n">size</span> <span class="o">=</span> <span class="n">comm</span><span class="p">.</span><span class="nc">Get_size</span><span class="p">()</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10000000</span>
+
+<span class="n">num_per_rank</span> <span class="o">=</span> <span class="n">b</span> <span class="o">//</span> <span class="n">size</span> <span class="c1"># the floor division // rounds the result down to the nearest whole number.
+</span><span class="n">summ</span> <span class="o">=</span> <span class="n">numpy</span><span class="p">.</span><span class="nf">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">lower_bound</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">rank</span> <span class="o">*</span> <span class="n">num_per_rank</span>
+<span class="n">upper_bound</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="p">(</span><span class="n">rank</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">num_per_rank</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">This is processor </span><span class="sh">"</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="sh">"</span><span class="s">and I am summing numbers from</span><span class="sh">"</span><span class="p">,</span> <span class="n">lower_bound</span><span class="p">,</span><span class="sh">"</span><span class="s"> to </span><span class="sh">"</span><span class="p">,</span> <span class="n">upper_bound</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">comm</span><span class="p">.</span><span class="nc">Barrier</span><span class="p">()</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">):</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">+</span> <span class="n">i</span>
+
+<span class="n">summ</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+
+<span class="k">if</span> <span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">numpy</span><span class="p">.</span><span class="nf">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="bp">None</span>
+
+<span class="n">comm</span><span class="p">.</span><span class="nc">Barrier</span><span class="p">()</span>
+<span class="c1"># collect the partial results and add to the total sum
+</span><span class="n">comm</span><span class="p">.</span><span class="nc">Reduce</span><span class="p">(</span><span class="n">summ</span><span class="p">,</span> <span class="n">total</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">MPI</span><span class="p">.</span><span class="n">SUM</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">stop_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="c1"># add the rest numbers to 1 000 000
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="p">(</span><span class="n">size</span><span class="p">)</span> <span class="o">*</span> <span class="n">num_per_rank</span><span class="p">,</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">total</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">total</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">i</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">The sum of numbers from 1 to 1 000 000: </span><span class="sh">"</span><span class="p">,</span> <span class="nf">int</span><span class="p">(</span><span class="n">total</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">time spent with </span><span class="sh">"</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="sh">"</span><span class="s"> threads in milliseconds</span><span class="sh">"</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">-----</span><span class="sh">"</span><span class="p">,</span> <span class="nf">int</span><span class="p">((</span><span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">),</span> <span class="sh">"</span><span class="s">-----</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The only thing to notice is that the input to the loop changes according to the the processor number (rank). Thus instead of looping <code class="language-plaintext highlighter-rouge">b</code> times, each processor has to loop only <code class="language-plaintext highlighter-rouge">num_per_rank</code> times.</p>
+
+<p>Running the above script on a single core result in the following output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>➜  pre-processing (master) time mpirun -np 1 python3 test-parallel.py
+This is processor  0 and I am summing numbers from 1  to  60000000
+The sum of numbers from 1 to 1 000 000:  1800000030000000
+time spent with  1  threads in milliseconds
+----- 5851 -----
+
+real    0m6.824s
+user    0m6.800s
+sys     0m0.010s
+</code></pre></div></div>
+
+<p>and running the same code on 6 cores results in the following output</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>➜  pre-processing (master) time mpirun -np 6 python3 test-parallel.py
+This is processor  0 and I am summing numbers from 1  to  10000000
+This is processor  2 and I am summing numbers from 20000001  to  30000000
+This is processor  3 and I am summing numbers from 30000001  to  40000000
+This is processor  4 and I am summing numbers from 40000001  to  50000000
+This is processor  1 and I am summing numbers from 10000001  to  20000000
+This is processor  5 and I am summing numbers from 50000001  to  60000000
+The sum of numbers from 1 to 1 000 000:  1800000030000000
+time spent with  6  threads in milliseconds
+----- 1668 -----
+
+real    0m1.945s
+user    0m11.250s
+sys     0m0.200s
+</code></pre></div></div>
+
+<p>Thus we have achieved almost a $3.5 \times$ boost in speed by running the code in parallel. Now, this was a trivial example but in real calculations, we can expect greater speed boosts.</p>
+
+<h2 id="running-finite-element-simulation-in-parallel-using-open-source-hpc-package-fenics">Running finite element simulation in parallel using open source HPC package FEniCS</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">dolfin</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="nf">set_log_level</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="n">comm</span> <span class="o">=</span> <span class="n">MPI</span><span class="p">.</span><span class="n">comm_world</span>
+<span class="n">rank</span> <span class="o">=</span> <span class="n">MPI</span><span class="p">.</span><span class="nf">rank</span><span class="p">(</span><span class="n">comm</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">mprint</span><span class="p">(</span><span class="o">*</span><span class="n">argv</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="sh">""</span>
+        <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">argv</span><span class="p">:</span>
+            <span class="n">out</span> <span class="o">=</span> <span class="n">out</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+        <span class="c1"># this forces program to output when run in parallel
+</span>        <span class="nf">print</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">epsilon</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nf">sym</span><span class="p">(</span><span class="nf">grad</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">sigma</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">lmbda</span><span class="o">*</span><span class="nf">tr</span><span class="p">(</span><span class="nf">epsilon</span><span class="p">(</span><span class="n">v</span><span class="p">))</span><span class="o">*</span><span class="nc">Identity</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">mu</span><span class="o">*</span><span class="nf">epsilon</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+
+<span class="n">lx</span><span class="p">,</span> <span class="n">ly</span><span class="p">,</span> <span class="n">mul</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span>
+<span class="n">nx</span><span class="p">,</span> <span class="n">ny</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">lx</span> <span class="o">*</span> <span class="n">mul</span><span class="p">),</span> <span class="nf">int</span><span class="p">(</span><span class="n">ly</span> <span class="o">*</span> <span class="n">mul</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="nc">RectangleMesh</span><span class="p">(</span><span class="n">comm</span><span class="p">,</span> <span class="nc">Point</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">),</span> <span class="nc">Point</span><span class="p">(</span><span class="n">lx</span><span class="p">,</span> <span class="n">ly</span><span class="p">),</span> <span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="sh">"</span><span class="s">crossed</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">E</span><span class="p">,</span> <span class="n">nu</span><span class="p">,</span> <span class="n">rho</span> <span class="o">=</span> <span class="nc">Constant</span><span class="p">(</span><span class="mf">2e11</span><span class="p">),</span> <span class="nc">Constant</span><span class="p">(</span><span class="mf">0.3</span><span class="p">),</span> <span class="nc">Constant</span><span class="p">(</span><span class="mi">7850</span><span class="p">)</span> <span class="c1"># E=N/m2 and rho=kg/m3
+</span><span class="n">mu</span><span class="p">,</span> <span class="n">lmbda</span> <span class="o">=</span> <span class="n">E</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">nu</span><span class="p">),</span> <span class="n">E</span><span class="o">*</span><span class="n">nu</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">nu</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">nu</span><span class="p">)</span>
+<span class="n">lmbda</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">mu</span><span class="o">*</span><span class="n">lmbda</span><span class="o">/</span><span class="p">(</span><span class="n">lmbda</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">mu</span><span class="p">)</span>
+
+<span class="n">rho_g</span> <span class="o">=</span> <span class="n">rho</span> <span class="o">*</span> <span class="mf">9.8</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nc">Constant</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">rho_g</span><span class="p">))</span>
+<span class="n">U</span> <span class="o">=</span> <span class="nc">VectorFunctionSpace</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="sh">'</span><span class="s">Lagrange</span><span class="sh">'</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="nc">TrialFunction</span><span class="p">(</span><span class="n">U</span><span class="p">),</span> <span class="nc">TestFunction</span><span class="p">(</span><span class="n">U</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nf">inner</span><span class="p">(</span><span class="nf">sigma</span><span class="p">(</span><span class="n">u</span><span class="p">),</span> <span class="nf">epsilon</span><span class="p">(</span><span class="n">v</span><span class="p">))</span><span class="o">*</span><span class="n">dx</span>
+<span class="n">l</span> <span class="o">=</span> <span class="nf">inner</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="n">dx</span>
+
+<span class="nf">mprint</span><span class="p">(</span><span class="sh">"</span><span class="s">DoF: </span><span class="sh">"</span><span class="p">,</span> <span class="p">(</span><span class="n">U</span><span class="p">.</span><span class="nf">dim</span><span class="p">()))</span>
+
+<span class="n">left</span> <span class="o">=</span> <span class="nc">CompiledSubDomain</span><span class="p">(</span><span class="sh">"</span><span class="s">near(x[0], 0.0, tol) &amp;&amp; on_boundary</span><span class="sh">"</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-14</span><span class="p">)</span>
+
+<span class="n">bc</span> <span class="o">=</span> <span class="nc">DirichletBC</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="nc">Constant</span><span class="p">((</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">)),</span> <span class="n">left</span><span class="p">)</span>
+<span class="n">u_sol</span> <span class="o">=</span> <span class="nc">Function</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">displacement</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">problem</span> <span class="o">=</span> <span class="nc">LinearVariationalProblem</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">u_sol</span><span class="p">,</span> <span class="n">bc</span><span class="p">)</span>
+<span class="n">solver</span> <span class="o">=</span> <span class="nc">LinearVariationalSolver</span><span class="p">(</span><span class="n">problem</span><span class="p">)</span>
+
+<span class="n">prm</span> <span class="o">=</span> <span class="n">solver</span><span class="p">.</span><span class="n">parameters</span>
+<span class="n">prm</span><span class="p">[</span><span class="sh">"</span><span class="s">linear_solver</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">'</span><span class="s">cg</span><span class="sh">'</span>
+<span class="n">prm</span><span class="p">[</span><span class="sh">"</span><span class="s">preconditioner</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">'</span><span class="s">hypre_euclid</span><span class="sh">'</span>
+<span class="n">solver</span><span class="p">.</span><span class="nf">solve</span><span class="p">()</span>
+
+<span class="nf">mprint</span><span class="p">(</span><span class="sh">"</span><span class="s">Maximal deflection    : </span><span class="sh">"</span><span class="p">,</span> <span class="o">-</span>
+       <span class="nf">round</span><span class="p">(</span><span class="n">MPI</span><span class="p">.</span><span class="nf">min</span><span class="p">(</span><span class="n">comm</span><span class="p">,</span> <span class="n">u_sol</span><span class="p">.</span><span class="nf">vector</span><span class="p">().</span><span class="nf">min</span><span class="p">()),</span> <span class="mi">3</span><span class="p">))</span>
+<span class="nf">mprint</span><span class="p">(</span><span class="sh">"</span><span class="s">Beam theory deflection: </span><span class="sh">"</span><span class="p">,</span> <span class="nf">round</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">rho_g</span><span class="o">*</span><span class="n">lx</span><span class="o">**</span><span class="mi">4</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="n">E</span><span class="o">/</span><span class="n">ly</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="n">file_results</span> <span class="o">=</span> <span class="nc">XDMFFile</span><span class="p">(</span><span class="n">comm</span><span class="p">,</span> <span class="sh">"</span><span class="s">output/elasticity_results.xdmf</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">file_results</span><span class="p">.</span><span class="n">parameters</span><span class="p">[</span><span class="sh">"</span><span class="s">flush_output</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">file_results</span><span class="p">.</span><span class="n">parameters</span><span class="p">[</span><span class="sh">"</span><span class="s">functions_share_mesh</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">file_results</span><span class="p">.</span><span class="n">parameters</span><span class="p">[</span><span class="sh">"</span><span class="s">rewrite_function_mesh</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">file_results</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">u_sol</span><span class="p">)</span>
+
+<span class="c1"># solvers = (
+#     "bicgstab",
+#     "cg",
+#     "default",
+#     "gmres",
+#     "minres",
+#     "mumps",
+#     "petsc",
+#     "richardson",
+#     "superlu",
+#     "tfqmr",
+#     "umfpack",
+# )
+</span>
+<span class="c1"># preconditioners = (
+#     "amg",
+#     "default",
+#     "hypre_amg",
+#     "hypre_euclid",
+#     "hypre_parasails",
+#     "icc",
+#     "ilu",
+#     "jacobi",
+#     "none",
+#     "petsc_amg",
+#     "sor",
+# )
+</span>
+<span class="c1"># linesearch = ("basic", "bt", "cp", "l2", "nleqerr")
+</span>
+<span class="c1"># list_timings(TimingClear.clear, [TimingType.wall])
+</span>
+
+</code></pre></div></div>]]></content><author><name></name></author><category term="coding" /><category term="simulation" /><summary type="html"><![CDATA[This article aims to explain the fundamentals of High-Performance Computing (HPC) and its role in Finite Element Method (FEM) simulations]]></summary></entry><entry><title type="html">How I sped up my finite element code 100x by moving parentheses.</title><link href="/2022/11/22/large-scale-matrix-multiplication.html" rel="alternate" type="text/html" title="How I sped up my finite element code 100x by moving parentheses." /><published>2022-11-22T00:00:00+05:30</published><updated>2022-11-22T00:00:00+05:30</updated><id>/2022/11/22/large-scale-matrix-multiplication</id><content type="html" xml:base="/2022/11/22/large-scale-matrix-multiplication.html"><![CDATA[<p>Matrix multiplication is one of the most fundamental operations in the finite element method. Recently there has been a lot of talk about  <a href="https://www.deepmind.com/blog/discovering-novel-algorithms-with-alphatensor">AI that came up with a faster way to multiply matrices</a>. And this is a big deal for the finite element world too. Faster matrix multiplication could lead to shorter run times for existing algorithms on existing hardware. In this post, I want to talk to you about one of my recent discoveries during a debugging session.</p>
+
+<p><strong>But first, let me define the problem.</strong></p>
+
+<p>We made a code to perform an eigen analysis of a finite element model. The first step for such analysis is to find the eigenvalues and eigenvectors of the system. The next step is to find the modal mass and the mass participation factor of the system, which is given by
+ \(M_{eff}=\left(\frac{[\phi]^{T}[M]\{T\}}{\sqrt{m}}\right)^{2}\)</p>
+
+<p>In the above equation, $\phi$ is the eigenvector matrix with a size of $(n\times m)$ (where $n$ is the number of degrees of freedom of the structure), $M$ is the mass matrix with a size of $(n\times n)$ , and $T$ is the rigid body vector with a size of $(n\times 1)$. There are two ways in which we can perform the multiplication in the numerator</p>
+
+<ol>
+  <li>$([\phi]^{T}[M]){T}$</li>
+  <li>$[\phi]^{T}([M]{T})$</li>
+</ol>
+
+<p>For small-scale systems, these options will have the same time-to-solution. But, for large-scale systems, we get a massive difference in the time-to-solution between the two approaches. Let us boil down the problem to its basics and understand what is happening here.</p>
+
+<h2 id="how-many-operations-can-a-computer-processor-perform-per-second">How many operations can a computer processor perform per second?</h2>
+
+<p>The speed of the computer processor is usually marketed in gigahertz (GHz). A standard Intel-i7 processor can achieve speeds up to 5GHz. This means that the processor can perform $5 \times 10^9$ cycles per second <a href="https://stackoverflow.com/questions/43651954/what-is-a-clock-cycle-and-clock-speed">(Ref)</a>. There is a whole lot of theoretical foundation that is required to understand what the computer can do in a single cycle. Still, for the sake of simplicity, we will assume that the computer can perform a single addition or multiplication in a single cycle. <a href="https://qr.ae/pvQsE4">(Ref)</a></p>
+
+<p>Thus, theoretically, with our gross simplification, it should take a computer equipped with an  Intel-i7 processor one second to perform $5 \times 10^9$ operations.</p>
+
+<h2 id="how-many-operations-are-there-in-schoolbook-matrix-multiplication">How many operations are there in schoolbook matrix multiplication?</h2>
+<p>Multiplying two vectors of $n\times 1$ size takes  $n$ multiplications and $n-1$ additions.</p>
+
+\[\left[\begin{array}{ll}
+a &amp; b 
+\end{array}\right]\left[\begin{array}{l}
+e \\
+g 
+\end{array}\right]=ae+bg\]
+
+<p>Thus the total number of operations in a vector—vector dot product is :</p>
+
+\[n+(n-1) = 2n-1\]
+
+<p>The resulting matrix from a $n \times n$ matrix-matrix dot product has $n^2$ elements.</p>
+
+\[\begin{equation}
+\left[\begin{array}{ll}
+a &amp; b \\
+c &amp; d
+\end{array}\right] \times \left[\begin{array}{c c}
+e &amp; f \\
+g &amp; h
+\end{array}\right]=\left[\begin{array}{ll}
+a e+b g &amp; a f+b h \\
+c e+d g &amp; c f+d h
+\end{array}\right]
+\end{equation}\]
+
+<p>Thus, the total number of operations in the matrix-matrix dot product is <a href="https://math.stackexchange.com/questions/484661/calculating-the-number-of-operations-in-matrix-multiplication#:~:text=Thus%20the%20total%20number%20of,%3DO(n3).">(Ref)</a></p>
+
+\[n^2 \times (2n-1) = 2n^3-n^2 = O(n^3).\]
+
+<p>Similarly, the total number of operations in a matrix-vector dot product is
+\(n \times (2n-1) = 2n^2-n = O(n^2).\)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>size</th>
+      <th>operations</th>
+      <th>time (seconds)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10</td>
+      <td>1.90E+03</td>
+      <td>3.80E-07</td>
+    </tr>
+    <tr>
+      <td>1E+2</td>
+      <td>1.99E+06</td>
+      <td>3.98E-04</td>
+    </tr>
+    <tr>
+      <td>1E+4</td>
+      <td>2.00E+12</td>
+      <td>4.00E+02</td>
+    </tr>
+    <tr>
+      <td>1E+6</td>
+      <td>2.00E+18</td>
+      <td>4.00E+08 $\approx$ 13 years</td>
+    </tr>
+    <tr>
+      <td>1E+9</td>
+      <td>2.00E+24</td>
+      <td>4.00E+14 $\approx$ 13 million years</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>As you can see from the above table, the cubic order increase (<a href="https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/">Ref.</a>) in operations leads to a huge increase in time-to-solution.</p>
+
+<h2 id="what-is-the-associative-property-of-multiplication">What is the associative property of multiplication?</h2>
+
+<p>It is a mathematical rule that states that the order in which matrices are grouped in a multiplication problem does not change the product, i.e., if we have three matrices with the correct size, then,</p>
+
+\[(AB)C=A(BC)\]
+
+<p>As is true for most of the concepts we learn in high school, every rule comes with a set of assumptions and limitations. In the realm of small scale, the multiplication order would not create much difference, but once we start working with huge matrices, we have to give special consideration to the simplest of operations.</p>
+
+<h2 id="the-finding">The finding</h2>
+<p>In one of the previous posts, I described <a href="https://abhigupta.io/2022/01/31/please-use-sparse-matrices.html">sparse matrices and why every researcher should understand and use them</a>. That handled one of the big problems of RAM requirement. The next step is to speed up the computation by developing the code based on good programming practices. I compiled most of my findings in this presentation: <a href="https://www.researchgate.net/publication/352643174_Run-time_from_300_years_to_300_min_Lessons_learned_in_large-scale_modeling_in_FEniCS">Run-time from 300 years to 300 min: Lessons learned in large-scale modeling in FEniCS</a>. By properly profiling the code for bottlenecks, we can figure out ways to increase its speed.</p>
+
+<p>Let’s create a test problem to understand</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">scipy.sparse</span> <span class="kn">import</span> <span class="n">csr_matrix</span>
+<span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="n">n</span><span class="o">=</span><span class="mi">100000</span>
+<span class="n">m</span><span class="o">=</span><span class="mi">40</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">ones</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">rows_n</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">cols_n</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">val_n</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">ones</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">mat_n</span> <span class="o">=</span> <span class="nf">csr_matrix</span><span class="p">((</span><span class="n">val_n</span><span class="p">,</span> <span class="p">(</span><span class="n">rows_n</span><span class="p">,</span> <span class="n">cols_n</span><span class="p">)),</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">mat_m</span><span class="o">=</span><span class="nf">csr_matrix</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">)))</span><span class="o">/</span><span class="mi">100</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option 1 — $([\phi]^{T}[M]){T}$</th>
+      <th>Option 2 — $[\phi]^{T}([M]{T})$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Here the multiplication order is<br /> $[m \times n]\cdot[n\times n] = [m\times n]$<br />$[m \times n]\cdot[n\times 1] = [m\times 1]$</td>
+      <td>Here the multiplication order is<br /> $[n \times n]\cdot[n\times1] = [n\times 1]$<br />$[m \times n]\cdot[n\times1] = [m\times 1]$</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">(mat_m.dot(mat_n)).dot(t)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">mat_m.dot(mat_n.dot(t))</code></td>
+    </tr>
+    <tr>
+      <td>Wall time: 57.5 ms</td>
+      <td>Wall time: 6.77 ms</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The simple example presented above shows that there is almost a $7\times$ speed boost by just changing the multiplication order. This increase is because, in the first case, we multiply two matrices resulting in a matrix. Then we multiply the matrix with a vector. In the second case, we multiply the matrix to a vector, resulting in a vector, and then multiply the resulting vector to a matrix. Since matrix-matrix multiplication scales at $O(n^3)$ and matrix-vector product scales at $O(n^2)$, we get substantial savings in <em>Option-2</em>.</p>
+
+<p>In the actual problem, I achieved a speed boost of around $100\times$. The run time for a single iteration reduces from 2 seconds to around 0.02 seconds. The simulation that took 2-3 hours to complete is completed in around 2mins. 🥳</p>
+
+<p>Think of the kind of analysis we can perform if our code can handle a billion degrees of freedom.</p>]]></content><author><name></name></author><category term="coding" /><category term="hpc" /><category term="matrix" /><category term="python" /><category term="numpy" /><category term="multiplication" /><category term="home" /><summary type="html"><![CDATA[The order of operation of multiplying three or more matrices could significantly affect the run-time of the algorithm.]]></summary></entry><entry><title type="html">How to use SVG images on your website with light and dark mode.</title><link href="/2022/10/30/use-svg-in-html.html" rel="alternate" type="text/html" title="How to use SVG images on your website with light and dark mode." /><published>2022-10-30T00:00:00+05:30</published><updated>2022-10-30T00:00:00+05:30</updated><id>/2022/10/30/use-svg-in-html</id><content type="html" xml:base="/2022/10/30/use-svg-in-html.html"><![CDATA[<p>I love vector-based drawing since it offers infinite zoom and is free from any kind of pixelation artifact. Moreover, for simple scientific drawings, they are substantially smaller in size as compared to their raster counterpart. I have been using vector format for all of my drawings in my research. Now I would like to do the same on the website. Adding a vector-based image to the website is quite easy. You just wrap the image in the <code class="language-plaintext highlighter-rouge">&lt;object&gt;</code>tag.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;object</span> <span class="na">data=</span><span class="s">"/assets/svg/abhi.svg"</span> <span class="na">width=</span><span class="s">"80%"</span> <span class="na">style=</span><span class="s">"pointer-events: none;"</span><span class="nt">&gt;&lt;/object&gt;</span>
+</code></pre></div></div>
+
+<p>This code renders the SVG image on my website. Currently, I am using Jekyll with Liquid and thus, the syntax for the path contains the variable- <code class="language-plaintext highlighter-rouge">site.url</code>. Setting <code class="language-plaintext highlighter-rouge">pointer-events</code> to <code class="language-plaintext highlighter-rouge">none</code> will allow setting <code class="language-plaintext highlighter-rouge">href</code> to the image. You can find more about it on the internet.</p>
+
+<hr />
+
+<p>The above code snippet successfully sets my desired image at my desired location. Now, I would like the image to change with the theme. That means in the dark mode, the image must be light, and in the light mode, the image must be dark. This could be achieved by using the <code class="language-plaintext highlighter-rouge">filter</code> method.</p>
+
+<p>We can use the <code class="language-plaintext highlighter-rouge">data-theme</code> property to set the dark and light filters. In the dark mode, I want the filter to invert the image from black to white. Thus, I will set the invert intensity to 100%. In the light mode, I want my image to be its standard color, i.e. black. Thus I will set the filter intensity to 0%. Then we can define a class that will switch the filter based on the variable and assign that class to the object. This way I will have light and dark icons on the website.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">html</span><span class="o">[</span><span class="nt">data-theme</span><span class="o">=</span><span class="s1">"dark"</span><span class="o">]</span> <span class="p">{</span><span class="py">--invert-intensity</span><span class="p">:</span> <span class="nf">invert</span><span class="p">(</span><span class="m">1</span><span class="p">);}</span>
+<span class="nt">html</span><span class="o">,</span><span class="nt">html</span><span class="o">[</span><span class="nt">data-theme</span><span class="o">=</span><span class="s1">"light"</span><span class="o">]</span> <span class="p">{</span><span class="py">--invert-intensity</span><span class="p">:</span><span class="nf">invert</span><span class="p">(</span><span class="m">0</span><span class="p">);}</span> 
+
+<span class="nc">.abhi-icon</span><span class="p">{</span>
+    <span class="nl">filter</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="l">--invert-intensity</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;object</span> <span class="na">class=</span><span class="s">"abhi-icon"</span> <span class="na">data=</span><span class="s">"/assets/svg/abhi.svg"</span> <span class="na">width=</span><span class="s">"80%"</span> <span class="na">style=</span><span class="s">"pointer-events: none;"</span><span class="nt">&gt;&lt;/object&gt;</span>
+</code></pre></div></div>]]></content><author><name></name></author><category term="coding" /><category term="presentation" /><summary type="html"><![CDATA[This post contains simple examples to showcase the way I use SVG in html.]]></summary></entry></feed>

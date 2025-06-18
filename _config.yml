@@ -7,8 +7,8 @@ keywords: "Abhinav Gupta, IIT Roorkee, Machine Learning, Deep Learning, Computer
 email: iitrabhi@gmail.com
 permalink: /:year/:month/:day/:title:output_ext
 
-url: "https://abhigupta.io/"
-baseurl: "/jekyll-theme-researcher"
+url: ""
+baseurl: ""
 
 
 # the base hostname & protocol for your site, e.g. http://example.com
@@ -25,6 +25,9 @@ sass:
   style: compressed
 
 highlighter: rouge
+
+destination: docs
+
 
 
 kramdown:
