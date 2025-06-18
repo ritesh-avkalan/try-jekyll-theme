@@ -1,0 +1,22 @@
+
+{% for researcher in site.home %}
+<div class="primary-container  hero">
+        <div class="secondary-container " >
+            <div class= "description-container">
+                <div class="description-content">
+                    <p class="heading">Hi, I am {{researcher.name}}</p>
+                    <p class="heading bold"><strong>{{researcher.intro_role}}</strong></p>
+                    <p class="para">{{researcher.intro_paragraph}}
+                    </p>
+
+                    <a class="button button-hello" href="{{ researcher.calendly_link }}" target="_blank" title="Say Hello!">Say Hello!</a>
+                </div>
+            </div>
+            <div class="svg-container">
+                <div>
+                    <object class="abhi-icon" data="{{ site.url }}/assets/svg/abhi.svg" width="230" style="pointer-events: none;"></object>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

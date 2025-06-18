@@ -1,0 +1,31 @@
+<div class="primary-container" >
+    {%- if site.newsletters.size > 0 -%}
+    <div class="secondary-container">
+    <ul class="post-list">
+        {% for newsletter in site.newsletters reversed %}
+        {% capture this_year %}{{ newsletter.date | date: "%Y" }}{% endcapture %}
+        {% capture next_year %}{{ newsletter.previous.date | date: "%Y" }}{% endcapture %}
+        {% if forloop.first %}
+        <h2 id="{{ this_year }}-ref" class="post-year">{{this_year}}</h2>
+        <ul>
+            {% endif %}
+            <li>
+                {%- assign date_format = "%b %d" | default: "%b %-d, %Y" -%}
+                <span class="post-meta">
+                    {{ newsletter.date | date: date_format }}
+                </span>
+                <a class="black-link post-link-layout " href="{{ newsletter.url | relative_url }}">
+                    {{ newsletter.title | escape }}
+                </a>
+            </li>
+            {% if forloop.last %}
+        </ul>
+        {% else %}
+        {% if this_year != next_year %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </ul>
+    </div>
+    {%- endif -%}
+</div>

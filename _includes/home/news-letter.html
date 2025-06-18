@@ -1,0 +1,40 @@
+{% for researcher in site.home %}
+   <div class="primary-container border-top-bottom" 
+     >
+        <div class="secondary-container" style="padding-top: 0px; padding-bottom: 0px;">
+            <div class="writings-container" >
+                <div class="writing-content" >
+                    <h1><strong>My writings</strong></h1>
+                    <p>{{researcher.my_writings | markdownify}}
+                    </p>
+                </div>
+                <div class="popular-content" >
+                    <div class="newsletter-content">   
+                            <h3><strong>Read a popular article:</strong> </h3>
+                            {%- if site.posts.size > 0 -%}
+                            {% for post in site.posts %}
+                            {% if post.tags contains 'home' %}
+                            <p style="margin-bottom:30px"><a class="hover_highlight" href="{{ post.url | relative_url }}">
+                                    {{ post.title | escape }}
+                                </a></p>
+                            {% endif %}
+                            {% endfor %}
+                            {%- endif -%}          
+                    </div>
+                    <hr>
+                    <div class="newsletter-content" >
+                        <h3 ><strong>Browse the latest newsletter:</strong></h3>
+                        {%- if site.newsletters.size > 0 -%}
+                        {% assign sorted_newsletters = site.newsletters | reverse %}
+                        {% for newsletter in sorted_newsletters limit:3 %}
+                        <p ><a class="hover_highlight" href="{{ newsletter.url | relative_url }}">
+                                {{ newsletter.title | escape }}
+                            </a></p>
+                        {% endfor %}
+                        {%- endif -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

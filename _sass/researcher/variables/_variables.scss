@@ -1,0 +1,126 @@
+@use "sass:color" as color;
+@use "sass:math" as math;
+
+$base-font-family: "Bitter", "Bitter", sans-serif;
+$base-font-size: 18px !default;
+$font-size-small:16px !default;
+$font-size-big: 36px !default;
+$base-font-weight: 400 !default;
+$small-font-size: $base-font-size * 0.85 !default;
+$base-line-height: 1.625 !default;
+$small-line-height: 1.6 !default;
+$padding-unit: 30px !default;
+$padding-big: 50px !default;
+$gap-unit: 32px !default;
+
+
+$content-width-home: 1200px !default;
+$content-width-mobile: 768px !default;
+$spacing-unit-mobile: 20px !default;
+$spacing-unit: 30px !default;
+$spacing-unit-div-2: math.div($spacing-unit, 2) !default;
+$spacing-unit-div-3: math.div($spacing-unit, 3) !default;
+$spacing-unit-div-5: math.div($spacing-unit, 5) !default;
+$spacing-unit-div-1-half: math.div($spacing-unit, 1.5) !default;
+$spacing-unit-div-12: math.div($spacing-unit, 12) !default;
+$max-width-dekstop: 78.75rem !default;
+// Width of the content area
+$content-width: 880px !default;
+$invert:color.adjust(#fff,$alpha: 0.5) !default;
+
+
+html,
+html[data-theme="dark"] {
+    --text-color: #dadada;
+    --text-color-2: #ffffff;
+    --background-color: #202a38;
+
+    --color-1: #314055;
+    --color-2: #161b22;
+
+    --brand-color: #f9ae58;
+    --shadow-color: rgba(255, 255, 255, 0.2);
+    --invert-intensity: invert(1);
+}
+
+html[data-theme="light"] {
+    --text-color: #3b3b3b;
+    --text-color-2: #303030;
+    --background-color: #ffffff;
+
+    --color-1: #e5f1ee;
+    --color-2: #A4CEC3;
+
+    --brand-color: #81acbb;
+    --shadow-color: rgba(249, 174, 88, 0.2);
+    --invert-intensity: invert(0);
+}
+
+@media (prefers-color-scheme: dark) {
+
+    html,
+    html[data-theme="dark"] {
+        --text-color: #dadada;
+        --text-color-2: #ffffff;
+        --background-color: #202a38;
+
+        --color-1: #314055;
+        --color-2: #161b22;
+
+        --brand-color: #f9ae58;
+        --shadow-color: rgba(255, 255, 255, 0.2);
+        --invert-intensity: invert(1);
+    }
+
+    html[data-theme="light"] {
+        --text-color: #3b3b3b;
+        --text-color-2: #303030;
+        --background-color: #ffffff;
+
+        --color-1: #e5f1ee;
+        --color-2: #A4CEC3;
+
+        --brand-color: #81acbb;
+        --shadow-color: rgba(249, 174, 88, 0.2);
+        --invert-intensity: invert(0);
+    }
+}
+
+
+$grey-color: #828282 !default;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%) !default;
+$grey-color-dark: color.adjust($grey-color, $lightness: -25%) !default;
+$orange-color: #f66a0a !default;
+$table-text-align: left !default;
+$notion-red: #cf4d45;
+
+
+$on-medium: 600px !default;
+$on-large: 900px !default;
+
+%clearfix {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+@mixin media-query($device) {
+
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@mixin relative-font-size($ratio) {
+   & {
+  font-size: $base-font-size * $ratio;
+}
+
+}
+
+// Import partials.
+
+
+

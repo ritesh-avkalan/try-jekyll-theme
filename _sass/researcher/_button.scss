@@ -1,0 +1,54 @@
+@use "variables/variables" as *;
+
+
+.button {
+    background-color: var(--background-color);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: $small-font-size;
+    margin: 4px 2px;
+    cursor: pointer;
+    color: var(--brand-color);
+    font-weight: bold;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+
+}
+
+.button:hover {
+  background-color: var(--brand-color);
+  color: var(--background-color);
+  text-decoration: none;
+
+}
+
+.button-prev {
+    float: left;
+}
+
+.button-next {
+    float: right;
+}
+
+
+.PageNavigation {
+    display: block;
+    width: auto;
+    overflow: hidden;
+}
+
+.button-hello {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    padding-left: $padding-big;
+    padding-right: $padding-big;
+    padding-top: $spacing-unit-mobile;
+    padding-bottom: $spacing-unit-mobile;
+    align-self: start;
+}
+
+
+

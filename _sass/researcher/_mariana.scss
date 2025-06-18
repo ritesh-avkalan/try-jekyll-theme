@@ -1,0 +1,341 @@
+@use "variables/variables" as *;
+ 
+ 
+ html, html[data-theme="dark"] {
+        --yellow : #fff0a6;
+        --pink : #fc9b9b;
+        --purple : #c6b4f0;
+        --green : #00cdaf;
+        --blue :#00a9ff;
+        --blue3 : #62c8f3;
+
+        --grey : #888888;
+        --grey2 : #4e5d62;
+        --grey3: #dee5e7;
+        --warm: #fefeec;
+        --code-background-color: #161b22;
+    }
+
+    html[data-theme="light"] {
+        --yellow : #c5a332;
+        --pink : #d52753;
+        --purple : #ce33c0;
+        --green : #00cdaf;
+        --blue : #275fe4;
+        --blue3 : #275fe4;
+
+        --grey : #888888;
+        --grey2 : #4e5d62;
+        --grey3: #dee5e7;
+        --warm: #fefeec;
+        --code-background-color: #fafafa;
+  }
+  
+@media (prefers-color-scheme: dark) {
+    html, html[data-theme="dark"] {
+        --yellow : #fff0a6;
+        --pink : #fc9b9b;
+        --purple : #c6b4f0;
+        --green : #00cdaf;
+        --blue :#00a9ff;
+        --blue3 : #62c8f3;
+
+        --grey : #888888;
+        --grey2 : #4e5d62;
+        --grey3: #dee5e7;
+        --warm: #fefeec;
+        --code-background-color: #161b22;
+    }
+
+    html[data-theme="light"] {
+        --yellow : #c5a332;
+        --pink : #d52753;
+        --purple : #ce33c0;
+        --green : #00cdaf;
+        --blue : #275fe4;
+        --blue3 : #275fe4;
+
+        --grey : #888888;
+        --grey2 : #4e5d62;
+        --grey3: #dee5e7;
+        --warm: #fefeec;
+        --code-background-color: #fafafa;
+  } 
+}
+
+
+
+.highlight .gt {
+    color: var(--grey3);
+    background-color: var(--grey2);
+}
+
+.highlight .gl {
+    color: var(--grey3);
+    background-color: var(--grey2);
+}
+
+code {
+    tab-size: 4;
+}
+
+.highlight table td {
+    padding: 0px;
+}
+
+.highlight table pre {
+    margin: 0;
+}
+
+.highlight {
+    color: var(--text-color);
+    background-color: var(--code-background-color);
+}
+
+
+
+.highlight .gp {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.highlight .c,
+.highlight .ch,
+.highlight .cd,
+.highlight .cm,
+.highlight .cpf,
+.highlight .c1,
+.highlight .cs {
+    color: var(--blue3);
+    font-style: italic;
+}
+
+.highlight .cp {
+    color: var(--blue3);
+    font-weight: bold;
+}
+
+
+
+.highlight .gr {
+    color: var(--text-color);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.highlight .k,
+.highlight .kd,
+.highlight .kv {
+    color: var(--purple);
+    font-weight: bold;
+}
+
+.highlight .o,
+.highlight .ow {
+    color: var(--blue3);
+    font-weight: bold;
+}
+
+.highlight .p,
+.highlight .pi {
+    color: var(--blue3);
+}
+
+.highlight .gd {
+    color: var(--text-color);
+}
+
+.highlight .gi {
+    color: var(--blue3);
+}
+
+.highlight .ge {
+    font-style: italic;
+}
+
+.highlight .gs {
+    font-weight: bold;
+}
+
+
+.highlight .kn {
+    color:var(--pink);
+    font-weight: bold;
+}
+
+.highlight .kp {
+    color: var(--pink);
+    font-weight: bold;
+}
+
+.highlight .kr {
+    color: var(--pink);
+    font-weight: bold;
+}
+
+.highlight .gh {
+    color: var(--pink);
+    font-weight: bold;
+}
+
+.highlight .gu {
+    color: var(--pink);
+    font-weight: bold;
+}
+
+.highlight .kt {
+    color: var(--blue3);
+    font-weight: bold;
+}
+
+.highlight .no {
+    color: var(--blue3);
+    font-weight: bold;
+}
+
+.highlight .nc {
+    color: var(--blue3);
+    font-weight: bold;
+}
+
+.highlight .nd {
+    color: var(--blue3);
+    font-weight: bold;
+}
+
+.highlight .nn {
+    color: var(--blue3);
+    font-weight: bold;
+}
+
+.highlight .bp {
+    color: var(--blue3);
+    font-weight: bold;
+}
+
+.highlight .ne {
+    color: var(--blue3);
+    font-weight: bold;
+}
+
+.highlight .nl {
+    color: var(--blue3);
+    font-weight: bold;
+}
+
+.highlight .nt {
+    color: var(--pink);
+    font-weight: bold;
+}
+
+.highlight .m,
+.highlight .mb,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .il,
+.highlight .mo,
+.highlight .mx {
+    color: var(--green);
+    font-weight: bold;
+}
+
+.highlight .ld {
+    color: var(--green);
+    font-weight: bold;
+}
+
+.highlight .ss {
+    color: var(--green);
+    font-weight: bold;
+}
+
+.highlight .s,
+.highlight .sb,
+.highlight .dl,
+.highlight .sd,
+.highlight .s2,
+.highlight .sh,
+.highlight .sx,
+.highlight .sr,
+.highlight .s1 {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+.highlight .sa {
+    color: var(--purple);
+    font-weight: bold;
+}
+
+.highlight .se {
+    color: var(--blue3);
+    font-weight: bold;
+}
+
+.highlight .sc {
+    color: var(--blue3);
+    font-weight: bold;
+}
+
+.highlight .si {
+    color: var(--blue3);
+    font-weight: bold;
+}
+
+.highlight .nb {
+    color: var(--green);
+    font-weight: bold;
+}
+
+
+
+.highlight .nf,
+.highlight .fm {
+    color: var(--blue);
+}
+
+.highlight .py {
+    color: var(--blue);
+}
+
+.highlight .na {
+    color: var(--blue);
+}
+
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi,
+.highlight .vm {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+
+
+
+
+.highlight .ni {
+    color: var(--grey);
+    font-weight: bold;
+}
+
+.highlight .w {
+    color: var(--grey);
+}
+
+.highlight .go {
+    color: var(--grey);
+}
+
+.highlight .kc {
+    color: var(--green);
+    font-weight: bold;
+}
+
+
+.highlight .err {
+    color: var(--warm);
+    background-color: var(--text-color);
+}

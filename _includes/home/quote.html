@@ -1,0 +1,10 @@
+{% for researcher in site.home %}
+<div class="primary-container">
+        <div class="secondary-container quote-container">
+            <h1>
+                {{researcher.quote}}
+            </h1>
+            <div class="quote-writer"><a class="hover_highlight" href="https://www.youtube.com/watch?v=LIxvQMhttq4">{{researcher.quote_writer}}</a></div>
+        </div>
+    </div>
+{% endfor %}

@@ -1,0 +1,130 @@
+@use "variables/variables" as *;
+
+
+.primary_container .home-icon {
+    display: none;
+}
+
+.navbar-container {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    display: -webkit-flexbox;
+    background-color: var(--color-1);
+    justify-content: center;
+    z-index: 10;
+}
+
+.navbar {
+    width: auto;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: var(--text-color);
+    text-align: center;
+    padding: 14px $font-size-small;
+    text-decoration: none;
+    font-size: $font-size-small;
+}
+
+.navbar a:hover {
+    background: var(--text-color);
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #04AA6D;
+    color: var(--text-color);
+}
+
+
+.navbar a.nav_desktop {
+    display: none;
+}
+
+.align_menu {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+@media (min-width: 600px) {
+
+    // Desktop
+    // .navbar home-icon{
+
+    // }   
+    .primary_container .home-icon {
+        position: absolute;
+        padding: 4px $font-size-small;
+        display: flex;
+        display: -webkit-flexbox;
+        
+    }
+
+    .primary_container .home-icon {
+        fill: var(--text-color);
+    }
+
+    .primary_container .home-icon:hover,
+    .primary_container .home-icon:focus {
+        fill: var(--brand-color);
+
+    }
+
+    .align_menu {
+        flex-grow: 1;
+
+        display: flex;
+        // justify-content: right;
+        justify-content: flex-end;
+        align-items: flex-end;
+        display: -webkit-flexbox;
+        -webkit-justify-content: flex-end;
+        -webkit-align-items: flex-end;
+
+    }
+
+    .navbar {
+        flex-grow: 1;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: var(--text-color);
+        text-align: center;
+        padding: 14px $font-size-small;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .navbar a:hover {
+        background: var(--color-2);
+        color: var(--text-color);
+    }
+
+    .navbar a.active {
+        background: var(--color-2);
+        color: var(--text-color);
+    }
+
+    .navbar-container {
+        position: static;
+        width: 100%;
+        background-color: var(--color-1);
+        display: flex;
+        display: -webkit-flexbox;
+        justify-content: flex-end;
+        padding-top: $spacing-unit-mobile;
+        padding-bottom: $spacing-unit-mobile;
+    }
+
+    .navbar a.nav_desktop {
+        display: block;
+    }
+}

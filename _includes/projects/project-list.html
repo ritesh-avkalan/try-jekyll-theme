@@ -1,0 +1,27 @@
+<div class="primary_container" style="padding-top:100px; padding-bottom:100px">
+    <div class="container" style="width:100%">
+        <main class="grid">
+            {% for project in site.projects reversed%}
+         
+                <a href="{{ project.url | relative_url }}">
+                    <div class="project-card">
+                        <div class="project-head">
+                            <h2>{{ project.title | escape }}
+                        </h2>
+                        <p class="date"><small> - {{ project.year | escape }}
+                            </small></p>
+                        </div>
+                        <div class="card-description">
+                            {% for lang in project.langs %}
+                            <code>{{ lang | escape }}</code>
+                            {% endfor %}
+                            <hr>
+                            <p>{{ project.description | escape }}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        </main>
+    </div>
+</div>

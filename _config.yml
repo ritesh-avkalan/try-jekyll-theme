@@ -1,0 +1,68 @@
+title: Abhinav Gupta
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+keywords: "Abhinav Gupta, IIT Roorkee, Machine Learning, Deep Learning, Computer Vision, Research, Publications, Projects, Resources, Team, fenics, topology optimization, isogeomtric analysis, hpc, phd blog, paraview, latex, computational mechanics, phd tools, parallel computation, python, phase field fracture, phase field topology optimization"
+email: iitrabhi@gmail.com
+permalink: /:year/:month/:day/:title:output_ext
+
+url: "https://abhigupta.io/"
+baseurl: "/jekyll-theme-researcher"
+
+
+# the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Compress CSS files
+sass:
+  sass_dir: _sass
+  style: compressed
+
+highlighter: rouge
+
+
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+collections_dir: my_website
+
+collections:
+  home:
+    output: true
+  docs:
+    output: true
+  projects:
+    output: true
+  newsletters:
+    output: true
+  posts:
+    output: true
+  cards:
+    output: true
+  article:
+    output: true
+  headerproject:
+    output: true
+  about:
+    output: true
+  coding:
+    output: true
+  presentation:
+    output: true
+  productivity:
+    output: true
+  categories:
+    output: true
+  
+
+
+edit_mode: true
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics: 

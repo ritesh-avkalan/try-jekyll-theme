@@ -1,0 +1,26 @@
+@use "variables/variables" as *;
+.notion-content {
+display: flex;
+flex-direction: column;
+gap: $gap-unit;
+flex: 1;
+padding: $spacing-unit-mobile;
+
+.notion-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: $font-size-small;
+    line-height: 1.2;
+}
+
+.button{
+    align-self: flex-start;
+}
+}
+
+.notion-image{
+    flex: 1;
+    padding: $spacing-unit-mobile;
+    min-width: 300px;
+}

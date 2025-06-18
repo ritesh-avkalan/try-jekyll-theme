@@ -1,0 +1,18 @@
+{% for researcher in site.home %}
+<div class="primary_container">
+  <main class="card-container">
+    {% for card in site.cards %}
+    <a href="{{ site.url }}{{card.route}}" class="cards" >
+        <div class="card" >
+          <div class="card-icon" >
+            <object class="abhi-icon" data="{{ site.url }}{{ card.icon }}"  ></object>
+          </div>
+          <div class="card-description plain-text">
+            {{ card.title }}
+          </div>
+        </div>  
+    </a>
+    {% endfor %}
+  </main>
+</div>
+{% endfor %}

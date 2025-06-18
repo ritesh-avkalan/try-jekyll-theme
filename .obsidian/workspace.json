@@ -1,0 +1,245 @@
+{
+  "main": {
+    "id": "e02fb882f681cc71",
+    "type": "split",
+    "children": [
+      {
+        "id": "ebeaece136c0984c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f88d4c664c3b4a40",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "Kanban.md"
+              },
+              "icon": "lucide-trello",
+              "title": "Kanban"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "91dfa9c7b64aba5b",
+    "type": "split",
+    "children": [
+      {
+        "id": "efdf54681f590d8a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ef6bafb7a3bb5c4c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "6d5471b3f8a99568",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "01e6a64b2bd2f3f6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "bf259eba2285db77",
+    "type": "split",
+    "children": [
+      {
+        "id": "bc26436d48655303",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a322c10763a09c0f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Kanban.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Kanban"
+            }
+          },
+          {
+            "id": "83a4c435c3d1e9ad",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Kanban.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Kanban"
+            }
+          },
+          {
+            "id": "b7e3949bc8b7e138",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ee72ccd11a638497",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "b949a6435edacd3d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Kanban.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Kanban"
+            }
+          },
+          {
+            "id": "094cc4f5e006a42d",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": true,
+      "graph:Open graph view": true,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": true,
+      "command-palette:Open command palette": true,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "ef6bafb7a3bb5c4c",
+  "lastOpenFiles": [
+    "_site/assets/css/main.css.map",
+    "_sass/researcher/_text.scss",
+    "_sass/researcher/_main_menu.scss",
+    "_sass/researcher/_mariana.scss",
+    "_sass/researcher/_layout.scss",
+    "_sass/researcher/_form.scss",
+    "_sass/researcher/_code.scss",
+    "_sass/researcher/_footer.scss",
+    "_sass/researcher/_cards.scss",
+    "_sass/researcher/_button.scss",
+    "_sass/researcher/_anim.scss",
+    "_site/home/researcher.md",
+    "my_website/_home/researcher.md",
+    "my_website/_newsletters/2022/November/quality-research-4.md",
+    "my_website/_newsletters/2022/November/quality-research-3.md",
+    "my_website/_newsletters/2022/November/quality-research-2.md",
+    "my_website/_newsletters/2022/November/quality-research-1.md",
+    "my_website/_projects/2022/04April/isogeometric-analysis.md",
+    "my_website/_projects/2022/03March/pen-printer-arduino.md",
+    "my_website/_projects/2022/02Feburary/caustics.md",
+    "my_website/_projects/2021/12December/personal-website.md",
+    "my_website/_projects/2021/08August/creative-coding-blender.md",
+    "my_website/_projects/2021/03March/random-vibration-analysis.md",
+    "my_website/_projects/2020/11November/adaptive-topology-optimization.md",
+    "my_website/_projects/2020/07July/topology-optimization-fenics.md",
+    "my_website/_projects/2019/10October/gsoc-fenics.md",
+    "my_website/_projects/2019/08August/meshio-pr.md",
+    "my_website/_projects/2019/04April/adaptive-phase-field-fracture.md",
+    "my_website/_projects/2019/03March/cmlab-website.md",
+    "my_website/_projects/2018/11November/gui-iga.md",
+    "my_website/_projects/2017/01January/eigenplus-apps.md",
+    "my_website/_projects/2016/08August/bore-hole-autocad.md",
+    "my_website/_projects/2016/01January/eigenplus-website.md",
+    "my_website/_projects/2015/March/vba-drawing-checking.md",
+    "my_website/_projects/2013/March/liquifaction-analysis.md",
+    "my_website/_projects/2006/March/fee-management-system.md",
+    "_site/idea-board.canvas",
+    "_site/assets/svg/productivity.svg",
+    "_site/assets/svg/presentation.svg",
+    "_site/assets/svg/newsletter.svg",
+    "_site/assets/svg/coding.svg",
+    "_site/assets/svg/articles.svg",
+    "_site/assets/svg/ag.svg",
+    "_site/assets/svg/abhi.svg",
+    "_site/assets/svg/abhi-notion.svg",
+    "_site/assets/images/untitled@2x (2).png",
+    "_site/assets/images/sublime_latex_setup.jpg",
+    "idea-board.canvas"
+  ]
+}

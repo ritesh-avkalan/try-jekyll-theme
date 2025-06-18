@@ -1,0 +1,35 @@
+@use "variables/variables" as *;
+.article-content {
+  flex: 1;
+  padding: $padding-unit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (max-width: $content-width-mobile) {
+    padding: 0px;
+  }
+  .article-heading {
+    font-size: $font-size-big;
+    font-family: Montserrat;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  .article-para {
+    font-size: $base-font-size;
+    padding: $spacing-unit-mobile 0 $padding-unit 0;
+  }
+}
+
+.article-image {
+  flex: 1;
+  padding: $padding-unit;
+  min-width: 300px;
+
+  /* Add media query for mobile */
+  @media (max-width: $content-width-mobile) {
+    padding: $spacing-unit-mobile;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

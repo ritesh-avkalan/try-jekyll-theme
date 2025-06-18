@@ -1,0 +1,84 @@
+@use "variables/variables" as *;
+
+* {
+    box-sizing: border-box;
+    
+}
+
+@media (max-width: 600px) {
+.hide_mobile{
+    display: none;
+}
+
+}
+.full_width_container.primary_container {
+    display: flex;
+    flex-grow: 1;}
+
+.primary_container {
+    display: flex;
+    flex-grow: 1;
+    max-width: -webkit-calc(#{$content-width-home} + (#{$spacing-unit} * 2));
+    max-width: calc(#{$content-width-home} + (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    @extend %clearfix;
+
+    @media screen and (max-width: 600px) {
+        max-width: -webkit-calc(#{$content-width} + (#{$spacing-unit} * 2));
+        max-width: calc(#{$content-width} + (#{$spacing-unit} * 2));
+        padding-right: $spacing-unit;
+        padding-left: $spacing-unit;
+    }
+}
+
+.flexbox_container_two_col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexbox_item {
+    flex: 50%;
+    padding: $padding-unit;
+}
+
+.flexbox_container_flip{
+        flex-direction: row;
+    }
+
+@media screen and (max-width: 600px) {
+    .flexbox_container_two_col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .flexbox_item {
+        flex: 100%;
+        padding: $padding-unit;
+    }
+
+    .flexbox_container_flip{
+        flex-direction: column-reverse;
+    }
+}
+
+.abhi-icon{
+    filter: var(--invert-intensity);
+    
+    img{
+
+        background: none;
+    }
+    }
+
+.hero{
+    background-color: var(--color-1);
+  
+
+}

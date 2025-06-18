@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+@use "sass:color" as color;
+@use "sass:math";
+@use "researcher/variables/variables";
+@use "researcher/base";
+@use "researcher/home";
+@use "researcher/layout";
+@use "researcher/button";
+@use "researcher/anim";
+@use "researcher/mariana";
+@use "researcher/code";
+@use "researcher/main_menu";
+@use "researcher/footer";
+@use "researcher/form";
+@use "researcher/homebase";
+@use "researcher/card-container";
+@use "researcher/quote";
+@use "researcher/news-letter";
+@use "researcher/notion";
+@use "researcher/article-header";
+@use "researcher/posts";
+@use "researcher/project-lists";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
